@@ -244,6 +244,7 @@
                             </div>
                             <div class="service-description">
                                 <h2>Acoustic Sessions</h2>
+                                <h3>In development</h3>
                                 <p></p>
                             </div>
                         </a>
@@ -676,11 +677,11 @@
                     <div class="form-header">
                         Message Me
                     </div>
-                    <form id="myForm" onsubmit="sendEmail()" ; reset(); return false;>
+                    <form id="myForm" action="https://formsubmit.co/el/nafome" method="POST">
                         <div class="input-line">
                             <input id="name" type="text" placeholder="Name" class="input-name" required>
                             <input id="email" type="email" placeholder="Email" class="input-name" required>
-                            <input id="phone" type="" placeholder="Phone" class="input-name" required>
+                            <input id="phone" type="phone" placeholder="Phone" class="input-name" required>
 
                         </div>
                         <input type="text" id="subject" placeholder="subject" class="input-subject">
@@ -729,7 +730,7 @@
                     <!--Contact information end-->
                 </div>
             </div>
-            <!--copyright-section You Can Remove After Downloading-->
+
             <div class="footer">
                 <div class="footer-text">
                     <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> ronny wajah
@@ -746,13 +747,13 @@
     <script src="js/index.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-    <script>
+    <!-- <script>
         function sendEmail() {
             Email.send({
                 Host: "smtp.gmail.com",
-                Username: "egoistkhalig@gmail.com",
-                Password: "password",
-                To: 'ronywajah911@gmail.com',
+                Username: "ronywajah911@gmail.com",
+                Password: "Egoistkhal@Claud!@tess",
+                To: 'egoistkhalig@gmail.com',
                 From: document.getElementById("email").value,
                 Subject: "This is the subject",
                 Body: "And this is the body"
@@ -761,7 +762,7 @@
             );
 
         }
-    </script>
+    </script> -->
     <!--particles script-->
     <script>
         particlesJS("particles", {
