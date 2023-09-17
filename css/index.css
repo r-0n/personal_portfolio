@@ -1190,6 +1190,9 @@ button:hover .index {
     transition: scale .4s ease;
 }
 
+
+/* blog start */
+
 #blog {
     background: #101010;
     display: none;
@@ -1284,6 +1287,9 @@ button:hover .index {
     text-decoration: none;
     color: whitesmoke;
 }
+
+
+/* blog end */
 
 #contact {
     display: none;
