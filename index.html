@@ -237,7 +237,7 @@
                         </a>
                     </div>
                     <div class="service-three service wow">
-                        <a href="#guitar" id="">
+                        <a href="#guitar" id="guitar-link">
                             <div class="service-img">
                                 <img src="images/guitar-icon-png-11.png" alt="service-three">
                             </div>
@@ -832,7 +832,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-header">Contact <span class="color"> Me</span>
+            <div class="contact-header">Contact <span class="color"> Info</span>
                 <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div>
             </div>
             <div class="contact-content">
@@ -841,7 +841,7 @@
                     <div class="form-header">
                         Message Me
                     </div>
-                    <form id="myForm" action="https://formsubmit.co/el/nafome" method="POST">
+                    <form id="myForm" onsubmit="sendEmail(); reset(); return false;">
                         <div class="input-line">
                             <input id="name" type="text" placeholder="Name" class="input-name" required>
                             <input id="email" type="email" placeholder="Email" class="input-name" required>
@@ -909,24 +909,41 @@
     <script src="js/particles.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/index.js"></script>
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
         function sendEmail() {
             Email.send({
-                Host: "smtp.gmail.com",
+                Host: "smtp.elasticemail.com",
                 Username: "ronywajah911@gmail.com",
-                Password: "Egoistkhal@Claud!@tess",
+                Password: "3A26EA0D700A8D47D79DBDD04CA7CC6E60A4",
                 To: 'egoistkhalig@gmail.com',
                 From: document.getElementById("email").value,
-                Subject: "This is the subject",
-                Body: "And this is the body"
+                Subject: "Contact Enquiry",
+                Body: "Name: " + document.getElementById("name").value +
+                    "<br> Email: " + document.getElementById("email").value +
+                    "<br> Phone: " + document.getElementById("phone").value +
+                    "<br> Message: " + document.getElementById("body").value
             }).then(
                 message => alert(message)
             );
 
         }
     </script>
+
+    <!-- Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+); -->
+
     <!--particles script-->
     <script>
         particlesJS("particles", {
