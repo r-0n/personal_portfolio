@@ -1335,7 +1335,7 @@ button:hover .index {
 
 .guitar .img {
     height: 80%;
-    width: 100%;
+    width: 120%;
     overflow: hidden;
     transition: all .65s ease;
     position: relative;
