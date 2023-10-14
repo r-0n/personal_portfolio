@@ -1158,21 +1158,6 @@ button:hover .index {
     font-weight: 900;
 }
 
-.guitar-header {
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: whitesmoke;
-    padding: 10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    font-weight: 900;
-}
-
 .cursor {
     height: 50px;
     width: 50px;
@@ -1309,6 +1294,21 @@ button:hover .index {
 
 /* guitar */
 
+.guitar-header {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: raleway;
+    color: whitesmoke;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    font-weight: 900;
+}
+
 #guitar {
     background: #101010;
     display: none;
@@ -1387,16 +1387,16 @@ button:hover .index {
     opacity: .9;
     font-weight: 400;
     height: 80%;
-    padding: 30px;
+    padding: 25px;
     letter-spacing: 1px;
 }
 
 .guitar:hover .img {
-    transform: translateY(-70%);
+    transform: translateY(-45%);
 }
 
 .guitar:hover .guitar-text {
-    transform: translateY(-70%);
+    transform: translateY(-45%);
 }
 
 .guitar a {
