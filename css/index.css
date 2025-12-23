@@ -3174,3 +3174,636 @@ for tabs and large phones
         transition: all .4s ease;
     }
 }
+/* ============================================
+   COMPREHENSIVE RESPONSIVE DESIGN
+   ============================================ */
+
+/* Extra Small Devices (Phones - iPhone SE, small Android) */
+@media only screen and (max-width: 480px) {
+    .header-content {
+        font-size: 28px !important;
+        padding: 20px 15px;
+    }
+    
+    .header-content-box .firstline {
+        font-size: 32px !important;
+    }
+    
+    .header-content-box .secondline {
+        font-size: 18px !important;
+    }
+    
+    .social-media-links {
+        padding: 20px 10px;
+    }
+    
+    .social-media {
+        width: 18px;
+        margin: 6px;
+    }
+    
+    #navigation-bar img {
+        height: 50px;
+    }
+    
+    .menubar {
+        right: 3%;
+        top: 35%;
+    }
+    
+    .navigation-links a {
+        font-size: 24px;
+        padding: 8px;
+    }
+    
+    .about-header {
+        font-size: 28px;
+    }
+    
+    .about-first-line {
+        font-size: 22px !important;
+    }
+    
+    .about-first-line .color {
+        font-size: 24px !important;
+    }
+    
+    .about-second-line {
+        font-size: 14px !important;
+    }
+    
+    .about-img img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+    
+    .service {
+        width: 95% !important;
+        margin: 15px auto;
+        height: auto;
+        min-height: 280px;
+    }
+    
+    .service-img img {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .service-description h2 {
+        font-size: 20px;
+    }
+    
+    .service-description p {
+        font-size: 14px;
+    }
+    
+    .portfolio {
+        flex-direction: column !important;
+        padding: 30px 15px !important;
+        gap: 20px !important;
+    }
+    
+    .portfolio-image {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .portfolio-image img {
+        height: 250px !important;
+        width: 100%;
+    }
+    
+    .portfolio-text {
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 0 !important;
+    }
+    
+    .portfolio-text h2 {
+        font-size: 22px !important;
+        padding: 0 0 10px 0 !important;
+    }
+    
+    .portfolio-text p {
+        font-size: 14px !important;
+        padding: 0 !important;
+        margin: 0 0 15px 0 !important;
+    }
+    
+    .portfolio-header {
+        font-size: 32px;
+        padding: 40px 15px 20px;
+    }
+    
+    .blog-header, .guitar-header {
+        font-size: 32px;
+        padding: 40px 15px 20px;
+    }
+    
+    .header-caption {
+        font-size: 16px;
+    }
+    
+    .section-divider {
+        padding: 30px 10px;
+        margin: 30px 0;
+    }
+    
+    .section-divider .header-caption {
+        font-size: 22px;
+        padding: 0 15px;
+    }
+    
+    .blogs, .guitar {
+        width: 95% !important;
+        height: auto !important;
+        min-height: 350px;
+        margin: 15px auto;
+    }
+    
+    .blogs .img, .guitar .img {
+        height: 60%;
+    }
+    
+    .blogs .img iframe, .guitar .img iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+    }
+    
+    .blog-text, .guitar-text {
+        height: auto;
+        min-height: 40%;
+        padding: 15px;
+    }
+    
+    .blog-text h3, .guitar-text h3 {
+        font-size: 20px;
+        padding: 10px;
+        height: auto;
+    }
+    
+    .blog-text p, .guitar-text p {
+        font-size: 14px;
+        padding: 10px;
+        height: auto;
+    }
+    
+    .blog-date, .guitar-date {
+        font-size: 14px;
+        padding: 5px 10px;
+        width: auto;
+        min-width: 120px;
+    }
+    
+    .skills-header {
+        font-size: 32px;
+    }
+    
+    .skill {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+    
+    .skill-text {
+        font-size: 14px;
+    }
+    
+    .contact-header {
+        font-size: 32px;
+        padding: 40px 15px 20px;
+    }
+    
+    .contact-form {
+        width: 100% !important;
+        padding: 20px 10px;
+    }
+    
+    .input-name, .input-subject, .input-textarea {
+        width: 95% !important;
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    .input-line {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        width: 100% !important;
+        height: auto;
+        min-height: 400px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-info-content {
+        padding: 20px;
+    }
+    
+    .footer {
+        padding: 20px 10px;
+    }
+    
+    .footer-text {
+        font-size: 12px;
+    }
+}
+
+/* Small Devices (Large Phones - iPhone 12/13/14, Android) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .header-content {
+        font-size: 32px;
+    }
+    
+    .header-content-box .firstline {
+        font-size: 36px;
+    }
+    
+    .header-content-box .secondline {
+        font-size: 20px;
+    }
+    
+    .portfolio {
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        gap: 30px !important;
+    }
+    
+    .portfolio-image {
+        width: 100% !important;
+    }
+    
+    .portfolio-image img {
+        height: 300px !important;
+    }
+    
+    .portfolio-text {
+        width: 100% !important;
+        padding: 25px !important;
+        margin: 0 !important;
+    }
+    
+    .portfolio-text h2 {
+        font-size: 26px;
+    }
+    
+    .portfolio-text p {
+        font-size: 15px;
+    }
+    
+    .blogs, .guitar {
+        width: 90% !important;
+        margin: 20px auto;
+    }
+    
+    .service {
+        width: 90% !important;
+        margin: 20px auto;
+    }
+    
+    .contact-form {
+        width: 100% !important;
+    }
+    
+    .contact-info {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+}
+
+/* Medium Devices (Tablets - iPad, Android Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-content {
+        font-size: 38px;
+    }
+    
+    .header-content-box .firstline {
+        font-size: 42px;
+    }
+    
+    .header-content-box .secondline {
+        font-size: 22px;
+    }
+    
+    .portfolio {
+        flex-direction: row !important;
+        padding: 50px 30px !important;
+        gap: 35px !important;
+    }
+    
+    .portfolio-image {
+        width: 48% !important;
+        height: 350px !important;
+    }
+    
+    .portfolio-image img {
+        height: 100% !important;
+    }
+    
+    .portfolio-text {
+        width: 48% !important;
+        padding: 30px !important;
+    }
+    
+    .portfolio-text h2 {
+        font-size: 28px;
+    }
+    
+    .portfolio-text p {
+        font-size: 16px;
+    }
+    
+    .blogs, .guitar {
+        width: 45% !important;
+        margin: 20px;
+    }
+    
+    .service {
+        width: 45% !important;
+        margin: 20px 2.5%;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-form {
+        width: 90% !important;
+        margin-bottom: 30px;
+    }
+    
+    .contact-info {
+        width: 90% !important;
+    }
+    
+    .about-main {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .about-img {
+        width: 40%;
+    }
+    
+    .about-first-paragraph {
+        width: 55%;
+    }
+}
+
+/* Large Devices (Small Desktops, Large Tablets) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .portfolio {
+        max-width: 1200px;
+        padding: 50px 40px;
+    }
+    
+    .portfolio-image {
+        width: 45%;
+        height: 380px;
+    }
+    
+    .portfolio-text {
+        width: 45%;
+    }
+    
+    .blogs, .guitar {
+        width: 38%;
+    }
+    
+    .service {
+        width: 30%;
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media only screen and (min-width: 1441px) {
+    .portfolio {
+        max-width: 1400px;
+    }
+    
+    .portfolio-image {
+        width: 45%;
+        height: 450px;
+    }
+    
+    .portfolio-text {
+        width: 45%;
+    }
+}
+
+/* Landscape Orientation for Tablets and Phones */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    .header-content {
+        font-size: 28px;
+        padding: 10px;
+    }
+    
+    .header-content-box .firstline {
+        font-size: 32px;
+    }
+    
+    .header-content-box .secondline {
+        font-size: 18px;
+    }
+    
+    .social-media-links {
+        padding: 10px;
+    }
+    
+    .portfolio {
+        padding: 30px 20px;
+    }
+    
+    .section-title {
+        margin: 40px 0 30px;
+        font-size: 2em;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .cursor {
+        display: none !important;
+    }
+    
+    .cursor-small {
+        display: none !important;
+    }
+    
+    .menubar {
+        padding: 15px;
+    }
+    
+    .menubar span {
+        width: 25px;
+        height: 3px;
+        margin: 7px;
+    }
+    
+    .navigation-links a {
+        padding: 15px;
+        font-size: 28px;
+    }
+    
+    .back-button {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+    
+    form button {
+        padding: 15px 30px;
+        font-size: 18px;
+        min-height: 50px;
+    }
+    
+    .portfolio-text button {
+        padding: 12px 25px;
+        font-size: 16px;
+        min-height: 45px;
+    }
+    
+    .download-button {
+        padding: 20px 40px;
+        font-size: 1.1em;
+        min-height: 55px;
+    }
+    
+    .blogs:hover .img,
+    .guitar:hover .img,
+    .blogs:hover .blog-text,
+    .guitar:hover .guitar-text {
+        transform: none;
+    }
+}
+
+/* High DPI Displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    .portfolio-image img,
+    .about-img img,
+    .service-img img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Responsive iframes */
+.blogs .img iframe,
+.guitar .img iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Print Styles */
+@media print {
+    #navigation-bar,
+    .menubar,
+    .color-changer,
+    .social-media-links,
+    .cursor,
+    #resume-particles,
+    .floating-shape {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .resume-container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media only screen and (max-width: 767px) {
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    #all {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* Fix viewport units on mobile */
+    #header {
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    /* Better text readability */
+    p, .timeline-description, .blog-text p, .guitar-text p {
+        line-height: 1.6;
+    }
+    
+    /* Improve button spacing */
+    .button {
+        margin: 15px 0;
+    }
+    
+    /* Better form layout */
+    .contact-content {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    
+    /* Fix portfolio alternating layout on mobile */
+    .portfolio-second,
+    .portfolio-fourth {
+        flex-direction: column !important;
+    }
+    
+    .portfolio-second .portfolio-text,
+    .portfolio-fourth .portfolio-text {
+        order: 1;
+    }
+    
+    .portfolio-second .portfolio-image,
+    .portfolio-fourth .portfolio-image {
+        order: 2;
+    }
+}
+
+/* iPad Specific Optimizations */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .portfolio {
+        flex-direction: column !important;
+        padding: 40px 25px !important;
+    }
+    
+    .portfolio-image {
+        width: 80% !important;
+        height: 400px !important;
+    }
+    
+    .portfolio-text {
+        width: 80% !important;
+    }
+    
+    .blogs, .guitar {
+        width: 48% !important;
+    }
+}
+
+/* iPad Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .portfolio {
+        flex-direction: row !important;
+    }
+    
+    .portfolio-image {
+        width: 48% !important;
+        height: 300px !important;
+    }
+    
+    .portfolio-text {
+        width: 48% !important;
+    }
+}

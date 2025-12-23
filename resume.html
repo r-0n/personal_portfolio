@@ -503,37 +503,199 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* Mobile Phones */
+        @media (max-width: 480px) {
             .timeline::before {
-                left: 40px;
+                left: 20px;
             }
 
             .timeline-item {
-                padding-left: 100px;
+                padding-left: 70px;
+                margin-bottom: 40px;
             }
 
             .timeline-dot {
-                left: 40px;
+                left: 20px;
+                width: 16px;
+                height: 16px;
+            }
+
+            .resume-header {
+                padding: 60px 20px 40px;
             }
 
             .resume-header h1 {
-                font-size: 2.5em;
+                font-size: 2em;
+            }
+
+            .resume-header p {
+                font-size: 1em;
+            }
+
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 10px 18px;
+                font-size: 14px;
             }
 
             .resume-content {
                 padding: 20px 10px;
             }
 
-            .timeline-content {
-                padding: 25px;
+            .section-title {
+                font-size: 1.8em;
+                margin: 40px 0 30px;
             }
 
-            .section-title {
-                font-size: 2em;
+            .timeline-content {
+                padding: 20px;
+            }
+
+            .timeline-title {
+                font-size: 1.3em;
+            }
+
+            .timeline-subtitle {
+                font-size: 1em;
+            }
+
+            .timeline-location {
+                font-size: 0.85em;
+            }
+
+            .timeline-bullets li {
+                font-size: 0.85em;
+                line-height: 1.6;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 10px;
+            }
+
+            .skill-category {
+                padding: 20px;
+            }
+
+            .skill-category h3 {
+                font-size: 1.2em;
+            }
+
+            .download-section {
+                padding: 40px 20px;
+                margin: 50px 20px 30px;
+            }
+
+            .download-section h3 {
+                font-size: 1.5em;
+            }
+
+            .download-button {
+                padding: 15px 35px;
+                font-size: 1em;
+            }
+        }
+
+        /* Small Phones to Large Phones */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                padding-left: 80px;
+                margin-bottom: 50px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .resume-header h1 {
+                font-size: 2.5em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        /* Tablets (iPad, Android Tablets) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .timeline::before {
+                left: 60px;
+            }
+
+            .timeline-item {
+                padding-left: 150px;
+            }
+
+            .timeline-dot {
+                left: 60px;
+            }
+
+            .resume-header h1 {
+                font-size: 3em;
+            }
+
+            .section-title {
+                font-size: 2.5em;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .timeline-content {
+                padding: 30px;
+            }
+        }
+
+        /* Landscape Orientation */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .resume-header {
+                padding: 40px 20px 30px;
+            }
+
+            .resume-header h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                margin: 30px 0 20px;
+                font-size: 1.8em;
+            }
+
+            .timeline-item {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .back-button {
+                padding: 15px 25px;
+                font-size: 16px;
+            }
+
+            .download-button {
+                padding: 20px 45px;
+                font-size: 1.1em;
+                min-height: 55px;
+            }
+
+            .timeline-content:hover {
+                transform: none;
             }
         }
 
