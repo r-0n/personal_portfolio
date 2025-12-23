@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aaron Wajah - Resume Journey" />
+    <title>Aaron Wajah || Resume Journey</title>
+    <link rel="icon" type="image/png" href="images/logo-no-background.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" defer></script>
+    <script src="js/particles.min.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #101010;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #101010;
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #resume-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .resume-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .resume-header {
+            text-align: center;
+            padding: 80px 40px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(199, 0, 57, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(199, 0, 57, 0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(199, 0, 57, 0.2);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(199, 0, 57, 0.3);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: rgba(199, 0, 57, 0.4);
+            transform: translateX(-5px);
+            border-color: rgba(199, 0, 57, 0.6);
+        }
+
+        .resume-header h1 {
+            font-size: 4em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, #fff 0%, #c70039 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(199, 0, 57, 0.5);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(199, 0, 57, 0.8), 0 0 40px rgba(199, 0, 57, 0.5);
+            }
+        }
+
+        .resume-header p {
+            font-size: 1.3em;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+            color: #ccc;
+        }
+
+        .resume-content {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin: 60px 0 50px;
+            position: relative;
+            padding-bottom: 20px;
+            color: #fff;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #c70039, transparent);
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(199, 0, 57, 0.6);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 100px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, 
+                rgba(199, 0, 57, 0.3) 0%, 
+                rgba(199, 0, 57, 0.8) 50%, 
+                rgba(199, 0, 57, 0.3) 100%);
+            box-shadow: 0 0 20px rgba(199, 0, 57, 0.5);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            padding-left: 200px;
+            opacity: 0;
+            transform: translateX(-100px);
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(7) { animation-delay: 0.7s; }
+        .timeline-item:nth-child(8) { animation-delay: 0.8s; }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 100px;
+            top: 20px;
+            width: 24px;
+            height: 24px;
+            background: #c70039;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid #101010;
+            box-shadow: 0 0 0 4px rgba(199, 0, 57, 0.3),
+                        0 0 30px rgba(199, 0, 57, 0.8);
+            z-index: 2;
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% {
+                box-shadow: 0 0 0 4px rgba(199, 0, 57, 0.3),
+                            0 0 30px rgba(199, 0, 57, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(199, 0, 57, 0.1),
+                            0 0 50px rgba(199, 0, 57, 1);
+            }
+        }
+
+        .timeline-content {
+            background: linear-gradient(135deg, rgba(32, 32, 32, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(199, 0, 57, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+                        inset 0 0 20px rgba(199, 0, 57, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(199, 0, 57, 0.1), 
+                transparent);
+            transition: left 0.5s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px) translateX(10px);
+            border-color: rgba(199, 0, 57, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7),
+                        0 0 40px rgba(199, 0, 57, 0.3),
+                        inset 0 0 30px rgba(199, 0, 57, 0.1);
+        }
+
+        .timeline-content:hover::before {
+            left: 100%;
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background: linear-gradient(135deg, #c70039 0%, #8b0026 100%);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(199, 0, 57, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-title {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-subtitle {
+            color: #c70039;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-location {
+            color: #999;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-description {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-bullets li {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .timeline-bullets li::before {
+            content: '●';
+            color: #c70039;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, rgba(32, 32, 32, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(199, 0, 57, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: rgba(199, 0, 57, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7),
+                        0 0 40px rgba(199, 0, 57, 0.3);
+        }
+
+        .skill-category h3 {
+            color: #c70039;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(199, 0, 57, 0.15);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(199, 0, 57, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .skill-tag:hover {
+            background: rgba(199, 0, 57, 0.4);
+            border-color: rgba(199, 0, 57, 0.6);
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 5px 20px rgba(199, 0, 57, 0.4);
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(32, 32, 32, 0.8) 0%, rgba(20, 20, 20, 0.8) 100%);
+            margin: 80px auto 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(199, 0, 57, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                        inset 0 0 30px rgba(199, 0, 57, 0.05);
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(199, 0, 57, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .download-section h3 {
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 2em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-section p {
+            margin-bottom: 40px;
+            color: #ccc;
+            font-size: 1.1em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #c70039 0%, #8b0026 100%);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(199, 0, 57, 0.5);
+            position: relative;
+            z-index: 1;
+            border: 2px solid transparent;
+        }
+
+        .download-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(199, 0, 57, 0.7);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(199, 0, 57, 0.1);
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .floating-shape:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 40px;
+            }
+
+            .timeline-item {
+                padding-left: 100px;
+            }
+
+            .timeline-dot {
+                left: 40px;
+            }
+
+            .resume-header h1 {
+                font-size: 2.5em;
+            }
+
+            .resume-content {
+                padding: 20px 10px;
+            }
+
+            .timeline-content {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #101010;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c70039;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b0026;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="resume-particles"></div>
+    
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+
+    <div class="resume-container">
+        <div class="resume-header">
+            <a href="index.html" class="back-button">← Back to Portfolio</a>
+            <h1>Aaron Wajah</h1>
+            <p>My Professional Journey</p>
+        </div>
+
+        <div class="resume-content">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2021 - MAY 2025</span>
+                        <h3 class="timeline-title">Bachelor of Science, Computer Science</h3>
+                        <p class="timeline-subtitle">Applied Math & Interactive Media Minor</p>
+                        <p class="timeline-location">New York University Abu Dhabi | Abu Dhabi, UAE</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2016 - JUNE 2019</span>
+                        <h3 class="timeline-title">High School Diploma</h3>
+                        <p class="timeline-subtitle">Class of 2019 President, National Debate Team Principal Speaker</p>
+                        <p class="timeline-location">St. Augustine's College | Cape Coast, Ghana</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2025 - TO DATE</span>
+                        <h3 class="timeline-title">Student Research Assistant</h3>
+                        <p class="timeline-subtitle">Prof. Michael Ang's Lab</p>
+                        <p class="timeline-location">NYU Abu Dhabi Interactive Media Dept. | Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Assisted in developing functional prototypes, including robotic systems and novel digital musical instruments from concept.</li>
+                            <li>Designed and fabricated installation components using Fusion360 and 3D printers to ensure high-quality physical construction.</li>
+                            <li>Assembled and soldered electronic circuits, integrating sensors, actuators, and LEDs to bring interactive designs to life.</li>
+                            <li>Supported the technical setup and execution of live performances and public exhibitions of interactive artwork.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2024 - AUG 2025</span>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <p class="timeline-subtitle">Student Research Assistant: Public Opinion Research Technology</p>
+                        <p class="timeline-location">NYU Abu Dhabi | Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Spearheaded software development for a public opinion research tool, taking over from three previous developers, improving documentation, adding features, and optimizing the existing codebase to enhance performance and usability by 20%.</li>
+                            <li>Developed and integrated new web interface components using Python and JavaScript, improving user interaction and survey design for global public opinion studies, contributing to a 15% increase in user efficiency.</li>
+                            <li>Led the migration of the software to a new server environment, ensuring minimal downtime and improved system stability, reducing server maintenance costs by 10%.</li>
+                            <li>Collaborated with Professor Aaron Kaufman in weekly meetings to align project goals and gain hands-on experience with real-world software development methodologies.</li>
+                            <li>Utilizing server management skills, including Nginx configuration and resource allocation, to optimize backend and frontend communication, achieving a 25% boost in system efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">SEPT 2024 – DEC 2024</span>
+                        <h3 class="timeline-title">IM Storage Room Student Assistant</h3>
+                        <p class="timeline-subtitle">NYUAD Interactive Media</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Ensured the storage room adhered to safety protocols and remained clean and orderly, optimizing functionality for lab operations.</li>
+                            <li>Collaborated with lab instructors to create an inventory check for proper inventory and equipment management and tracking.</li>
+                            <li>Maintained the Connect 2 system, ensuring accurate inventory tracking and smooth equipment checkout processes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">MAY 2023 – AUG 2023</span>
+                        <h3 class="timeline-title">Software Engineering Intern</h3>
+                        <p class="timeline-subtitle">Aikins Educational Consult</p>
+                        <p class="timeline-location">Accra, Ghana</p>
+                        <ul class="timeline-bullets">
+                            <li>Utilized strong analytical skills to interpret software design specifications and product requirements for precise test case creation.</li>
+                            <li>Increased student engagement by 30% over a three-month period by designing and developing a collaborative web application.</li>
+                            <li>Enhanced the overall user experience by 50% by implementing real-time messaging functionality using WebSocket technology.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">JAN 2023 – MAY 2023</span>
+                        <h3 class="timeline-title">WorkSmart Student Assistant</h3>
+                        <p class="timeline-subtitle">NYUAD Office of the Vice Chancellor</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Spearheaded updates to Work Smart website, resulting in a 20% increase in user engagement and alignment with project goals.</li>
+                            <li>Enhanced progress tracking and communication by coordinating multiple projects, tracking timelines, and presenting status updates, resulting in a 20% increase in project alignment with goals.</li>
+                            <li>Analyzed existing systems for opportunities to reduce data integrity issues and enhance data accuracy for decision-making.</li>
+                            <li>Collaborated with Project Heads to develop project plans, monitored progress, and ensured alignment with WorkSmart goals.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2022 – MAY 2023</span>
+                        <h3 class="timeline-title">Advanced Manufacturing Workshop Student Assistant & Web Developer</h3>
+                        <p class="timeline-subtitle">NYUAD Engineering</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Designed and maintained the NYUAD Engineering website, using CSS, HTML, and JavaScript to enhance user experience.</li>
+                            <li>Developed 9+ comprehensive web workflow tutorials using WIX for lab machines, enhancing lab safety and reducing accidents.</li>
+                            <li>Leveraged Git for version control, collaborating seamlessly with team members on web projects and ensuring codebase integrity.</li>
+                            <li>Enhanced lab safety by creating 3+ different workflow tutorials on the laser cutter, Ultimaker, and CNC machine.</li>
+                            <li>Assisted students and the general NYUAD community with digital fabrication projects such as laser engraving.</li>
+                            <li>Increased cybersecurity awareness by modeling a construction site for CSAW Hack my Robot Challenge.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2022 – TO DATE</span>
+                        <h3 class="timeline-title">Student Assistant</h3>
+                        <p class="timeline-subtitle">NYUAD Office of the Vice Chancellor</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Enhanced progress on Work Smart, a centralized web-based resource, by providing monthly updates and feedback on the site.</li>
+                            <li>Fostered Inclusion, Diversity, Belonging, and Equity within NYUAD by Spearheading and organizing community events.</li>
+                            <li>Enhanced external relationships with stakeholders by planning, researching, drafting, and executing correspondence and initiative messaging.</li>
+                            <li>Improved office-community communication by Graphic design for Office of the Vice Chancellor events and communication.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Projects & Achievements</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">JULY 2025 - TO DATE</span>
+                        <h3 class="timeline-title">AI Engineer - startAD AI for Good Hackathon</h3>
+                        <p class="timeline-subtitle">(with support from Google.org)</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Spearheaded the end-to-end design of an adaptive self-management AI-powered companion application for Multiple Sclerosis patients.</li>
+                            <li>Engineered a feature set integrating adaptive wellness planning, holistic data tracking, and proactive alerts to enable early intervention and maintain patient independence.</li>
+                            <li>Architected a solution to overcome key challenges in MS care, including fragmented data, clinic-based rehab limitations, and proactive mental health support.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">JULY 2025 - TO DATE</span>
+                        <h3 class="timeline-title">Software Developer - Rapid Wash Delivery App</h3>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Designed and developed a cross-platform mobile app that enables users to schedule laundry pickups and deliveries, fully integrated with Rapid Wash.</li>
+                            <li>Built admin dashboard for managing service status updates, user notifications, and delivery coordination, reducing manual overhead by 80%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">AUG 2022 – TO DATE</span>
+                        <h3 class="timeline-title">CSAW Hack My Robot Finalist</h3>
+                        <p class="timeline-subtitle">S.M.A.R.T Construction Group & Center for AI and Robotics & Center For Cybersecurity</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Constructed a TurtleBot 3 Burger RPi4 4GB by assembling vital peripheries such as Raspberry Pi 3, a 360 LiDAR for SLAM and Navigation, a Dynamixel for Spyrocket wheels and tires, an Open CR for open source robot software, and a Li-Po battery.</li>
+                            <li>Highlighted security risks in the construction industry by simulating an autonomous progress monitoring task on a modeled construction site using TurtleBot 3 Burger RPi4 4GB.</li>
+                            <li>Constructed an autonomous TurtleBot 3 Burger RPi4 4GB, implementing 4+ penetration test techniques and enhancing cybersecurity awareness in construction with a 30% reduction in potential vulnerabilities.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">ONGOING</span>
+                        <h3 class="timeline-title">AutoVert - Software Developer</h3>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Developed AutoVert, a cross-platform Flutter app (iOS, Android, Web) offering AI-powered car diagnostics and repair estimates.</li>
+                            <li>Built backend AI pipeline using Google Generative AI and OpenAI API to analyze inputs (voice, text, image) and generate repair recommendations.</li>
+                            <li>Integrated AI-driven speech-to-text (OpenAI/Google Generative AI) and Google Maps APIs to enable real-time vehicle issue reporting, improving user workflow efficiency by 30%.</li>
+                            <li>Optimized data synchronization with Firebase Realtime Database and background tasks (Workmanager), achieving 99% uptime for 1K+ concurrent users and reducing latency by 25% through Dio-based networking.</li>
+                            <li>Achieved 85% test coverage via Flutter's testing framework (unit/widget/integration), automating CI/CD pipelines with GitHub Actions to reduce regression bugs by 50%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">JUNE 2024 - AUG 2024</span>
+                        <h3 class="timeline-title">Movie Recommendation AI</h3>
+                        <p class="timeline-subtitle">Software Engineering, Artificial Intelligence, and Machine Learning</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Built an online recommendation system with collaborative filtering, increasing user satisfaction by 20%.</li>
+                            <li>Implemented a mixed-effects model to analyze user behavior, identifying key retention drivers.</li>
+                            <li>Successfully built and deployed a functional movie recommendation system with a user-friendly interface, improved recommendation accuracy by fine-tuning the SVD algorithm and preprocessing techniques, and enhanced user engagement by providing personalized movie recommendations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">APR 2024 - JUL 2024</span>
+                        <h3 class="timeline-title">Stock Price Prediction AI</h3>
+                        <p class="timeline-subtitle">Artificial Intelligence and Machine Learning</p>
+                        <p class="timeline-location">Abu Dhabi, UAE</p>
+                        <ul class="timeline-bullets">
+                            <li>Successfully built and deployed a functional stock price prediction system with an interactive user interface, enhancing UX and improving model accuracy by 15% through meticulous data preprocessing and fine-tuning of the linear regression model.</li>
+                            <li>Developed an AI chatbot with 90% accuracy in multi-language user queries using NLP and deep learning.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Flutter</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Design & CAD</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">Fusion 360</span>
+                        <span class="skill-tag">Adobe Photoshop</span>
+                        <span class="skill-tag">Adobe Illustrator</span>
+                        <span class="skill-tag">DaVinci Resolve</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Google Generative AI</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Collaborative Filtering</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Hashcat</span>
+                        <span class="skill-tag">CrackStation</span>
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Network Security</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">English (Native)</span>
+                        <span class="skill-tag">Akan (Fluent)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h3>Download Full Resume</h3>
+                <p>Get the complete PDF version of my resume</p>
+                <a href="https://drive.google.com/file/d/1klnPqDlcCxXT7yQEnbCzJVbocWL0JOP1/view?usp=sharing" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="download-button">
+                    Download Resume PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('resume-particles', {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#c70039"
+                        },
+                        "shape": {
+                            "type": "circle"
+                        },
+                        "opacity": {
+                            "value": 0.3,
+                            "random": true
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#c70039",
+                            "opacity": 0.2,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "repulse": {
+                                "distance": 100,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+
+            const items = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+
+</html>

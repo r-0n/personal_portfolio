@@ -85,117 +85,95 @@ $(function() {
         document.body.appendChild(css);
     };
 })
+// History persistence function
+function navigateToSection(sectionId) {
+    // Store current section in sessionStorage
+    sessionStorage.setItem('lastSection', sectionId);
+    // Update URL hash
+    window.location.hash = sectionId;
+    
+    // Hide all sections
+    gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
+    gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
+    gsap.to('#header', 0, { display: "none" });
+    gsap.to('#about', 0, { display: "none" });
+    gsap.to('#blog', 0, { display: "none" });
+    gsap.to('#portfolio', 0, { display: "none" });
+    gsap.to('#contact', 0, { display: "none" });
+    gsap.to('#guitar', 0, { display: "none" });
+    gsap.to('#breaker', 0, { display: "block" });
+    gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
+    gsap.to('#breaker', 0, { display: "none", delay: 2 });
+    gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
+    
+    // Show target section
+    if (sectionId === 'header' || sectionId === '') {
+        gsap.to('#header', 0, { display: "block", delay: .7 });
+    } else {
+        gsap.to('#' + sectionId, 0, { display: "block", delay: .7 });
+    }
+    gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+}
+
+// Restore last visited section on page load
+$(window).on('load', function() {
+    var hash = window.location.hash.substring(1);
+    var lastSection = sessionStorage.getItem('lastSection');
+    
+    // If there's a hash, use it; otherwise use lastSection; otherwise default to header
+    var targetSection = hash || lastSection || 'header';
+    
+    if (targetSection && targetSection !== 'header') {
+        // Small delay to ensure GSAP is loaded
+        setTimeout(function() {
+            navigateToSection(targetSection);
+        }, 100);
+    }
+});
+
+// Handle browser back/forward buttons
+$(window).on('hashchange', function() {
+    var hash = window.location.hash.substring(1);
+    if (hash) {
+        navigateToSection(hash);
+    } else {
+        navigateToSection('header');
+    }
+});
+
 $(function() {
 
-    $('#about-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#blog', 0, { display: "none" });
-        gsap.to('#portfolio', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#contact', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#about', 0, { display: "block", delay: .7 });
-        gsap.to('#guitar', 0, { display: "none" });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#about-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('about');
     })
-    $('#contact-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#about', 0, { display: "none" });
-        gsap.to('#blog', 0, { display: "none" });
-        gsap.to('#portfolio', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#contact', 0, { display: "block", delay: .7 });
-        gsap.to('#guitar', 0, { display: "none" });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#contact-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('contact');
     })
-    $('#portfolio-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#about', 0, { display: "none" });
-        gsap.to('#contact', 0, { display: "none" });
-        gsap.to('#blog', 0, { display: "none" });
-        gsap.to('#guitar', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#portfolio', 0, { display: "block", delay: .7 });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#portfolio-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('portfolio');
     })
-    $('#blog-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#about', 0, { display: "none" });
-        gsap.to('#portfolio', 0, { display: "none" });
-        gsap.to('#contact', 0, { display: "none" });
-        gsap.to('#guitar', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#blog', 0, { display: "block", delay: .7 });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#blog-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('blog');
     })
-    $('#project-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#about', 0, { display: "none" });
-        gsap.to('#portfolio', 0, { display: "none" });
-        gsap.to('#contact', 0, { display: "none" });
-        gsap.to('#guitar', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#blog', 0, { display: "block", delay: .7 });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#project-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('blog');
     })
 
     //for guitar(acoustic sessions) post 
 
-    $('#guitar-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#about', 0, { display: "none" });
-        gsap.to('#portfolio', 0, { display: "none" });
-        gsap.to('#contact', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#blog', 0, { display: "none", delay: .7 });
-        gsap.to('#guitar', 0, { display: "block", delay: .7 });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#guitar-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('guitar');
     })
 
-    $('#home-link').on('click', function() {
-        gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
-        gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
-        gsap.to('#header', 0, { display: "none" });
-        gsap.to('#about', 0, { display: "none" });
-        gsap.to('#portfolio', 0, { display: "none" });
-        gsap.to('#contact', 0, { display: "none" });
-        gsap.to('#blog', 0, { display: "none" });
-        gsap.to('#guitar', 0, { display: "none" });
-        gsap.to('#breaker', 0, { display: "block" });
-        gsap.to('#breaker-two', 0, { display: "block", delay: .1 });
-        gsap.to('#breaker', 0, { display: "none", delay: 2 });
-        gsap.to('#breaker-two', 0, { display: "none", delay: 2 });
-        gsap.to('#header', 0, { display: "block", delay: .7 });
-        gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
+    $('#home-link').on('click', function(e) {
+        e.preventDefault();
+        navigateToSection('header');
     })
 
 

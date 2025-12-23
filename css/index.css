@@ -1000,6 +1000,188 @@ body {
     opacity: .8;
     display: block;
     font-size: 20px;
+}
+
+.section-divider {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(199, 0, 57, 0.3), transparent);
+}
+
+.section-divider .header-caption {
+    position: relative;
+    z-index: 1;
+    background: #101010;
+    padding: 0 30px;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Enhanced blog and guitar card styling */
+.blogs, .guitar {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(199, 0, 57, 0.1);
+}
+
+.blogs:hover, .guitar:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(199, 0, 57, 0.3);
+    border-color: rgba(199, 0, 57, 0.4);
+}
+
+.blogs .img iframe, .guitar .img iframe {
+    border-radius: 8px 8px 0 0;
+    transition: all 0.4s ease;
+}
+
+.blogs:hover .img iframe, .guitar:hover .img iframe {
+    transform: scale(1.05);
+}
+
+.blog-text, .guitar-text {
+    border-top: 2px solid rgba(199, 0, 57, 0.2);
+}
+
+.blog-text h3, .guitar-text h3 {
+    color: #c70039;
+    transition: all 0.3s ease;
+}
+
+.blogs:hover .blog-text h3, .guitar:hover .guitar-text h3 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(199, 0, 57, 0.5);
+}
+
+.blog-date, .guitar-date {
+    box-shadow: 0 4px 15px rgba(199, 0, 57, 0.4);
+    transition: all 0.3s ease;
+}
+
+.blogs:hover .blog-date, .guitar:hover .guitar-date {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(199, 0, 57, 0.6);
+}
+
+/* Improved form message styling */
+#form-message {
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#form-message {
+    display: none;
+}
+
+#form-message a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Enhanced input focus states */
+.input-name:focus, .input-subject:focus, .input-textarea:focus {
+    border: 1px solid rgba(199, 0, 57, 0.5) !important;
+    box-shadow: 0 0 15px rgba(199, 0, 57, 0.2) !important;
+    background: #0a0a0a !important;
+}
+
+/* Better spacing for blog/guitar content */
+.blog-content, .guitar-content {
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Improved iframe container */
+.blogs .img, .guitar .img {
+    background: #000;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogs .img::after, .guitar .img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(199, 0, 57, 0.1) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blogs:hover .img::after, .guitar:hover .img::after {
+    opacity: 1;
+}
+
+/* Enhanced input focus states */
+.input-name:focus, .input-subject:focus, .input-textarea:focus {
+    border: 1px solid rgba(199, 0, 57, 0.5);
+    box-shadow: 0 0 15px rgba(199, 0, 57, 0.2);
+    background: #0a0a0a;
+}
+
+/* Better spacing for blog/guitar content */
+.blog-content, .guitar-content {
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Improved iframe container */
+.blogs .img, .guitar .img {
+    background: #000;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogs .img::after, .guitar .img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(199, 0, 57, 0.1) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blogs:hover .img::after, .guitar:hover .img::after {
+    opacity: 1;
+}
     font-family: raleway;
     padding: 8px;
     padding-top: 15px;
@@ -1010,44 +1192,49 @@ body {
 .portfolio {
     height: auto;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 1.5%;
-    padding-right: 2%;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding: 60px 40px;
+    gap: 40px;
 }
 
 .portfolio-text {
-    width: 40%;
-    padding-left: 1%;
-    margin: 1%;
-    margin-left: -40px;
-    margin-top: 160px;
+    width: 45%;
+    padding: 30px;
+    margin: 0;
     z-index: 3;
     opacity: 1;
     background: #080808;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .portfolio-text h2 {
-    font-size: 35px;
+    font-size: 32px;
     font-family: poppins;
-    font-weight: 200;
-    padding: 20px;
+    font-weight: 600;
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
     color: #c70039;
     transition: all .4s ease;
+    line-height: 1.3;
+    border-bottom: 2px solid rgba(199, 0, 57, 0.2);
 }
 
 .portfolio-text p {
     font-size: 16px;
-    opacity: .8;
+    opacity: .9;
     font-family: poppins;
-    font-weight: 200;
-    padding: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0 0 25px 0;
+    line-height: 1.7;
 }
 
 .portfolio-text button {
@@ -1098,17 +1285,28 @@ button:hover .index {
 
 .button {
     text-align: center;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 .portfolio-image img {
     height: 400px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
 .portfolio-image {
     height: 400px;
-    width: 40%;
+    width: 45%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.portfolio:hover .portfolio-image img {
+    transform: scale(1.05);
 }
 
 .portfolio-image img::before {
@@ -1126,11 +1324,15 @@ button:hover .index {
 
 #portfolio-content {
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     height: auto;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
+    padding: 20px 0;
 }
 
 #portfolio {
