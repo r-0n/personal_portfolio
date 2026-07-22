@@ -46,6 +46,20 @@ $(function() {
         }
     });
 });
+// Acoustic sessions category filter
+$(function() {
+    $('.guitar-filters .filter-btn').on('click', function() {
+        var filter = $(this).data('filter');
+        $('.guitar-filters .filter-btn').removeClass('filter-active');
+        $(this).addClass('filter-active');
+        if (filter === 'all') {
+            $('.music-group').stop(true, true).fadeIn(350);
+        } else {
+            $('.music-group').stop(true, true).hide();
+            $('.music-group[data-category="' + filter + '"]').fadeIn(350);
+        }
+    });
+});
 $(function() {
     $('.menubar').on('click', function() {
         gsap.to('#navigation-content', .6, { y: 0 });
