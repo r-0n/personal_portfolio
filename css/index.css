@@ -1182,12 +1182,6 @@ body {
 .blogs:hover .img::after, .guitar:hover .img::after {
     opacity: 1;
 }
-    font-family: raleway;
-    padding: 8px;
-    padding-top: 15px;
-    color: whitesmoke;
-    font-weight: 900;
-}
 
 .portfolio {
     height: auto;
