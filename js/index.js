@@ -18,6 +18,20 @@ $(function() {
         $('head').append('<link rel="stylesheet" href="css/' + attr + '.css">');
     });
 });
+// Project category filter (project post page)
+$(function() {
+    $('.filter-btn').on('click', function() {
+        var filter = $(this).data('filter');
+        $('.filter-btn').removeClass('filter-active');
+        $(this).addClass('filter-active');
+        if (filter === 'all') {
+            $('.project-group').stop(true, true).fadeIn(350);
+        } else {
+            $('.project-group').stop(true, true).hide();
+            $('.project-group[data-category="' + filter + '"]').fadeIn(350);
+        }
+    });
+});
 $(function() {
     $('.menubar').on('click', function() {
         gsap.to('#navigation-content', .6, { y: 0 });

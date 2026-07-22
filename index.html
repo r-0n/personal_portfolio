@@ -40,7 +40,16 @@
         <!--mouse  follower-->
         <!--loader-->
         <div class="bounce-top" id="loader">
-            <span class="color">Hey</span> There!!
+            <div class="loader-logo">
+                <svg class="loader-triangle color" viewBox="0 0 100 100" aria-hidden="true">
+                    <polygon class="triangle-orbit" points="50,14 87.5,79 12.5,79"></polygon>
+                    <polygon class="triangle-track" points="50,6 94,82 6,82"></polygon>
+                    <polygon class="triangle-runner" points="50,6 94,82 6,82" pathLength="100"></polygon>
+                    <polygon class="triangle-runner triangle-runner-two" points="50,6 94,82 6,82" pathLength="100"></polygon>
+                </svg>
+                <div class="loader-text"><span class="loader-letter">r</span><span class="loader-letter color">-</span><span class="loader-letter color">0</span><span class="loader-letter">n</span></div>
+            </div>
+            <div class="loader-dots" aria-hidden="true"><span></span><span></span><span></span></div>
         </div>
         <!--loader-end-->
         <!--link-screen-->
@@ -491,6 +500,17 @@
                 <span class="header-caption"> My Latest <span class="color"> blog posts.</span></span>
             </div>
 
+            <!--project category filters-->
+            <div class="project-filters">
+                <button class="filter-btn filter-active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="p5js">P5.JS</button>
+                <button class="filter-btn" data-filter="arduino">Arduino</button>
+                <button class="filter-btn" data-filter="solidworks">SolidWorks</button>
+                <button class="filter-btn" data-filter="fusion360">Fusion 360</button>
+            </div>
+            <!--project category filters end-->
+
+            <div class="project-group" data-category="p5js">
             <div class="section-divider">
                 <span class="header-caption"> P5 <span class="color"> .JS</span></span>
             </div>
@@ -615,6 +635,9 @@
                 </div>
             </div>
 
+            </div>
+
+            <div class="project-group" data-category="arduino">
             <div class="section-divider">
                 <span class="header-caption"> Ardu<span class="color">ino</span></span>
             </div>
@@ -637,6 +660,9 @@
             </div>
 
 
+            </div>
+
+            <div class="project-group" data-category="solidworks">
             <div class="section-divider">
                 <span class="header-caption"> Solid <span class="color"> Works</span></span>
             </div>
@@ -682,7 +708,10 @@
                 </div>
 
             </div>
+            </div>
+
             <!-- fusion 360 -->
+            <div class="project-group" data-category="fusion360">
             <div class="section-divider">
                 <a href="https://drive.google.com/drive/folders/18Kn38W2RWwBT9VOqfoj1Pw3wf26emMWy?usp=sharing" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span class="header-caption"> Fusion <span class="color"> 360</span></span></a>
             </div>
@@ -713,6 +742,7 @@
                 </div>
 
 
+            </div>
             </div>
 
             <div class="footer">
