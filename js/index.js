@@ -20,15 +20,29 @@ $(function() {
 });
 // Project category filter (project post page)
 $(function() {
-    $('.filter-btn').on('click', function() {
+    $('.project-filters .filter-btn').on('click', function() {
         var filter = $(this).data('filter');
-        $('.filter-btn').removeClass('filter-active');
+        $('.project-filters .filter-btn').removeClass('filter-active');
         $(this).addClass('filter-active');
         if (filter === 'all') {
             $('.project-group').stop(true, true).fadeIn(350);
         } else {
             $('.project-group').stop(true, true).hide();
             $('.project-group[data-category="' + filter + '"]').fadeIn(350);
+        }
+    });
+});
+// Portfolio category filter
+$(function() {
+    $('.portfolio-filters .filter-btn').on('click', function() {
+        var filter = $(this).data('filter');
+        $('.portfolio-filters .filter-btn').removeClass('filter-active');
+        $(this).addClass('filter-active');
+        if (filter === 'all') {
+            $('.portfolio').stop(true, true).fadeIn(350);
+        } else {
+            $('.portfolio').stop(true, true).hide();
+            $('.portfolio[data-category="' + filter + '"]').fadeIn(350);
         }
     });
 });

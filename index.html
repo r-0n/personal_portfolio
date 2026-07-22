@@ -111,8 +111,8 @@
                     </div>
 
                     <div class="contact">
-                        <a href="egoistkhalig@gmail.com"><img src="images/mail.png" alt="email-pic" class="contactpic"></a>
-                        <a href="+233265680872"><img src="images/call.png" alt="phone-pic" class="contactpic"></a>
+                        <a href="mailto:ronywajah911@gmail.com"><img src="images/mail.png" alt="email-pic" class="contactpic"></a>
+                        <a href="tel:+233265680872"><img src="images/call.png" alt="phone-pic" class="contactpic"></a>
                     </div>
 
                 </div>
@@ -393,8 +393,18 @@
             <div class="portfolio-header"> <span class="color"> My </span> Portfolio
                 <span class="header-caption"> Some Of My <span class="color"> Works</span></span>
             </div>
+            <!--portfolio category filters-->
+            <div class="portfolio-filters">
+                <button class="filter-btn filter-active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robotics">Robotics & IoT</button>
+                <button class="filter-btn" data-filter="solidworks">SolidWorks</button>
+                <button class="filter-btn" data-filter="fabrication">Fabrication</button>
+                <button class="filter-btn" data-filter="fusion360">Fusion 360</button>
+                <button class="filter-btn" data-filter="music">Music</button>
+            </div>
+            <!--portfolio category filters end-->
             <div id="portfolio-content">
-                <div class="portfolio portfolio-first">
+                <div class="portfolio portfolio-first" data-category="robotics">
                     <div class="portfolio-image">
                         <img src="images/robot.jpg" alt="portfolio-first" loading="lazy">
                     </div>
@@ -407,7 +417,7 @@
                         <div class="button"><a href="https://drive.google.com/drive/folders/1L2CpFvaMMK2RYS_706ET2c2iG6Z-OXsb?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
-                <div class="portfolio portfolio-second">
+                <div class="portfolio portfolio-second" data-category="solidworks">
                     <div class="portfolio-text">
                         <h2>SolidWorks Portfolio</h2>
                         <p>Within this portfolio, you will find a collection of meticulously crafted designs and engineering solutions, all brought to life using the robust capabilities of SolidWorks. From intricate mechanical assemblies to elegant product
@@ -419,7 +429,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio portfolio-third">
+                <div class="portfolio portfolio-third" data-category="fabrication">
                     <div class="portfolio-image">
                         <img src="images/radial slicing method.jpeg" alt="portfolio-third" loading="lazy">
                     </div>
@@ -430,7 +440,7 @@
                         <div class="button"><a href="https://drive.google.com/drive/folders/1DbAHLw_-t4c80BPKHZTz-W56iZGOYINL?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
                     </div>
                 </div>
-                <div class="portfolio portfolio-fourth">
+                <div class="portfolio portfolio-fourth" data-category="fusion360">
                     <div class="portfolio-text">
                         <h2>Fusion 360 Portfolio</h2>
                         <p>A collection of designs made with Fusion 360. I invite you to explore my Fusion 360 portfolio, where innovation meets artistry. Witness the fusion of technology and imagination as I push the boundaries of design, engineering, and
@@ -443,7 +453,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio portfolio-fifth">
+                <div class="portfolio portfolio-fifth" data-category="music">
                     <div class="portfolio-image">
                         <img src="images/Guitar.PNG" alt="portfolio-fifth" loading="lazy">
                     </div>
@@ -942,9 +952,9 @@
                         <input type="text" id="subject" placeholder="Subject" class="input-subject">
                         <textarea id="body" class="input-textarea" placeholder="Message? Comment? Opportunities?" required></textarea>
                         <div id="form-message"></div>
-                        <button type="submit" id="submit" value="send">Submit</button>
-                        <p style="margin-top: 15px; font-size: 14px; opacity: 0.7; text-align: center; color: #ccc; font-family: poppins;">
-                            Or email me directly at <a href="mailto:egoistkhalig@gmail.com" style="color: #c70039; text-decoration: none;">egoistkhalig@gmail.com</a>
+                        <button type="submit" id="submit" value="send">Send Message</button>
+                        <p class="direct-email">
+                            Or email me directly at <a href="mailto:ronywajah911@gmail.com">ronywajah911@gmail.com</a>
                         </p>
                     </form>
 
@@ -974,7 +984,7 @@
                             <img src="./images/icon-phone.png" class="icon" alt="phone-icon" loading="lazy">
                             <div class="contact-info-icon-text">
                                 <h6>Call</h6>
-                                <p>+23326568082</p>
+                                <p><a href="tel:+23326568082" class="contact-link">+23326568082</a></p>
                             </div>
                         </div>
 
@@ -982,7 +992,7 @@
                             <img src="./images/icon-email.png" class="icon" alt="email-icon" loading="lazy">
                             <div class="contact-info-icon-text">
                                 <h6>Email</h6>
-                                <p>egoistkhalig@gmail.com</p>
+                                <p><a href="mailto:ronywajah911@gmail.com" class="contact-link">ronywajah911@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -1007,56 +1017,76 @@
     <script src="js/app.js" defer></script>
 
     <script>
-        // Enhanced email function with mailto fallback
+        // Sends form submissions to ronywajah911@gmail.com via FormSubmit,
+        // falling back to the visitor's email client if the request fails.
+        var CONTACT_EMAIL = "ronywajah911@gmail.com";
+
+        function showFormMessage(formMessage, background, html) {
+            formMessage.style.display = "block";
+            formMessage.style.backgroundColor = background;
+            formMessage.style.color = "white";
+            formMessage.innerHTML = html;
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
         function sendEmail(event) {
             event.preventDefault();
-            
+
             var submitBtn = document.getElementById("submit");
             var formMessage = document.getElementById("form-message");
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var phone = document.getElementById("phone").value;
-            var subject = document.getElementById("subject").value || "Contact Enquiry";
+            var subject = document.getElementById("subject").value || "Portfolio Contact Enquiry";
             var body = document.getElementById("body").value;
-            
-            // Disable submit button and show loading state
+
             submitBtn.disabled = true;
             submitBtn.textContent = "Sending...";
             formMessage.style.display = "none";
-            
-            // Use Formspree or similar service, with mailto fallback
-            // For now, we'll use a mailto link as a reliable fallback
-            var mailtoSubject = encodeURIComponent(subject);
-            var mailtoBody = encodeURIComponent(
-                "Name: " + name + "\n" +
-                "Email: " + email + "\n" +
-                "Phone: " + phone + "\n\n" +
-                "Message:\n" + body
-            );
-            
-            // Try to use Web API to send email (requires backend)
-            // For client-side only, we'll use mailto with better UX
-            var mailtoLink = "mailto:egoistkhalig@gmail.com?subject=" + mailtoSubject + "&body=" + mailtoBody;
-            
-            // Create a temporary link and click it
-            var tempLink = document.createElement('a');
-            tempLink.href = mailtoLink;
-            tempLink.style.display = 'none';
-            document.body.appendChild(tempLink);
-            tempLink.click();
-            document.body.removeChild(tempLink);
-            
-            // Show success message
-            setTimeout(function() {
-                formMessage.style.display = "block";
-                formMessage.style.backgroundColor = "#4CAF50";
-                formMessage.style.color = "white";
-                formMessage.innerHTML = "✓ Your email client should open. If not, please email me directly at <a href='mailto:egoistkhalig@gmail.com' style='color: white; text-decoration: underline;'>egoistkhalig@gmail.com</a>";
+
+            fetch("https://formsubmit.co/ajax/" + CONTACT_EMAIL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: body,
+                    _subject: subject,
+                    _template: "table",
+                    _captcha: "false"
+                })
+            }).then(function(response) {
+                if (!response.ok) {
+                    throw new Error("Request failed");
+                }
+                return response.json();
+            }).then(function() {
+                showFormMessage(formMessage, "#4CAF50",
+                    "&#10003; Thanks, your message has been sent! I'll get back to you soon.");
                 document.getElementById("myForm").reset();
+            }).catch(function() {
+                // Network/service failure: open the visitor's email client instead
+                var mailtoLink = "mailto:" + CONTACT_EMAIL +
+                    "?subject=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(
+                        "Name: " + name + "\n" +
+                        "Email: " + email + "\n" +
+                        "Phone: " + phone + "\n\n" +
+                        "Message:\n" + body
+                    );
+                window.location.href = mailtoLink;
+                showFormMessage(formMessage, "#c78100",
+                    "Direct sending is unavailable right now, so your email client was opened instead. " +
+                    "You can also reach me at <a href='mailto:" + CONTACT_EMAIL +
+                    "' style='color: white; text-decoration: underline;'>" + CONTACT_EMAIL + "</a>");
+            }).finally(function() {
                 submitBtn.disabled = false;
-                submitBtn.textContent = "Submit";
-                formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 500);
+                submitBtn.textContent = "Send Message";
+            });
         }
     </script>
 
