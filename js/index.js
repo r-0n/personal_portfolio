@@ -151,6 +151,13 @@ function navigateToSection(sectionId) {
     // Show target section
     if (sectionId === 'header' || sectionId === '') {
         gsap.to('#header', 0, { display: "block", delay: .7 });
+        // particles.js canvas dies while #header is display:none (esp. after resize
+        // on non-laptop viewports). Rebuild it once Home is visible again.
+        setTimeout(function() {
+            if (typeof window.refreshHomeParticles === 'function') {
+                window.refreshHomeParticles();
+            }
+        }, 750);
     } else {
         gsap.to('#' + sectionId, 0, { display: "block", delay: .7 });
     }
@@ -176,7 +183,7 @@ $(window).on('load', function() {
 // Handle browser back/forward buttons
 $(window).on('hashchange', function() {
     var hash = window.location.hash.substring(1);
-    if (hash) {
+    if (hash && hash !== 'header') {
         navigateToSection(hash);
     } else {
         navigateToSection('header');
