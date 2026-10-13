@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="../images/logo-no-background.png">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/crawler.css?v=1">
+    <link rel="stylesheet" href="../css/crawler.css?v=3">
 </head>
 <body class="case-study-page crawler-story" data-base="../">
     <div id="case-chrome-top"></div>
@@ -18,11 +18,8 @@
         <a href="#concept" data-chapter="concept"><i>01</i><span>Concept</span></a>
         <a href="#design" data-chapter="design"><i>02</i><span>Design</span></a>
         <a href="#behavior" data-chapter="behavior"><i>03</i><span>Behavior</span></a>
-        <a href="#technical" data-chapter="technical"><i>04</i><span>Technical</span></a>
-        <a href="#prototyping" data-chapter="prototyping"><i>05</i><span>Build</span></a>
-        <a href="#experiment" data-chapter="experiment"><i>06</i><span>Experiment</span></a>
-        <a href="#reflection" data-chapter="reflection"><i>07</i><span>Reflection</span></a>
-        <a href="#future" data-chapter="future"><i>08</i><span>Future</span></a>
+        <a href="#conclusion" data-chapter="conclusion"><i>04</i><span>Close</span></a>
+        <a href="#references" data-chapter="references"><i>05</i><span>Refs</span></a>
     </nav>
 
     <main class="crawler-main">
@@ -31,23 +28,24 @@
             <div class="hero-stage reveal" data-slide="0">
                 <div class="hero-media">
                     <figure class="hero-frame is-active" data-hero="0">
-                        <img src="../images/the-crawler/face-on.jpg" alt="The Crawler with phone face illuminated">
+                        <img src="../images/the-crawler/face-angle.jpg" alt="The Crawler at an angle with phone face illuminated">
                     </figure>
                     <figure class="hero-frame" data-hero="1">
-                        <img src="../images/the-crawler/face-angle.jpg" alt="The Crawler at an angle">
+                        <img src="../images/the-crawler/face-on.jpg" alt="The Crawler facing forward">
                     </figure>
                     <figure class="hero-frame" data-hero="2">
-                        <img src="../images/the-crawler/hero-close.jpg" alt="Close-up of The Crawler ultrasonic face">
+                        <img src="../images/the-crawler/hero-close.jpg" alt="Close-up of The Crawler ultrasonic sensors and legs">
                     </figure>
                 </div>
                 <div class="hero-veil" aria-hidden="true"></div>
                 <div class="hero-copy">
-                    <p class="case-kicker">Robotics · Speculative Interaction</p>
+                    <p class="case-kicker">May 2025 · Speculative Robotics &amp; Human–Robot Interaction</p>
                     <h1>
                         <span class="hero-title-line">The</span>
                         <span class="hero-title-line color">Crawler</span>
                     </h1>
-                    <p class="hero-line">A smartphone that refuses to remain passive</p>
+                    <p class="hero-line">What if managing your phone meant letting it walk away?</p>
+                    <p class="hero-role">Technical Developer · Collaborative Project</p>
                     <div class="hero-dots" role="tablist" aria-label="Hero slides">
                         <button type="button" class="is-on" data-go="0" aria-label="Slide 1"></button>
                         <button type="button" data-go="1" aria-label="Slide 2"></button>
@@ -62,170 +60,125 @@
             <div class="chapter-index" aria-hidden="true">01</div>
             <div class="chapter-head reveal">
                 <p class="season-kicker">Concept &amp; Inspiration</p>
-                <h2>When the Phone Stops <span class="color">Waiting</span></h2>
+                <h2>Rethinking Smartphone <span class="color">Management</span></h2>
             </div>
             <div class="chapter-prose reveal">
-                <p class="lead">We treat smartphones as tools that wait for us. They sit still until we decide to pick them up, unlock them, and look. The Crawler questions that assumption.</p>
-                <p>The project began with an interest in attention, dependency, and the quiet power devices already have over our posture, time, and presence in a room. What if that relationship became spatial? What if looking away — or looking too long — changed how the object behaved in physical space?</p>
-                <p>Rather than criticizing screen culture through a poster or interface, The Crawler turns dependency into movement. The phone is no longer only a surface for content. It becomes the head of a small robotic character that advances, retreats, and watches back.</p>
+                <p class="lead">We carry our phones almost everywhere. They have become constant companions, offering convenience and connection while demanding more of our attention than we often intend. Even the tools designed to help us manage our screen time exist within the devices we're trying to use less.</p>
+                <p>What if our phones could physically help us break these habits?</p>
+                <p>The Crawler emerged from this question. Conceived as a six-legged personal robot capable of carrying a smartphone, it explores an alternative approach to digital well-being through movement and physical interaction. Rather than simply reminding users to put their phones down, the robot could move the device out of reach, follow its owner when needed, or encourage breaks from prolonged use.</p>
+                <p>The project draws inspiration from personal robotic companions such as the Piaggio Gitamini, which follows its owner and carries belongings. The Crawler extends this idea beyond convenience, imagining a robot that not only carries our technology but also influences how we engage with it.</p>
+                <p class="beat">There is a playful contradiction at the heart of the concept. <strong>To help people regain control over their smartphones, we give the robot a degree of control over the phone itself.</strong></p>
             </div>
         </section>
 
-        <!-- 02 DESIGN EXPLORATION -->
+        <!-- 02 DESIGN & DEVELOPMENT -->
         <section class="chapter" id="design">
             <div class="chapter-index" aria-hidden="true">02</div>
             <div class="chapter-head reveal">
-                <p class="season-kicker">Design Exploration</p>
-                <h2>Giving Technology a <span class="color">Body</span></h2>
+                <p class="season-kicker">Design &amp; Development</p>
+                <h2>Giving the Phone a <span class="color">Body</span></h2>
             </div>
             <div class="split reveal">
                 <div class="split-copy">
-                    <p>The central design move was simple: take a passive object people already hold and give it legs.</p>
-                    <p>A six-legged chassis turned the smartphone into a character with weight, silhouette, and gait. The ultrasonic sensors read as eyes. Exposed wiring and servo joints kept the machine honest — a prototype that shows how it thinks, not a sealed appliance that hides its logic.</p>
-                    <p>The phone mount places the screen where a face would be. When the display shows two glowing circles, the robot stops looking like hardware and starts looking like something that can meet your gaze.</p>
+                    <p>We began with a programmable Freenove hexapod, a six-legged robot capable of crawling and twisting its body in ways that resemble a living creature. Its movement offered an interesting foundation for exploring how an ordinary smartphone might acquire a sense of personality and apparent independence.</p>
+                    <p>My technical work focused on programming the robot's movement and proximity-based responses using an Arduino Mega 2560 and an HC-SR04 ultrasonic sensor.</p>
+                    <p>The implemented behavior follows a straightforward rule. When the path ahead is clear, the robot continues crawling forward. When an object comes within approximately 20 centimeters, it backs away and turns to change direction.</p>
+                    <p class="beat">Simple movements. A different relationship.</p>
+                    <p>By allowing the robot to retreat from someone approaching it, we began exploring how physical movement could make a familiar device appear less passive. The act of reaching for a phone could become an interaction in which the object no longer remains where its owner expects it to be.</p>
+                    <p>This implementation formed an early technical exploration of the larger personal-assistant concept. The prototype demonstrated proximity-based movement and avoidance, while more advanced features such as tracking actual phone usage, recognizing users, and responding to their habits remained part of the speculative design vision.</p>
                 </div>
                 <div class="split-media">
                     <figure>
-                        <img src="../images/the-crawler/hero-detail.jpg" alt="Six-legged chassis and ultrasonic sensors" loading="lazy">
+                        <img src="../images/the-crawler/hero-detail.jpg" alt="Hexapod chassis, ultrasonic sensors, and servo wiring" loading="lazy">
                     </figure>
                     <figure>
-                        <img src="../images/the-crawler/lab-back.jpg" alt="The Crawler in the studio with phone mounted" loading="lazy">
+                        <img src="../images/the-crawler/lab-back.jpg" alt="The Crawler prototype on the studio table" loading="lazy">
+                    </figure>
+                    <figure>
+                        <img src="../images/the-crawler/hero-close.jpg" alt="Close-up of legs and HC-SR04 sensor face" loading="lazy">
                     </figure>
                 </div>
             </div>
         </section>
 
-        <!-- 03 BEHAVIORAL DESIGN -->
+        <!-- 03 BEHAVIOR & INTERACTION -->
         <section class="chapter" id="behavior">
             <div class="chapter-index" aria-hidden="true">03</div>
             <div class="chapter-head reveal">
-                <p class="season-kicker">Behavioral Design</p>
-                <h2>Choreographing <span class="color">Attention</span></h2>
+                <p class="season-kicker">Behavior &amp; Interaction</p>
+                <h2>A Companion With a Mind of Its <span class="color">Own</span></h2>
             </div>
-            <div class="chapter-prose reveal">
-                <p class="lead">Behavior is the real interface. The Crawler is designed around three gestures: following, approaching, and withdrawing.</p>
-                <ul class="behavior-list">
-                    <li><strong>Follow</strong> — the robot orients toward presence, reading the room as something that can be pursued.</li>
-                    <li><strong>Approach</strong> — when attention leaves the glass, the machine closes distance, making reclaiming the world feel answered.</li>
-                    <li><strong>Withdraw</strong> — when screen-time dominates, it retreats, turning overuse into a visible social event.</li>
-                </ul>
-                <p>These are not gags. They are a choreography of agency: the object stops waiting and starts negotiating space with the person who usually controls it.</p>
+            <div class="split reveal">
+                <figure class="split-single">
+                    <img src="../images/the-crawler/face-on.jpg" alt="The Crawler with glowing screen eyes" loading="lazy">
+                </figure>
+                <div class="split-copy">
+                    <p>The Crawler was imagined as more than a mobile phone holder. Its movements, sounds, and physical interactions would give it a character of its own, turning ordinary moments of smartphone use into small encounters.</p>
+                    <p>Approach it, and it might scurry away. Ignore it for too long, and it could nudge you like a curious cat. Spend too much time on your phone, and it might retreat, encouraging you to take a break.</p>
+                    <p>These behaviors explore a different kind of interface. Instead of communicating solely through screens and notifications, the robot could express its intentions through distance, movement, and physical presence.</p>
+                    <p>The working prototype demonstrated the fundamental retreat behavior through ultrasonic obstacle detection. The broader interaction scenarios, including usage-aware withdrawal, following its owner, nudging, and expressive sounds, represent the project's envisioned development beyond that implementation.</p>
+                    <p>What interested us was how even simple movement could change the way people perceive an object. A phone that moves away might seem stubborn. One that approaches might appear affectionate or demanding. Neither interpretation requires the machine to possess those emotions.</p>
+                    <p class="beat"><strong>Its behavior gives us a reason to imagine that it does.</strong></p>
+                </div>
             </div>
         </section>
 
-        <!-- 04 TECHNICAL -->
-        <section class="chapter" id="technical">
+        <!-- 04 CONCLUSION -->
+        <section class="chapter" id="conclusion">
             <div class="chapter-index" aria-hidden="true">04</div>
             <div class="chapter-head reveal">
-                <p class="season-kicker">Technical Development</p>
-                <h2>From Intention to <span class="color">Movement</span></h2>
+                <p class="season-kicker">Conclusion</p>
+                <h2>Helping Without Taking <span class="color">Over</span></h2>
             </div>
-            <div class="split reveal">
-                <div class="split-copy">
-                    <p>Under the character sits a control loop: sense, decide, actuate.</p>
-                    <p>Ultrasonic sensing informs proximity. A microcontroller evaluates conditions and selects gait. Servo-driven legs translate those decisions into pursue and retreat locomotion across six limbs.</p>
-                    <div class="flow">
-                        <div class="flow-node">Sense</div>
-                        <div class="flow-arrow" aria-hidden="true">→</div>
-                        <div class="flow-node">Decide</div>
-                        <div class="flow-arrow" aria-hidden="true">→</div>
-                        <div class="flow-node">Gait</div>
-                        <div class="flow-arrow" aria-hidden="true">→</div>
-                        <div class="flow-node">Motion</div>
-                    </div>
-                    <p>The technical work was always in service of the behavioral idea: movement had to feel intentional enough to be read as a response, not random noise.</p>
-                </div>
-                <figure class="split-single">
-                    <img src="../images/the-crawler/hero-close.jpg" alt="Servo legs, wiring, and ultrasonic face" loading="lazy">
-                </figure>
+            <div class="chapter-prose reveal">
+                <p class="lead">The Crawler began with a practical ambition: to explore whether a personal robot could help people manage their smartphone habits by changing how they physically access their devices.</p>
+                <p>Developing the prototype opened up a broader question about agency. The robot's programmed movements were relatively simple, yet they suggested a relationship in which the smartphone was no longer entirely passive. The user could approach it, but the robot could also retreat.</p>
+                <p>This tension is what makes the concept interesting. A companion designed to reduce our dependence on technology might occasionally frustrate us in the process. Its usefulness comes not only from carrying the phone, but from interrupting the expectation that it should always be within reach.</p>
+                <p>Future iterations could connect the robot's physical behavior to actual phone usage, allowing it to respond more meaningfully to individual habits while giving users control over when and how it intervenes.</p>
+                <p class="beat"><strong>The question is not simply whether a robot can manage our phones, but how much independence we are willing to give it to help us manage ourselves.</strong></p>
             </div>
         </section>
 
-        <!-- 05 PROTOTYPING -->
-        <section class="chapter" id="prototyping">
+        <!-- 05 REFERENCES -->
+        <section class="chapter" id="references">
             <div class="chapter-index" aria-hidden="true">05</div>
             <div class="chapter-head reveal">
-                <p class="season-kicker">Prototyping &amp; Iteration</p>
-                <h2>Building the <span class="color">Crawler</span></h2>
+                <p class="season-kicker">References</p>
+                <h2>Sources &amp; <span class="color">Inspiration</span></h2>
             </div>
-            <div class="photo-grid reveal">
-                <figure>
-                    <img src="../images/the-crawler/lab-back.jpg" alt="Prototype on the studio table" loading="lazy">
-                    <figcaption>Studio prototype — phone as head, legs as body</figcaption>
-                </figure>
-                <figure>
-                    <img src="../images/the-crawler/hero-detail.jpg" alt="Wiring and servo assembly" loading="lazy">
-                    <figcaption>Exposed assembly kept the engineering readable</figcaption>
-                </figure>
-                <figure>
-                    <img src="../images/the-crawler/face-angle.jpg" alt="Character face on the phone screen" loading="lazy">
-                    <figcaption>Screen eyes complete the character read</figcaption>
-                </figure>
-            </div>
-            <div class="chapter-prose reveal">
-                <p>Building meant balancing stability, cable management, servo torque, and the awkward reality of carrying a glass rectangle on a walking chassis. Each test refined whether the wheel of attention — approach, retreat, pause — could be felt before it was explained.</p>
-            </div>
-        </section>
-
-        <!-- 06 FINAL EXPERIMENT -->
-        <section class="chapter" id="experiment">
-            <div class="chapter-index" aria-hidden="true">06</div>
-            <div class="chapter-head reveal">
-                <p class="season-kicker">Final Experiment</p>
-                <h2>When the Object Moves <span class="color">First</span></h2>
-            </div>
-            <div class="split reveal">
-                <figure class="split-single">
-                    <img src="../images/the-crawler/face-on.jpg" alt="Encountering The Crawler face to face" loading="lazy">
-                </figure>
-                <div class="split-copy">
-                    <p>The experiment is the encounter: a phone that no longer waits on the table, a body that closes or opens distance based on how you attend to it.</p>
-                    <p>Documentation of that behavior will sit here as video arrives. For now, the stills hold the moment before motion — the character already looking, already capable of leaving.</p>
-                    <div class="media-slot" aria-label="Video coming soon">
-                        <span>Behavior video — coming soon</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 07 REFLECTION -->
-        <section class="chapter" id="reflection">
-            <div class="chapter-index" aria-hidden="true">07</div>
-            <div class="chapter-head reveal">
-                <p class="season-kicker">Critical Reflection</p>
-                <h2>Who Is Really in <span class="color">Control</span>?</h2>
-            </div>
-            <div class="chapter-prose reveal">
-                <p class="lead">We like to believe we use devices. The Crawler makes that belief harder to hold without looking at it.</p>
-                <p>If a machine can answer your attention with movement, agency stops being a metaphor. Autonomy becomes a negotiation in the room: who approaches, who withdraws, whose gaze organizes the scene.</p>
-                <p>The project does not claim the robot is alive. It claims the relationship already was — and that giving the phone a body only made the psychology easier to see.</p>
-            </div>
-        </section>
-
-        <!-- 08 FUTURE -->
-        <section class="chapter" id="future">
-            <div class="chapter-index" aria-hidden="true">08</div>
-            <div class="chapter-head reveal">
-                <p class="season-kicker">Future Directions</p>
-                <h2>Beyond the <span class="color">Screen</span></h2>
-            </div>
-            <div class="chapter-prose reveal">
-                <p>Next steps push toward richer sensing, clearer gaits, and situations where physically expressive technology can live outside the studio — environments where a device’s body is part of how it communicates, not just how it is carried.</p>
-                <p>The Crawler is a first argument: the screen does not have to be the only surface of interaction. Sometimes the most honest interface is the one that walks toward you when you look away.</p>
-                <div class="concept-docs">
-                    <a class="doc-btn" href="https://drive.google.com/drive/folders/1L2CpFvaMMK2RYS_706ET2c2iG6Z-OXsb?usp=sharing" target="_blank" rel="noopener noreferrer">Project Folder</a>
-                </div>
-            </div>
+            <ul class="ref-list reveal">
+                <li>
+                    <a href="https://www.amazon.ae/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN/?th=1" target="_blank" rel="noopener noreferrer">
+                        <span class="ref-label">Platform</span>
+                        <span class="ref-title">Freenove Hexapod Robot Kit</span>
+                        <span class="ref-meta">Amazon</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://piaggiofastforward.com/shop/gitaplus" target="_blank" rel="noopener noreferrer">
+                        <span class="ref-label">Companion</span>
+                        <span class="ref-title">Piaggio Fast Forward gita_plus</span>
+                        <span class="ref-meta">piaggiofastforward.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.forbes.com/sites/forbes-personal-shopper/2024/03/06/gitamini-review/" target="_blank" rel="noopener noreferrer">
+                        <span class="ref-label">Review</span>
+                        <span class="ref-title">Gita Mini Review</span>
+                        <span class="ref-meta">Forbes</span>
+                    </a>
+                </li>
+            </ul>
         </section>
 
         <nav class="case-pager">
             <a href="carapace.html"><small>Previous</small>Carapace</a>
-            <a class="next" href="solidworks-robotic-arm.html"><small>Next</small>SolidWorks Robotic Arm</a>
+            <a class="next" href="visages-of-fanaticism.html"><small>Next</small>Visages of Fanaticism</a>
         </nav>
     </main>
 
     <div id="case-chrome-bottom"></div>
     <script src="../js/case-study.js" defer></script>
-    <script src="../js/crawler.js?v=1" defer></script>
+    <script src="../js/crawler.js?v=2" defer></script>
 </body>
 </html>
