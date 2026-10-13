@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <title>Carapace || Aaron Wajah</title>
+    <link rel="icon" type="image/png" href="../images/logo-no-background.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/carapace.css">
+</head>
+<body class="case-study-page carapace-story" data-base="../">
+    <div id="case-chrome-top"></div>
+
+    <canvas id="shell-field" class="shell-field" aria-hidden="true"></canvas>
+
+    <nav class="annuli" aria-label="Growth seasons">
+        <a href="#origin" data-season="origin"><i>00</i><span>Concept</span></a>
+        <a href="#final" data-season="final"><i>01</i><span>Final</span></a>
+        <a href="#process" data-season="process"><i>02</i><span>Process</span></a>
+        <a href="#pack" data-season="pack"><i>03</i><span>Lloyd</span></a>
+        <a href="#stack" data-season="stack"><i>04</i><span>Stack</span></a>
+        <a href="#pigment" data-season="pigment"><i>05</i><span>Pigment</span></a>
+    </nav>
+
+    <main class="carapace-main">
+        <header class="scute-hero">
+            <div class="hero-copy reveal">
+                <canvas id="hero-scute" class="hero-scute" width="720" height="720" aria-hidden="true"></canvas>
+                <p class="case-kicker">Digital Matter · Parametricism in 2.5D</p>
+                <h1><span class="color">Carapace</span></h1>
+                <p class="case-role">Aaron Wajah &amp; Mustafa Bakir </p>
+                <ul class="meta-hexes">
+                    <li>Rhinoceros 3D</li>
+                    <li>Grasshopper</li>
+                </ul>
+            </div>
+            <figure class="hero-specimen reveal">
+                <div class="specimen-mask">
+                    <img src="../images/carapace/cover.png" alt="Final Carapace panels — edge and front, height mapped as pigment">
+                </div>
+                <div class="doc-btns">
+                    <a class="doc-btn" href="https://drive.google.com/file/d/1liXBXmpCorF-067zgIJzz7k-k5DvFwrP/view?usp=sharing" target="_blank" rel="noopener noreferrer">Initial Documentation</a>
+                    <a class="doc-btn" href="https://drive.google.com/file/d/1PeJ-HQRe3teeAxF8X9btadWzhzCKaZ3v/view?usp=sharing" target="_blank" rel="noopener noreferrer">Project Booklet</a>
+                </div>
+            </figure>
+        </header>
+
+        <section class="season season-origin" id="origin">
+            <div class="season-index" aria-hidden="true">00</div>
+            <div class="origin-split reveal">
+                <div class="look-copy">
+                    <p class="season-kicker">Concept and Inspiration</p>
+                    <div class="origin-prose">
+                        <p>A tortoise shell is more than a protective covering. Look closely, and its surface reveals a collection of interlocking plates, each marked by ridges that trace years of gradual growth. These patterns are not simply decorative. They emerge from a biological process in which structure develops slowly, layer by layer.</p>
+                        <p>This became the starting point for Carapace, a parametric design project inspired by the geometry of tortoise shells and the relationship between growth, time, and form.</p>
+                        <p>The idea was to understand how nature builds complexity through repetition. Using Rhino and Grasshopper, we translated the shell’s arrangement of scutes into Voronoi cells, refining their distribution through Lloyd’s algorithm to achieve a more balanced, organic structure. Each cell was then developed through concentric offsets and stepped elevations, recreating the layered ridges characteristic of a growing shell.</p>
+                        <p>Imperfection mattered, too. Natural growth rarely follows perfectly straight lines or uniform proportions. We explored controlled irregularities in the geometry, allowing subtle variations to interrupt the precision of the underlying mathematical system. Gradients of earthy oranges and dark browns further emphasized the depth of each layer, referencing the weathered appearance of a tortoise shell.</p>
+                        <p class="origin-ask">Can we design the process of growth rather than just imitate its final form?</p>
+                        <p>It is a question that opens up possibilities for using computational design to explore how natural structures develop, adapt, and acquire their distinct character over time.</p>
+                    </div>
+                </div>
+                <div class="scute-mosaic">
+                    <figure class="scute-tile">
+                        <img src="../images/carapace/inspire-star.png" alt="Star-pattern tortoise shell with radiating scute geometry">
+                    </figure>
+                    <figure class="scute-tile">
+                        <img src="../images/carapace/inspire-plan.png" alt="Top-down tortoise shell showing hexagonal growth rings">
+                    </figure>
+                    <figure class="scute-tile">
+                        <img src="../images/carapace/inspire-drawing.png" alt="Contour line drawing of a tortoise carapace">
+                    </figure>
+                    <figure class="scute-tile">
+                        <img src="../images/carapace/inspire-terrace.png" alt="Close-up of raised tortoise scutes and growth rings">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="season season-final" id="final">
+            <div class="season-index" aria-hidden="true">01</div>
+            <p class="season-kicker reveal">Final Render</p>
+            <div class="orbit-carousel reveal" id="final-carousel" data-interval="4200" aria-roledescription="carousel" aria-label="Final renders">
+                <div class="orbit-stage">
+                    <button type="button" class="orbit-nav orbit-prev" aria-label="Previous render">‹</button>
+                    <div class="orbit-track">
+                        <figure class="orbit-slide is-active" data-i="0"><img src="../images/carapace/final/fv1.png" alt="Final Version 1"></figure>
+                        <figure class="orbit-slide" data-i="1"><img src="../images/carapace/final/fv2.png" alt="Final Version 2"></figure>
+                        <figure class="orbit-slide" data-i="2"><img src="../images/carapace/final/fv3.png" alt="Final Version 3"></figure>
+                        <figure class="orbit-slide" data-i="3"><img src="../images/carapace/final/fv4.png" alt="Final Version 4"></figure>
+                        <figure class="orbit-slide" data-i="4"><img src="../images/carapace/final/pair.png" alt="Paired finished panels"></figure>
+                        <figure class="orbit-slide" data-i="5"><img src="../images/carapace/final/edge.png" alt="Edge and front views"></figure>
+                        <figure class="orbit-slide" data-i="6"><img src="../images/carapace/final/angle.png" alt="Angled pigment-mapped panel"></figure>
+                        <figure class="orbit-slide" data-i="7"><img src="../images/carapace/final/20-scute.png" alt="20 Scute Voronoi panel"></figure>
+                        <figure class="orbit-slide" data-i="8"><img src="../images/carapace/final/20-iso.png" alt="Isometric 20 scutes"></figure>
+                        <figure class="orbit-slide" data-i="9"><img src="../images/carapace/final/30-iso.png" alt="Isometric 30 scutes"></figure>
+                        <figure class="orbit-slide" data-i="10"><img src="../images/carapace/final/40-iso.png" alt="Isometric 40 scutes"></figure>
+                        <figure class="orbit-slide" data-i="11"><img src="../images/carapace/final/40-growth.png" alt="40 scutes with taller growth"></figure>
+                    </div>
+                    <button type="button" class="orbit-nav orbit-next" aria-label="Next render">›</button>
+                    <div class="orbit-ring" aria-hidden="true"><span class="orbit-progress"></span></div>
+                </div>
+                <div class="orbit-controls">
+                    <button type="button" class="orbit-play is-playing" aria-label="Pause slideshow" title="Pause">❚❚</button>
+                    <div class="orbit-dots" role="tablist" aria-label="Choose render"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="season season-process" id="process">
+            <div class="season-index" aria-hidden="true">02</div>
+            <p class="season-kicker reveal">Development Process</p>
+            <div class="process-carousel reveal" id="process-carousel" data-interval="5000" aria-roledescription="carousel" aria-label="Development process">
+                <div class="process-rail">
+                    <button type="button" class="orbit-nav orbit-prev" aria-label="Previous step">‹</button>
+                    <div class="process-viewport">
+                        <div class="process-track">
+                            <figure class="process-slide is-active"><img src="../images/carapace/process/01-square-base.png" alt="Square Base Creation"><figcaption>Square Base Creation</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/02-point-population.png" alt="Point Population"><figcaption>Point Population</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/03-voronoi-creation.png" alt="Voronoi Creation"><figcaption>Voronoi Creation</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/04-lloyd-relax.png" alt="Relaxing the Vcells via Lloyd's Algorithm"><figcaption>Relaxing the Vcells via Lloyd’s Algorithm</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/05-populate-seed.png" alt="Populate Seed and Boundary"><figcaption>Populate Seed &amp; Boundary</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/06-lloyd-result.png" alt="Final Voronoi Result From Lloyd's Algorithm"><figcaption>Final Voronoi Result From Lloyd’s Algorithm</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/07-fillet-curves.png" alt="Fillet Voronoi Curves"><figcaption>Fillet Voronoi Curves</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/08-divide-curves.png" alt="Dividing Curves to Gain More Control Points"><figcaption>Dividing Curves to Gain More Control Points</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/09-nurbs-curve.png" alt="Nurbs Curve"><figcaption>Nurbs Curve</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/10-offset-ridges.png" alt="Offsetting Curves for Ridges Contour"><figcaption>Offsetting Curves for Ridges Contour</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/11-move-unit-y.png" alt="Moving the Offset Curve in Unit Y Direction"><figcaption>Moving the Offset Curve in Unit Y Direction</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/12-series-height.png" alt="Applying Series for Height of Scutes and Number of Scute Ridges"><figcaption>Applying Series for Height of Scutes and Number of Scute Ridges</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/13-series-ridge-control.png" alt="Series Control for Ridge Spacing"><figcaption>Series Control for Ridge Spacing</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/14-extrude-preview.png" alt="Extrude Preview"><figcaption>Extrude Preview</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/15-extrude-solid.png" alt="Extruding to Make Results Solid"><figcaption>Extruding to Make Results Solid</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/16-variation-less-seed.png" alt="Variation 1 Less Seed Points"><figcaption>Variation 1 — Less Seed Points</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/17-variation-more-seed.png" alt="Variation 2 More Seed Points"><figcaption>Variation 2 — More Seed Points</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/18-variation-height.png" alt="Variation 3 Varying Scute Height and Number"><figcaption>Variation 3 — Varying Scute Height &amp; Number</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/19-pigment-preview.png" alt="Pigment Preview"><figcaption>Pigment Preview</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/20-upclose-steps.png" alt="Upclose More Steps on Scutes"><figcaption>Upclose — More Steps on Scutes</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/21-angled-panel.png" alt="Angled Panel Render"><figcaption>Angled Panel Render</figcaption></figure>
+                            <figure class="process-slide"><img src="../images/carapace/process/22-scute-diagram.png" alt="Scute Diagram"><figcaption>Scute Diagram</figcaption></figure>
+                        </div>
+                    </div>
+                    <button type="button" class="orbit-nav orbit-next" aria-label="Next step">›</button>
+                </div>
+                <div class="orbit-controls">
+                    <button type="button" class="orbit-play is-playing" aria-label="Pause slideshow" title="Pause">❚❚</button>
+                    <span class="process-step" id="process-step">01 / 22</span>
+                    <div class="orbit-dots process-dots" role="tablist" aria-label="Choose process step"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="season season-pack" id="pack">
+            <div class="season-index" aria-hidden="true">03</div>
+            <div class="pack-copy reveal">
+                <p class="season-kicker">03 · Base geometry</p>
+                <h2>Lloyd’s <span class="color">Algorithm</span></h2>
+                <p>Lloyd’s algorithm produces a centroidal Voronoi tessellation. Given a set of seed points, it builds the Voronoi cells that claim every surrounding location, then moves each seed to the geometric center of its own cell. That step is repeated.</p>
+                <p>With every pass, cells become more even in area, boundaries settle, and the packing loses the awkwardness of a random start. The same iterative pressure is what Grasshopper was doing when the Voronoi component was looped four times to relax the colony — and what natural scutes approximate as they compete for space over time.</p>
+                <div class="pack-controls">
+                    <button type="button" class="scute-btn" id="reseed">Reseed</button>
+                    <button type="button" class="scute-btn scute-btn-accent" id="relax">Relax × 4</button>
+                    <span class="pass-readout" id="pass-readout">pass 0 / 4</span>
+                    <span class="pass-readout" id="lloyd-stats">48 sites · mean drift —</span>
+                </div>
+            </div>
+            <div class="pack-stage reveal">
+                <canvas id="relax-canvas" width="960" height="620" aria-label="Interactive Lloyd Voronoi relaxation"></canvas>
+            </div>
+        </section>
+
+        <section class="season season-stack" id="stack">
+            <div class="season-index" aria-hidden="true">04</div>
+            <div class="stack-copy reveal">
+                <p class="season-kicker">Stack · Layering</p>
+                <h2>Years, not a <span class="color">loft</span></h2>
+                <p>Concentric offsets grow inward from each Voronoi polygon. A series sets how many rings; a second series plus Move builds the stacking order.</p>
+                <p>A continuous loft between rings would yield an inaccurate, smooth dome. So the curves are extruded into discrete, solid tiers — the ridges of sequential growth cycles.</p>
+                <div class="stack-controls">
+                    <label class="season-slider">
+                        <span>Growth seasons <b id="season-count">5</b></span>
+                        <input type="range" id="seasons" min="1" max="10" value="5">
+                    </label>
+                    <label class="extrude-toggle">
+                        <input type="checkbox" id="extrude">
+                        <span>Extrude into tiers</span>
+                    </label>
+                </div>
+            </div>
+            <div class="stack-rig reveal">
+                <div class="growth-viewport">
+                    <div class="growth-scute" id="growth-scute" data-rings="5"></div>
+                </div>
+                <div class="stack-stills">
+                    <img src="../images/carapace/img-07.jpg" alt="Concentric offset curves stacked as growth rings">
+                    <img src="../images/carapace/img-08.jpg" alt="Vertically extruded discrete tiers">
+                </div>
+            </div>
+        </section>
+
+        <section class="season season-pigment" id="pigment">
+            <div class="season-index" aria-hidden="true">05</div>
+            <div class="pigment-copy reveal">
+                <p class="season-kicker">Pigment · Color mapping</p>
+                <h2>Height becomes <span class="color">color</span></h2>
+                <p>Z-axis elevation for every tier is normalized into a 0–1 domain, then a custom gradient is mapped across it. Dark, weathered tones settle on the lowest bases; brighter tones claim the peaks. Pigment is not painted. It is earned by height.</p>
+                <p class="scrub-hint">Raise the elevation. The stack starts grey. Base weathers brown; the peak goes yellow.</p>
+                <label class="season-slider">
+                    <span>Elevation <b id="z-chip">0.00</b></span>
+                    <input type="range" id="z-scrub" min="0" max="100" value="0">
+                </label>
+            </div>
+            <div class="pigment-rig reveal">
+                <div class="growth-viewport">
+                    <div class="growth-scute is-extruded" id="pigment-scute" data-rings="8"></div>
+                </div>
+                <div class="swatch-run" id="swatch-run" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <img class="pigment-still" src="../images/carapace/img-09.jpg" alt="Elevation mapped to a dark-to-bright color gradient">
+            </div>
+        </section>
+
+        <div class="doc-close reveal" aria-label="Project documents">
+            <div class="doc-btns">
+                <a class="doc-btn" href="https://drive.google.com/file/d/1liXBXmpCorF-067zgIJzz7k-k5DvFwrP/view?usp=sharing" target="_blank" rel="noopener noreferrer">Initial Documentation</a>
+                <a class="doc-btn" href="https://drive.google.com/file/d/1PeJ-HQRe3teeAxF8X9btadWzhzCKaZ3v/view?usp=sharing" target="_blank" rel="noopener noreferrer">Project Booklet</a>
+            </div>
+        </div>
+
+        <nav class="case-pager">
+            <a href="visages-of-fanaticism.html"><small>Previous</small>Visages of Fanaticism</a>
+            <a class="next" href="the-crawler.html"><small>Next</small>The Crawler</a>
+        </nav>
+    </main>
+
+    <div id="case-chrome-bottom"></div>
+    <script src="../js/case-study.js" defer></script>
+    <script src="../js/carapace.js" defer></script>
+</body>
+</html>

@@ -1,12 +1,34 @@
 $(window).on('load', function() {
+    // Resume where the visitor left off: URL hash first (Back from a project
+    // page, shared link), then the section remembered for this tab, else Home.
+    var initial = window.location.hash.substring(1) ||
+                  sessionStorage.getItem(SECTION_KEY) || 'header';
+    if (!document.getElementById(initial)) initial = 'header';
+    rememberSection(initial);
+    // Keep the address bar canonical: Home has no hash, sections carry theirs.
+    history.replaceState({ section: initial }, '', initial === 'header' ? BASE_URL : BASE_URL + '#' + initial);
+
     gsap.to('#loader', 1, { y: "-100%" });
     gsap.to('#loader', 1, { opacity: 0 });
     gsap.to('#loader', 0, { display: "none", delay: 1 });
-    gsap.to('#header', 0, { display: "block", delay: 1 })
+    if (initial !== 'header') gsap.set('#header', { display: "none" }); // Home is visible by default in CSS
+    gsap.to('#' + initial, 0, { display: "block", delay: 1 });
     gsap.to('#navigation-content', 0, { display: "none" });
     gsap.to('#navigation-content', 0, { display: "flex", delay: 1 });
+
+    if (initial === 'header') {
+        setTimeout(function() {
+            if (typeof window.refreshHomeParticles === 'function') window.refreshHomeParticles();
+        }, 1050);
+    } else {
+        setTimeout(function() { restoreScroll(initial); }, 1050);
+    }
 })
 $(function() {
+    var savedTheme = localStorage.getItem('r0n-theme-color');
+    if (savedTheme) {
+        $('head').append('<link rel="stylesheet" href="css/' + savedTheme + '.css">');
+    }
     $('.color-panel').on("click", function(e) {
         e.preventDefault();
         $('.color-changer').toggleClass('color-changer-active');
@@ -15,49 +37,51 @@ $(function() {
         e.preventDefault();
         var attr = $(this).attr("title");
         console.log(attr);
+        localStorage.setItem('r0n-theme-color', attr);
         $('head').append('<link rel="stylesheet" href="css/' + attr + '.css">');
     });
 });
-// Project category filter (project post page)
+// ---- Category filters (Projects, Portfolio hub, Acoustic Sessions) ----
+// The active filter of each group is remembered for the tab, so coming back
+// from a project page (or Back/Forward) shows the same selection.
+var FILTER_GROUPS = [
+    { bar: '.project-filters',   items: '.project-group', mode: 'fade' },
+    { bar: '.portfolio-filters', items: '.hub-card',      mode: 'class' },
+    { bar: '.guitar-filters',    items: '.music-group',   mode: 'fade' }
+];
+
+function applyFilter(group, filter, animate) {
+    var $bar = $(group.bar);
+    if (!$bar.length) return;
+    $bar.find('.filter-btn').removeClass('filter-active')
+        .filter('[data-filter="' + filter + '"]').addClass('filter-active');
+
+    var $all = $(group.items);
+    var $match = filter === 'all' ? $all : $all.filter('[data-category="' + filter + '"]');
+    if (group.mode === 'class') {
+        $all.addClass('hub-hidden');
+        $match.removeClass('hub-hidden');
+    } else if (animate) {
+        $all.stop(true, true).hide();
+        $match.fadeIn(350);
+    } else {
+        $all.hide();
+        $match.show();
+    }
+}
+
 $(function() {
-    $('.project-filters .filter-btn').on('click', function() {
-        var filter = $(this).data('filter');
-        $('.project-filters .filter-btn').removeClass('filter-active');
-        $(this).addClass('filter-active');
-        if (filter === 'all') {
-            $('.project-group').stop(true, true).fadeIn(350);
-        } else {
-            $('.project-group').stop(true, true).hide();
-            $('.project-group[data-category="' + filter + '"]').fadeIn(350);
+    FILTER_GROUPS.forEach(function(group) {
+        var key = 'r0n-filter:' + group.bar;
+        var saved = sessionStorage.getItem(key);
+        if (saved && $(group.bar).find('[data-filter="' + saved + '"]').length) {
+            applyFilter(group, saved, false);
         }
-    });
-});
-// Portfolio category filter
-$(function() {
-    $('.portfolio-filters .filter-btn').on('click', function() {
-        var filter = $(this).data('filter');
-        $('.portfolio-filters .filter-btn').removeClass('filter-active');
-        $(this).addClass('filter-active');
-        if (filter === 'all') {
-            $('.portfolio').stop(true, true).fadeIn(350);
-        } else {
-            $('.portfolio').stop(true, true).hide();
-            $('.portfolio[data-category="' + filter + '"]').fadeIn(350);
-        }
-    });
-});
-// Acoustic sessions category filter
-$(function() {
-    $('.guitar-filters .filter-btn').on('click', function() {
-        var filter = $(this).data('filter');
-        $('.guitar-filters .filter-btn').removeClass('filter-active');
-        $(this).addClass('filter-active');
-        if (filter === 'all') {
-            $('.music-group').stop(true, true).fadeIn(350);
-        } else {
-            $('.music-group').stop(true, true).hide();
-            $('.music-group[data-category="' + filter + '"]').fadeIn(350);
-        }
+        $(group.bar).on('click', '.filter-btn', function() {
+            var filter = $(this).data('filter');
+            sessionStorage.setItem(key, filter);
+            applyFilter(group, filter, true);
+        });
     });
 });
 $(function() {
@@ -127,13 +151,52 @@ $(function() {
         document.body.appendChild(css);
     };
 })
-// History persistence function
+// ---- Section routing & session persistence ----
+// Every section visit is a real history entry, so Back/Forward retrace the
+// visitor's steps. The current section, scroll position and filters survive
+// trips to project pages (and reloads) via sessionStorage.
+var BASE_URL = window.location.pathname + window.location.search;
+var SECTION_KEY = 'r0n-section';
+var SCROLL_KEY = 'r0n-scroll:';
+
+// We restore scroll ourselves once the section is visible.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+function sectionFromHash() {
+    var hash = window.location.hash.substring(1);
+    return (hash && hash !== 'header') ? hash : 'header';
+}
+
+function rememberSection(sectionId) {
+    sessionStorage.setItem(SECTION_KEY, sectionId);
+}
+
+function saveScroll(sectionId) {
+    sessionStorage.setItem(SCROLL_KEY + sectionId, String(window.pageYOffset || 0));
+}
+
+function restoreScroll(sectionId) {
+    var y = parseInt(sessionStorage.getItem(SCROLL_KEY + sectionId), 10);
+    window.scrollTo(0, isNaN(y) ? 0 : y);
+}
+
+// Update history, then render.
 function navigateToSection(sectionId) {
-    // Store current section in sessionStorage
-    sessionStorage.setItem('lastSection', sectionId);
-    // Update URL hash
-    window.location.hash = sectionId;
-    
+    if (sectionId === '') sectionId = 'header';
+    var current = sectionFromHash();
+    saveScroll(current);
+    var url = sectionId === 'header' ? BASE_URL : BASE_URL + '#' + sectionId;
+    if (sectionId === current) {
+        history.replaceState({ section: sectionId }, '', url); // re-selecting: no duplicate entry
+    } else {
+        history.pushState({ section: sectionId }, '', url);
+    }
+    showSection(sectionId);
+}
+
+// Render a section without touching history (used by Back/Forward).
+function showSection(sectionId, keepScroll) {
+    rememberSection(sectionId);
     // Hide all sections
     gsap.to('#navigation-content', 0, { display: "none", delay: .7 });
     gsap.to('#navigation-content', 0, { y: '-100%', delay: .7 });
@@ -161,33 +224,35 @@ function navigateToSection(sectionId) {
     } else {
         gsap.to('#' + sectionId, 0, { display: "block", delay: .7 });
     }
+    // Back/Forward returns to the spot the visitor was reading; a fresh
+    // navigation starts the section from the top.
+    setTimeout(function() {
+        if (keepScroll) restoreScroll(sectionId); else window.scrollTo(0, 0);
+    }, 720);
     gsap.to('#navigation-content', 0, { display: 'flex', delay: 2 });
 }
 
-// Restore last visited section on page load
-$(window).on('load', function() {
-    var hash = window.location.hash.substring(1);
-    var lastSection = sessionStorage.getItem('lastSection');
-    
-    // If there's a hash, use it; otherwise use lastSection; otherwise default to header
-    var targetSection = hash || lastSection || 'header';
-    
-    if (targetSection && targetSection !== 'header') {
-        // Small delay to ensure GSAP is loaded
-        setTimeout(function() {
-            navigateToSection(targetSection);
-        }, 100);
+// Leaving for a project page (or closing the tab): remember where we were so
+// Back / reopening lands on the same section at the same scroll position.
+$(window).on('pagehide', function() {
+    saveScroll(sectionFromHash());
+});
+
+// Back-forward cache: the browser restored this page from memory with its DOM
+// intact, so only the particles canvas (killed while hidden) needs a nudge.
+$(window).on('pageshow', function(e) {
+    if (e.originalEvent && e.originalEvent.persisted) {
+        rememberSection(sectionFromHash());
+        if (sectionFromHash() === 'header' && typeof window.refreshHomeParticles === 'function') {
+            window.refreshHomeParticles();
+        }
     }
 });
 
-// Handle browser back/forward buttons
-$(window).on('hashchange', function() {
-    var hash = window.location.hash.substring(1);
-    if (hash && hash !== 'header') {
-        navigateToSection(hash);
-    } else {
-        navigateToSection('header');
-    }
+// Browser Back/Forward between sections.
+$(window).on('popstate', function() {
+    saveScroll(sessionStorage.getItem(SECTION_KEY) || 'header');
+    showSection(sectionFromHash(), true);
 });
 
 $(function() {

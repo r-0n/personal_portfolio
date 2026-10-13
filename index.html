@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" href="images/logo-no-background.png">
     <!--favicon-img-->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/projects.css">
     <!--main css file-->
     <!-- Resource hints for performance -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -402,77 +403,102 @@
             <div class="portfolio-header"> <span class="color"> My </span> Portfolio
                 <span class="header-caption"> Some Of My <span class="color"> Works</span></span>
             </div>
+            <p class="hub-intro">Selected case studies across parametric design, robotics, fabrication, and interaction.</p>
             <!--portfolio category filters-->
             <div class="portfolio-filters">
                 <button class="filter-btn filter-active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="robotics">Robotics & IoT</button>
+                <button class="filter-btn" data-filter="parametric">Parametric</button>
+                <button class="filter-btn" data-filter="robotics">Robotics &amp; IoT</button>
                 <button class="filter-btn" data-filter="solidworks">SolidWorks</button>
                 <button class="filter-btn" data-filter="fabrication">Fabrication</button>
-                <button class="filter-btn" data-filter="fusion360">Fusion 360</button>
-                <button class="filter-btn" data-filter="music">Music</button>
+                <button class="filter-btn" data-filter="interactive">Interactive</button>
             </div>
             <!--portfolio category filters end-->
-            <div id="portfolio-content">
-                <div class="portfolio portfolio-first" data-category="robotics">
-                    <div class="portfolio-image">
-                        <img src="images/robot.jpg" alt="portfolio-first" loading="lazy">
+            <div id="portfolio-content" class="hub-grid">
+                <article class="hub-card" data-category="parametric">
+                    <a class="hub-card-link" href="projects/visages-of-fanaticism.html">
+                        <div class="hub-media">
+                            <img src="images/visages-of-fanaticism/exhibition-photos/exhibition1.jpeg" alt="Visages of Fanaticism" loading="lazy">
+                            <span class="hub-year">2024</span>
+                        </div>
+                        <div class="hub-body">
+                            <h3>Visages of Fanaticism</h3>
+                            <p class="hub-tagline">A sculptural mask on fanaticism and identity — Ghanaian mask precedents, brain-coral growth language, Voronoi + Thallus systems.</p>
+                            <div class="hub-tags"><span>Grasshopper</span><span>Fabrication</span></div>
+                            <span class="hub-cta">Open case study →</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="hub-card" data-category="parametric">
+                    <a class="hub-card-link" href="projects/carapace.html">
+                        <div class="hub-media hub-media-carapace">
+                            <img src="images/carapace/cover.png" alt="Carapace" loading="lazy">
+                            <span class="hub-year">Draft</span>
+                        </div>
+                        <div class="hub-body">
+                            <h3>Carapace</h3>
+                            <p class="hub-tagline">A tortoise-shell study in 2.5D: Voronoi cells, terraced growth rings, and height-mapped pigment.</p>
+                            <div class="hub-tags"><span>Rhino</span><span>Grasshopper</span></div>
+                            <span class="hub-cta">Open case study →</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="hub-card" data-category="robotics">
+                    <a class="hub-card-link" href="projects/the-crawler.html">
+                        <div class="hub-media">
+                            <img src="images/the-crawler/face-angle.jpg" alt="The Crawler" loading="lazy">
+                            <span class="hub-year">2023</span>
+                        </div>
+                        <div class="hub-body">
+                            <h3>The Crawler</h3>
+                            <p class="hub-tagline">A smartphone that refuses to remain passive — six legs, pursuit, and retreat.</p>
+                            <div class="hub-tags"><span>Arduino</span><span>Robotics</span></div>
+                            <span class="hub-cta">Open case study →</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="hub-card is-soon" data-category="solidworks" aria-disabled="true">
+                    <div class="hub-card-link">
+                        <div class="hub-media">
+                            <img src="images/A400.png" alt="SolidWorks Robotic Arm" loading="lazy">
+                            <span class="hub-year">2023</span>
+                        </div>
+                        <div class="hub-body">
+                            <h3>SolidWorks Robotic Arm</h3>
+                            <p class="hub-tagline">Mechanical assemblies and motion studies authored in SolidWorks.</p>
+                            <div class="hub-tags"><span>SolidWorks</span><span>CAD</span></div>
+                            <span class="hub-cta">Coming soon</span>
+                        </div>
                     </div>
-                    <div class="portfolio-text">
-                        <h2>Robotic Serial Control with Arduino & p5.js</h2>
-                        <p>Introducing a racing experience by creating a race circuit. The idea is for a user to complete a lap in the fastest time possible. Before you begin the experience, you can view the leaderboard. After your time has been recorded,
-                            a pop-up appears for you to input your name to be added to the leaderboard. For this, we created a new user interface on a separate laptop. This laptop powers an Arduino circuit connection which features an ultrasonic sensor.
-                            The ultrasonic sensor checks when the car has crossed the start line and begins a timer, and detects when the user ends the circuit. After this, it records the time it took a user to complete the track and sends this data to
-                            the leaderboard.</p>
-                        <div class="button"><a href="https://drive.google.com/drive/folders/1L2CpFvaMMK2RYS_706ET2c2iG6Z-OXsb?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+                </article>
+                <article class="hub-card is-soon" data-category="interactive" aria-disabled="true">
+                    <div class="hub-card-link">
+                        <div class="hub-media">
+                            <img src="images/Guitar.PNG" alt="The Outer Experience" loading="lazy">
+                            <span class="hub-year">2023</span>
+                        </div>
+                        <div class="hub-body">
+                            <h3>The Outer Experience</h3>
+                            <p class="hub-tagline">A p5.js voyage between galaxies — interaction as cinematic space.</p>
+                            <div class="hub-tags"><span>p5.js</span><span>Interactive</span></div>
+                            <span class="hub-cta">Coming soon</span>
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio portfolio-second" data-category="solidworks">
-                    <div class="portfolio-text">
-                        <h2>SolidWorks Portfolio</h2>
-                        <p>Within this portfolio, you will find a collection of meticulously crafted designs and engineering solutions, all brought to life using the robust capabilities of SolidWorks. From intricate mechanical assemblies to elegant product
-                            designs, each project highlights my expertise in leveraging SolidWorks to overcome complex challenges and deliver exceptional results.</p>
-                        <div class="button"><a href="https://drive.google.com/drive/folders/1mNgBJcHpwds5xIS2B8qpwK1UnZb58bCg?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
+                </article>
+                <article class="hub-card is-soon" data-category="parametric" aria-disabled="true">
+                    <div class="hub-card-link">
+                        <div class="hub-media">
+                            <img src="images/kinetic-ellipse/hub-cover.png" alt="Kinetic Ellipse" loading="lazy">
+                            <span class="hub-year">2023</span>
+                        </div>
+                        <div class="hub-body">
+                            <h3>Kinetic Ellipse</h3>
+                            <p class="hub-tagline">Motion and ellipse logic in a compact parametric study.</p>
+                            <div class="hub-tags"><span>Parametric</span></div>
+                            <span class="hub-cta">Coming soon</span>
+                        </div>
                     </div>
-                    <div class="portfolio-image">
-                        <img src="images/A400.png" alt="portfolio-second" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="portfolio portfolio-third" data-category="fabrication">
-                    <div class="portfolio-image">
-                        <img src="images/radial slicing method.jpeg" alt="portfolio-third" loading="lazy">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2>Digital Fabrication Portfolio</h2>
-                        <p>Step into the realm of digital fabrication as you delve into my portfolio, where imagination meets cutting-edge technology. Here, I invite you to witness the convergence of digital design and physical creation, showcasing my expertise
-                            in harnessing the power of digital fabrication.</p>
-                        <div class="button"><a href="https://drive.google.com/drive/folders/1DbAHLw_-t4c80BPKHZTz-W56iZGOYINL?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Project<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
-                <div class="portfolio portfolio-fourth" data-category="fusion360">
-                    <div class="portfolio-text">
-                        <h2>Fusion 360 Portfolio</h2>
-                        <p>A collection of designs made with Fusion 360. I invite you to explore my Fusion 360 portfolio, where innovation meets artistry. Witness the fusion of technology and imagination as I push the boundaries of design, engineering, and
-                            manufacturing.
-                        </p>
-                        <div class="button"><a href="https://drive.google.com/drive/folders/18Kn38W2RWwBT9VOqfoj1Pw3wf26emMWy?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Portfolio<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                    <div class="portfolio-image">
-                        <img src="images/lampshade.png" alt="portfolio-fourth" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="portfolio portfolio-fifth" data-category="music">
-                    <div class="portfolio-image">
-                        <img src="images/Guitar.PNG" alt="portfolio-fifth" loading="lazy">
-                    </div>
-                    <div class="portfolio-text">
-                        <h2>Guitar & Piano Portfolio</h2>
-                        <p>In my musical journey, I have developed a profound passion for both the guitar and piano, captivating audiences with my versatile and expressive performances. With 2 and half years of dedicated practice and a deep understanding
-                            of these instruments, I have honed my skills to create a captivating musical experience.</p>
-                        <div class="button"><a href="https://drive.google.com/drive/folders/16ftxPslitLd_AMZE2SNyU5OGyyu9VSnD?usp=sharing" target="_blank" rel="noopener noreferrer"><button><span class="index"> View Portfolio<i class="gg-arrow-right"></i></span></button></a></div>
-                    </div>
-                </div>
+                </article>
             </div>
             <!--copyright-section -->
             <div class="footer">

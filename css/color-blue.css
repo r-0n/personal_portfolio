@@ -97,3 +97,24 @@ form button {
         box-shadow: 0px 0px 0px 0px #c70039;
     }
 }
+.hub-body h3, .hub-cta, .case-kicker, .panel h3, .case-section h2 span, .case-meta a {
+    color: #035aa6;
+}
+.hub-year, .process-tab.is-active, .compare-handle::after {
+    background: #035aa6;
+}
+.hub-card:hover {
+    border-color: #035aa673;
+    box-shadow: 0 12px 32px #035aa62e;
+}
+.flow-node {
+    border-color: #035aa666;
+    background: #035aa614;
+}
+.flow-arrow, .compare-overlay {
+    border-color: #035aa6;
+}
+.flow-arrow { color: #035aa6; }
+.compare-handle::before { background: #035aa6; }
+.case-pager { --pager-accent: #035aa6; }
+.carapace-story { --accent: #035aa6; }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <title>Chain Farms || Aaron Wajah</title>
+    <link rel="icon" type="image/png" href="../images/logo-no-background.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body class="case-study-page" data-base="../">
+    <div id="case-chrome-top"></div>
+    <main class="case-study">
+    <header class="case-hero">
+        <div class="case-hero-visual"><img src="../images/radial slicing method.jpeg" alt="Field systems analog"></div>
+        <div>
+            <div class="case-kicker">Smart Systems & AgTech</div>
+            <h1>Chain <span class="color">Farms</span></h1>
+            <p class="case-subtitle">A research map where autonomous robotics, cash crops, and sensor grids share one cadastral logic.</p>
+            <p class="case-role">Role: Systems designer  |  Research lead</p>
+        </div>
+    </header>
+    <div class="case-meta">
+        <div><h6>Year / Status</h6><p>2025  |  Ongoing</p></div>
+        <div><h6>Discipline</h6><p>AgTech, spatial computing</p></div>
+        <div><h6>Tools & Tech</h6><p>LiDAR, robotics, sensor networks</p></div>
+        <div><h6>Links</h6><p><a href="../index.html#portfolio">Portfolio hub</a></p></div>
+    </div>
+    <section class="case-section">
+        <h2>Interactive Research <span>Map</span></h2>
+        <p>Legend: crimson = robot corridors, teal = sensor nodes, green = crop blocks, mute = service path. Replace cells with LiDAR tiles as the survey lands.</p>
+        <div class="farm-map" id="farm-map"></div>
+    </section>
+    <section class="case-section">
+        <h2>Next <span>Steps</span></h2>
+        <p>Smart farm division: parcel the grid by crop value, water stress, and robot duty cycle rather than by fence line.</p>
+    </section>
+    <nav class="case-pager">
+        <a href="kinetic-ellipse.html"><small>Previous</small>Kinetic Ellipse</a>
+        <a class="next" href="pneumitecture.html"><small>Next</small>Pneumitecture</a>
+    </nav>
+</main>
+<script>
+window.addEventListener('load', function(){
+    const types=['crop','sensor','path','robot','crop','sensor','crop','path','robot','crop','sensor','path'];
+    const labels={crop:'Crop',sensor:'Sensor',path:'Path',robot:'Robot'};
+    const map=document.getElementById('farm-map');
+    for(let i=0;i<36;i++){
+        const t=types[i%types.length];
+        const el=document.createElement('div');
+        el.className='farm-cell '+t;
+        el.textContent=labels[t];
+        map.appendChild(el);
+    }
+});
+</script>
+    <div id="case-chrome-bottom"></div>
+    <script src="../js/case-study.js" defer></script>
+</body>
+</html>
