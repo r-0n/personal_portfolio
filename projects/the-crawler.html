@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="../images/logo-no-background.png">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/crawler.css?v=3">
+    <link rel="stylesheet" href="../css/crawler.css?v=10">
 </head>
 <body class="case-study-page crawler-story" data-base="../">
     <div id="case-chrome-top"></div>
@@ -62,24 +62,37 @@
                 <p class="season-kicker">Concept &amp; Inspiration</p>
                 <h2>Rethinking Smartphone <span class="color">Management</span></h2>
             </div>
-            <div class="chapter-prose reveal">
-                <p class="lead">We carry our phones almost everywhere. They have become constant companions, offering convenience and connection while demanding more of our attention than we often intend. Even the tools designed to help us manage our screen time exist within the devices we're trying to use less.</p>
-                <p>What if our phones could physically help us break these habits?</p>
-                <p>The Crawler emerged from this question. Conceived as a six-legged personal robot capable of carrying a smartphone, it explores an alternative approach to digital well-being through movement and physical interaction. Rather than simply reminding users to put their phones down, the robot could move the device out of reach, follow its owner when needed, or encourage breaks from prolonged use.</p>
-                <p>The project draws inspiration from personal robotic companions such as the Piaggio Gitamini, which follows its owner and carries belongings. The Crawler extends this idea beyond convenience, imagining a robot that not only carries our technology but also influences how we engage with it.</p>
-                <p class="beat">There is a playful contradiction at the heart of the concept. <strong>To help people regain control over their smartphones, we give the robot a degree of control over the phone itself.</strong></p>
+            <div class="split concept-split reveal">
+                <div class="split-copy">
+                    <p class="lead">We carry our phones almost everywhere. They have become constant companions, offering convenience and connection while demanding more of our attention than we often intend. Even the tools designed to help us manage our screen time exist within the devices we're trying to use less.</p>
+                    <p>What if our phones could physically help us break these habits?</p>
+                    <p>The Crawler emerged from this question. Conceived as a six-legged personal robot capable of carrying a smartphone, it explores an alternative approach to digital well-being through movement and physical interaction. Rather than simply reminding users to put their phones down, the robot could move the device out of reach, follow its owner when needed, or encourage breaks from prolonged use.</p>
+                    <p>The project draws inspiration from personal robotic companions such as the Piaggio Gitamini, which follows its owner and carries belongings. The Crawler extends this idea beyond convenience, imagining a robot that not only carries our technology but also influences how we engage with it.</p>
+                    <p class="beat">There is a playful contradiction at the heart of the concept. <strong>To help people regain control over their smartphones, we give the robot a degree of control over the phone itself.</strong></p>
+                </div>
+                <div class="concept-media" aria-label="Concept photographs">
+                    <figure class="concept-media-hero">
+                        <img src="../images/the-crawler/10.jpg" alt="The Crawler with illuminated phone face" loading="lazy">
+                    </figure>
+                    <figure>
+                        <img src="../images/the-crawler/15.jpg" alt="The Crawler prototype in the studio" loading="lazy">
+                    </figure>
+                    <figure>
+                        <img src="../images/the-crawler/14.jpg" alt="Low-angle view of The Crawler ultrasonic face" loading="lazy">
+                    </figure>
+                </div>
             </div>
         </section>
 
         <!-- 02 DESIGN & DEVELOPMENT -->
-        <section class="chapter" id="design">
+        <section class="chapter chapter-design" id="design">
             <div class="chapter-index" aria-hidden="true">02</div>
             <div class="chapter-head reveal">
                 <p class="season-kicker">Design &amp; Development</p>
                 <h2>Giving the Phone a <span class="color">Body</span></h2>
             </div>
-            <div class="split reveal">
-                <div class="split-copy">
+            <div class="design-layout reveal">
+                <div class="design-copy">
                     <p>We began with a programmable Freenove hexapod, a six-legged robot capable of crawling and twisting its body in ways that resemble a living creature. Its movement offered an interesting foundation for exploring how an ordinary smartphone might acquire a sense of personality and apparent independence.</p>
                     <p>My technical work focused on programming the robot's movement and proximity-based responses using an Arduino Mega 2560 and an HC-SR04 ultrasonic sensor.</p>
                     <p>The implemented behavior follows a straightforward rule. When the path ahead is clear, the robot continues crawling forward. When an object comes within approximately 20 centimeters, it backs away and turns to change direction.</p>
@@ -87,16 +100,56 @@
                     <p>By allowing the robot to retreat from someone approaching it, we began exploring how physical movement could make a familiar device appear less passive. The act of reaching for a phone could become an interaction in which the object no longer remains where its owner expects it to be.</p>
                     <p>This implementation formed an early technical exploration of the larger personal-assistant concept. The prototype demonstrated proximity-based movement and avoidance, while more advanced features such as tracking actual phone usage, recognizing users, and responding to their habits remained part of the speculative design vision.</p>
                 </div>
-                <div class="split-media">
-                    <figure>
-                        <img src="../images/the-crawler/hero-detail.jpg" alt="Hexapod chassis, ultrasonic sensors, and servo wiring" loading="lazy">
-                    </figure>
-                    <figure>
-                        <img src="../images/the-crawler/lab-back.jpg" alt="The Crawler prototype on the studio table" loading="lazy">
-                    </figure>
-                    <figure>
-                        <img src="../images/the-crawler/hero-close.jpg" alt="Close-up of legs and HC-SR04 sensor face" loading="lazy">
-                    </figure>
+
+                <div class="design-carousel" data-design-carousel aria-roledescription="carousel" aria-label="Design and development media">
+                    <div class="design-carousel-stage">
+                        <div class="design-carousel-track">
+                            <figure class="design-slide is-video" data-slide>
+                                <video
+                                    src="../images/the-crawler/video/design-dev.mp4"
+                                    muted
+                                    playsinline
+                                    controls
+                                    preload="metadata"
+                                    aria-label="Design and development process film"></video>
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/1.jpg" alt="Crawler build photograph 1" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/2.jpg" alt="Crawler build photograph 2" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/3.jpg" alt="Crawler build photograph 3" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/3.2.jpg" alt="Crawler build photograph 3.2" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/4.jpg" alt="Crawler build photograph 4" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/6.jpg" alt="Crawler build photograph 6" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/7.jpg" alt="Crawler build photograph 7" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/8.jpg" alt="Crawler build photograph 8" loading="lazy">
+                            </figure>
+                            <figure class="design-slide" data-slide>
+                                <img src="../images/the-crawler/9.jpg" alt="Crawler build photograph 9" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="design-carousel-progress" aria-hidden="true"><span></span></div>
+                    </div>
+
+                    <div class="design-carousel-ui">
+                        <button type="button" class="design-carousel-nav" data-carousel-prev aria-label="Previous slide">‹</button>
+                        <div class="design-carousel-thumbs" data-carousel-thumbs></div>
+                        <button type="button" class="design-carousel-nav" data-carousel-next aria-label="Next slide">›</button>
+                        <p class="design-carousel-count" data-carousel-count aria-live="polite">01 / 10</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,10 +161,18 @@
                 <p class="season-kicker">Behavior &amp; Interaction</p>
                 <h2>A Companion With a Mind of Its <span class="color">Own</span></h2>
             </div>
-            <div class="split reveal">
-                <figure class="split-single">
-                    <img src="../images/the-crawler/face-on.jpg" alt="The Crawler with glowing screen eyes" loading="lazy">
-                </figure>
+            <div class="split behavior-split reveal">
+                <div class="behavior-video">
+                    <video
+                        class="autoplay-inview"
+                        src="../images/the-crawler/video/behavior.mp4"
+                        muted
+                        loop
+                        playsinline
+                        controls
+                        preload="metadata"
+                        aria-label="Crawler behavior demonstration"></video>
+                </div>
                 <div class="split-copy">
                     <p>The Crawler was imagined as more than a mobile phone holder. Its movements, sounds, and physical interactions would give it a character of its own, turning ordinary moments of smartphone use into small encounters.</p>
                     <p>Approach it, and it might scurry away. Ignore it for too long, and it could nudge you like a curious cat. Spend too much time on your phone, and it might retreat, encouraging you to take a break.</p>
@@ -179,6 +240,6 @@
 
     <div id="case-chrome-bottom"></div>
     <script src="../js/case-study.js" defer></script>
-    <script src="../js/crawler.js?v=2" defer></script>
+    <script src="../js/crawler.js?v=4" defer></script>
 </body>
 </html>
