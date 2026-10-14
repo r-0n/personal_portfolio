@@ -182,12 +182,12 @@
 }
 
 @keyframes case-fade-in {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: none; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes case-fade-out {
-    to { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 0; }
 }
 
 .case-study {

@@ -3,6 +3,44 @@
 
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    /* ---- dock rail + color changer as one fixed unit ---- */
+    (function mountDock() {
+        function clearBodyTransform() {
+            // Page fade used to leave a transform on <body>, which breaks position:fixed
+            document.body.style.transform = 'none';
+        }
+
+        function place() {
+            var rail = document.querySelector('.crawler-rail');
+            var changer = document.querySelector('.color-changer');
+            if (!rail || !changer) return false;
+            if (document.querySelector('.crawler-dock')) {
+                clearBodyTransform();
+                return true;
+            }
+
+            var dock = document.createElement('div');
+            dock.className = 'crawler-dock';
+            dock.setAttribute('aria-label', 'Page tools');
+            document.body.appendChild(dock);
+            dock.appendChild(changer);
+            dock.appendChild(rail);
+            clearBodyTransform();
+            return true;
+        }
+
+        if (!place()) {
+            var tries = 0;
+            var id = setInterval(function () {
+                tries += 1;
+                if (place() || tries > 40) clearInterval(id);
+            }, 50);
+        }
+
+        window.addEventListener('load', clearBodyTransform);
+        setTimeout(clearBodyTransform, 600);
+    })();
+
     function syncAccent() {
         var c = getComputedStyle(document.querySelector('.color') || document.body).color;
         if (c) document.body.style.setProperty('--accent', c);
@@ -10,6 +48,13 @@
     document.querySelectorAll('.color-changer a').forEach(function (a) {
         a.addEventListener('click', function () { setTimeout(syncAccent, 40); });
     });
+    // color links may mount slightly later with chrome
+    setTimeout(function () {
+        document.querySelectorAll('.color-changer a').forEach(function (a) {
+            a.addEventListener('click', function () { setTimeout(syncAccent, 40); });
+        });
+        syncAccent();
+    }, 120);
     syncAccent();
 
     /* ---- reveal ---- */
