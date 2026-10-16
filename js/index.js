@@ -326,3 +326,34 @@ $(function() {
     $('.navigation-close').hover(cursorhover, cursor);
 
 })
+
+// Hub cover videos: muted autoplay + loop while in view
+$(function() {
+    var videos = document.querySelectorAll('video.hub-autoplay');
+    if (!videos.length) return;
+
+    function tryPlay(v) {
+        v.muted = true;
+        var p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(function() {});
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        videos.forEach(tryPlay);
+        return;
+    }
+
+    var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            var v = e.target;
+            if (e.isIntersecting) tryPlay(v);
+            else v.pause();
+        });
+    }, { threshold: 0.35 });
+
+    videos.forEach(function(v) {
+        v.muted = true;
+        v.loop = true;
+        io.observe(v);
+    });
+});

@@ -7,6 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#101010">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="description" content="Aaron Wajah - Personal Portfolio Website " />
     <meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
     <meta name="author" content="Aaron Wajah" />
@@ -22,10 +23,13 @@
     <link rel="preconnect" href="https://smtpjs.com">
     <link rel="preconnect" href="https://editor.p5js.org">
     <link rel="preconnect" href="https://drive.google.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://smtpjs.com">
     <link rel="dns-prefetch" href="https://editor.p5js.org">
     <link rel="dns-prefetch" href="https://drive.google.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
     <!-- Preload critical resources -->
     <link rel="preload" href="images/logo-no-background.png" as="image">
     <link rel="preload" href="images/aaron.jpg" as="image">
@@ -459,8 +463,18 @@
                 </article>
                 <article class="hub-card is-soon" data-category="solidworks" aria-disabled="true">
                     <div class="hub-card-link">
-                        <div class="hub-media">
-                            <img src="images/A400.png" alt="SolidWorks Robotic Arm" loading="lazy">
+                        <div class="hub-media hub-media-video">
+                            <video
+                                class="hub-autoplay"
+                                src="images/robotic-arm/hub-cover.mp4"
+                                muted
+                                loop
+                                playsinline
+                                autoplay
+                                preload="auto"
+                                disablepictureinpicture
+                                controlslist="nodownload nofullscreen noremoteplayback"
+                                aria-label="SolidWorks Robotic Arm"></video>
                             <span class="hub-year">2025</span>
                         </div>
                         <div class="hub-body">
