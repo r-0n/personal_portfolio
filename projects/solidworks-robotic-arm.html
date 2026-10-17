@@ -4,45 +4,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#101010">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>SolidWorks Robotic Arm || Aaron Wajah</title>
     <link rel="icon" type="image/png" href="../images/logo-no-background.png">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/arm.css?v=11">
 </head>
-<body class="case-study-page" data-base="../">
+<body class="case-study-page arm-story" data-base="../">
     <div id="case-chrome-top"></div>
-    <main class="case-study">
-    <header class="case-hero">
-        <div class="case-hero-visual"><img src="../images/A400.png" alt="SolidWorks assembly"></div>
-        <div>
-            <div class="case-kicker">Robotics & Physical Computing</div>
-            <h1>SolidWorks <span class="color">Robotic Arm</span></h1>
-            <p class="case-subtitle">Kinematic assembly, joint stacks, and motion paths modeled for fabrication — engineering as a visible argument.</p>
-            <p class="case-role">Role: CAD engineer  |  Mechanical designer</p>
-        </div>
-    </header>
-    <div class="case-meta">
-        <div><h6>Year / Status</h6><p>2023  |  Portfolio</p></div>
-        <div><h6>Discipline</h6><p>Mechanical design</p></div>
-        <div><h6>Tools & Tech</h6><p>SolidWorks, motion study</p></div>
-        <div><h6>Links</h6><p><a href="https://drive.google.com/drive/folders/1mNgBJcHpwds5xIS2B8qpwK1UnZb58bCg?usp=sharing" target="_blank" rel="noopener">SolidWorks folder</a></p></div>
-    </div>
-    <section class="case-section">
-        <h2>Algorithmic &amp; Technical <span>Breakdown</span></h2>
-        <p>The arm is a chain of constrained mates. Motion paths are not decoration: they prove reach, collision, and manufacturable travel before metal exists.</p>
-        <div class="flow">
-            <div class="flow-node">Base / yaw</div><div class="flow-arrow">â†’</div>
-            <div class="flow-node">Shoulder pitch</div><div class="flow-arrow">â†’</div>
-            <div class="flow-node">Elbow</div><div class="flow-arrow">â†’</div>
-            <div class="flow-node">Wrist / end effector</div>
-        </div>
-    </section>
-    <nav class="case-pager">
-        <a href="dr-orchid.html"><small>Previous</small>Dr. Orchid</a>
-        <a class="next" href="magnesynth.html"><small>Next</small>Magnesynth</a>
+
+    <nav class="arm-rail" aria-label="Chapters">
+        <a href="#hero" data-chapter="hero"><i>00</i><span>Hero</span></a>
+        <a href="#concept" data-chapter="concept"><i>01</i><span>Concept</span></a>
+        <a href="#motion" data-chapter="motion"><i>02</i><span>Motion</span></a>
+        <a href="#topology" data-chapter="topology"><i>03</i><span>Topology</span></a>
+        <a href="#conclusion" data-chapter="conclusion"><i>04</i><span>Close</span></a>
     </nav>
-</main>
+
+    <main class="arm-main case-study">
+        <!-- 00 HERO -->
+        <header class="case-hero reveal" id="hero">
+            <div class="case-hero-visual">
+                <video
+                    class="autoplay-inview"
+                    src="../images/robotic-arm/video/explode.mp4"
+                    muted
+                    loop
+                    playsinline
+                    autoplay
+                    preload="auto"
+                    aria-label="Assembly simulation of the SolidWorks robotic arm"></video>
+            </div>
+            <div>
+                <div class="case-kicker">2025 · Mechanical Design &amp; Simulation</div>
+                <h1>SolidWorks <span class="color">Robotic Arm</span></h1>
+                <p class="case-subtitle">Designing motion through geometry, actuation, and structural constraints.</p>
+                <p class="case-role">Role: CAD engineer · Mechanical designer</p>
+            </div>
+        </header>
+
+        <!-- 01 CONCEPT -->
+        <section class="chapter" id="concept">
+            <div class="chapter-index" aria-hidden="true">01</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Mechanical Design</p>
+                <h2>Engineering the <span class="color">Mechanism</span></h2>
+            </div>
+            <div class="arm-split reveal">
+                <div class="split-copy">
+                    <p class="lead">A robotic arm's movement heavily affected by its design even before its motor begins to turn. Every joint, support, and mechanical connection determines how forces are transferred and how the system can move.</p>
+                    <p>This project explored those relationships through the design of a motor-driven robotic arm mechanism in SolidWorks. Ideally, my team and I were supposed to design a robotic arm that could potentially be further developed(fabricated) and integrated into an Engineering lab at NYUAD. My work involved component design, assembly simulation, and engineering documentation, with an emphasis on how individual parts contribute to the behavior of the complete system.</p>
+                    <p>The assembly incorporated an SPG30E-270 DC motor, bearings, structural supports, and two limit switches intended to define the arm's range of movement. Each component introduced a different design constraint, from mounting geometry and mechanical alignment to the boundaries of rotation.</p>
+                    <p>Using SolidWorks, we were able to design components, perform motion analysis, perform simulations on the assembly, and optimize parts of the assembly, all geared towardss examining how the differnt components could function together as a single mechanism.</p>
+                </div>
+                <div class="arm-media-stack">
+                    <figure class="arm-media-frame arm-explode-frame">
+                        <img
+                            id="explode-preview"
+                            src="../images/robotic-arm/assembly/exploded.png"
+                            alt="Exploded assembly drawing with bill of materials"
+                            loading="lazy">
+                        <button type="button" class="arm-fs-btn" data-arm-fs="explode-preview" aria-label="View exploded assembly fullscreen">
+                            Fullscreen
+                        </button>
+                    </figure>
+                    <p class="arm-caption">Exploded assembly with BOM and min/max alternate views</p>
+                    <div class="arm-spec-row">
+                        <div class="arm-spec"><small>Actuation</small><strong>SPG30E-270 DC motor</strong></div>
+                        <div class="arm-spec"><small>Boundaries</small><strong>2× limit switches</strong></div>
+                        <div class="arm-spec"><small>Structure</small><strong>20 cm arm link</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arm-drawings reveal">
+                <h3 class="arm-subhead">Component <span class="color">Drawings</span></h3>
+                <div class="arm-draw-carousel" data-draw-carousel aria-roledescription="carousel" aria-label="Component drawings">
+                    <div class="arm-draw-stage">
+                        <div class="arm-draw-track">
+                            <figure class="arm-draw-slide is-active" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/right-base.jpg" alt="Right base support" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/left-base.jpg" alt="Left base support" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/encoder.jpg" alt="Encoder interface" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/motor-inside.jpg" alt="Motor housing" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/magnet-holder.jpg" alt="Magnet holder" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/motor-cover.jpg" alt="Motor cover" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/part-2.jpg" alt="Intermediate housing" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/part-3.jpg" alt="Hub interface" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-draw-slide>
+                                <img src="../images/robotic-arm/drawings/link.jpg" alt="20 cm arm link" loading="lazy">
+                            </figure>
+                        </div>
+                        <button type="button" class="arm-fs-btn" data-draw-fs aria-label="View drawing fullscreen">Fullscreen</button>
+                    </div>
+                    <div class="arm-draw-ui">
+                        <button type="button" class="arm-draw-nav" data-draw-prev aria-label="Previous drawing">‹</button>
+                        <div class="arm-draw-thumbs" data-draw-thumbs></div>
+                        <button type="button" class="arm-draw-nav" data-draw-next aria-label="Next drawing">›</button>
+                        <p class="arm-draw-count" data-draw-count aria-live="polite">01 / 09</p>
+                        <p class="arm-draw-label" data-draw-label>Right base support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 MOTION -->
+        <section class="chapter" id="motion">
+            <div class="chapter-index" aria-hidden="true">02</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Assembly &amp; Motion Simulation</p>
+                <h2>Movement Within <span class="color">Limits</span></h2>
+            </div>
+
+            <div class="arm-motion-layout reveal">
+                <div class="chapter-prose">
+                    <p class="lead">Designing the components was only part of the challenge. We also needed to understand how the assembled mechanism would behave when set in motion.</p>
+                    <p>Using SolidWorks motion studies, we examined the arm's movement across different configurations. Alternative-position views helped us visualize its range of rotation, while the integration of limit switches established intended boundaries for its operation.</p>
+                    <p>The exploded assembly and technical drawings offered another perspective. They made it possible to examine the relationship between individual components, their mounting positions, and their contribution to the mechanism's overall construction.</p>
+                    <p class="beat">The process highlighted a fundamental consideration in mechanical design: <strong>movement depends not only on actuation, but on the geometry and constraints of everything surrounding it.</strong></p>
+                </div>
+
+                <div class="arm-draw-carousel arm-motion-carousel" data-media-carousel aria-roledescription="carousel" aria-label="Assembly and motion media">
+                    <div class="arm-draw-stage arm-motion-stage">
+                        <div class="arm-draw-track">
+                            <figure class="arm-draw-slide is-active" data-media-slide>
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    poster="../images/robotic-arm/assembly/exploded.png"
+                                    src="../images/robotic-arm/video/explode.mp4"
+                                    aria-label="Exploded-view animation"></video>
+                            </figure>
+                            <figure class="arm-draw-slide" data-media-slide>
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    poster="../images/robotic-arm/assembly/motion-still.jpg"
+                                    src="../images/robotic-arm/video/motion.mp4"
+                                    aria-label="Motion study"></video>
+                            </figure>
+                            <figure class="arm-draw-slide" data-media-slide>
+                                <img src="../images/robotic-arm/assembly/alt-positions.jpg" alt="Alternative arm positions" loading="lazy">
+                            </figure>
+                            <figure class="arm-draw-slide" data-media-slide>
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    poster="../images/robotic-arm/assembly/motion-still.jpg"
+                                    src="../images/robotic-arm/video/motion-upclose.mp4"
+                                    aria-label="Motion study (Upclose)"></video>
+                            </figure>
+                        </div>
+                        <button type="button" class="arm-fs-btn" data-media-fs aria-label="View media fullscreen">Fullscreen</button>
+                    </div>
+                    <div class="arm-draw-ui">
+                        <button type="button" class="arm-draw-nav" data-media-prev aria-label="Previous media">‹</button>
+                        <div class="arm-draw-thumbs" data-media-thumbs></div>
+                        <button type="button" class="arm-draw-nav" data-media-next aria-label="Next media">›</button>
+                        <p class="arm-draw-count" data-media-count aria-live="polite">01 / 04</p>
+                        <p class="arm-draw-label" data-media-label>Exploded-view animation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 TOPOLOGY -->
+        <section class="chapter" id="topology">
+            <div class="chapter-index" aria-hidden="true">03</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Structural Analysis &amp; Topology Optimization</p>
+                <h2>Less Material, Same Design <span class="color">Objective</span></h2>
+            </div>
+            <div class="chapter-prose reveal">
+                <p class="lead">How much material does a mechanical component actually need?</p>
+                <p>We explored this question through topology optimization of the arm's 20 cm structural link. The original component had a modeled mass of 1,196.34 grams. Our objective was to reduce its weight while accounting for the loading and mounting constraints defined in the simulation.</p>
+                <p>Using 1020 alloy steel as the specified material, we applied loads of 5 N and 3 N and constrained the component at its mounting holes. SolidWorks then evaluated the distribution of material within the design space.</p>
+                <p>The resulting topology study suggested a substantially lighter structure, reducing the modeled mass to approximately 521 grams.</p>
+                <p class="beat"><strong>A 56.5% reduction in mass.</strong></p>
+                <p>What interested me was the shift in how the component was designed. Rather than treating its original geometry as fixed, optimization allowed us to investigate where material was most useful under the specified conditions, and where it might be removed.</p>
+                <p>The outcome was a computational proposal for a lighter component, providing a foundation for further refinement and structural validation.</p>
+            </div>
+
+            <div class="topo-board reveal">
+                <p class="topo-kicker">Topology Optimization · 20 cm Arm Link</p>
+                <div class="topo-metrics">
+                    <div class="topo-metric topo-hero">
+                        <small>Modeled mass reduction</small>
+                        <strong>56.5%</strong>
+                        <em>Computational result</em>
+                    </div>
+                    <div class="topo-metric">
+                        <small>Original modeled mass</small>
+                        <strong>1,196.34 g</strong>
+                    </div>
+                    <div class="topo-metric">
+                        <small>Optimized modeled mass</small>
+                        <strong>521 g</strong>
+                    </div>
+                </div>
+                <div class="topo-bar" aria-hidden="true"><span></span></div>
+                <div class="topo-bar-labels">
+                    <span>56.5% reduced</span>
+                    <span>43.5% remaining</span>
+                </div>
+                <p class="topo-note">The comparison is based on SolidWorks model results, not a measured physical prototype.</p>
+
+                <div class="topo-compare">
+                    <figure>
+                        <img src="../images/robotic-arm/topology/original-link.png" alt="Original 20 cm arm link before optimization" loading="lazy">
+                        <figcaption>Original link · 1,196.34 g modeled mass</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../images/robotic-arm/topology/optimized-link.png" alt="Topology-optimized arm link mesh" loading="lazy">
+                        <figcaption>Optimized proposal · ~521 g modeled mass</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="topo-gallery reveal">
+                <figure>
+                    <img src="../images/robotic-arm/topology/setup-loads.png" alt="Topology study load and fixture setup" loading="lazy">
+                    <figcaption>Loads (5 N, 3 N) and mounting fixtures</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/robotic-arm/topology/analysis-01.png" alt="Topology analysis visualization" loading="lazy">
+                    <figcaption>Material distribution analysis</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/robotic-arm/topology/analysis-02.png" alt="Topology analysis visualization" loading="lazy">
+                    <figcaption>Study progression</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/robotic-arm/topology/analysis-03.png" alt="Topology analysis visualization" loading="lazy">
+                    <figcaption>Load-path geometry</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- 04 CONCLUSION -->
+        <section class="chapter" id="conclusion">
+            <div class="chapter-index" aria-hidden="true">04</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Conclusion</p>
+                <h2>Intelligence in the <span class="color">Mechanics</span></h2>
+            </div>
+            <div class="chapter-prose reveal">
+                <p class="lead">This project changed how I approached the relationship between mechanical design and system behavior.</p>
+                <p>The motor provided actuation, but movement depended on far more than the motor itself. Every connection imposed a constraint. The limit switches introduced intended operational boundaries. Structural analysis raised questions about the material necessary to support the mechanism.</p>
+                <p>I became particularly interested in how these decisions influence one another. Altering the geometry of a single component can affect its weight, mechanical properties, and relationship to the wider assembly.</p>
+                <p>The project strengthened my understanding of mechanical design as an essential part of developing responsive physical systems. It is a perspective I want to carry into future work, where computation, actuation, and carefully designed structures come together to produce meaningful physical interaction.</p>
+            </div>
+        </section>
+
+        <nav class="case-pager">
+            <a href="the-crawler.html"><small>Previous</small>The Crawler</a>
+            <a class="next" href="the-outer-experience.html"><small>Next</small>The Outer Experience</a>
+        </nav>
+    </main>
+
     <div id="case-chrome-bottom"></div>
+
+    <div class="arm-lightbox" id="arm-lightbox" hidden>
+        <button type="button" class="arm-lightbox-close" data-arm-fs-close aria-label="Close fullscreen">×</button>
+        <button type="button" class="arm-lightbox-nav arm-lightbox-prev" data-arm-fs-prev aria-label="Previous" hidden>‹</button>
+        <button type="button" class="arm-lightbox-nav arm-lightbox-next" data-arm-fs-next aria-label="Next" hidden>›</button>
+        <figure>
+            <img src="" alt="" data-arm-fs-img>
+            <video muted loop playsinline data-arm-fs-video hidden></video>
+            <figcaption></figcaption>
+            <p class="arm-lightbox-count" data-arm-fs-count hidden></p>
+        </figure>
+    </div>
+
     <script src="../js/case-study.js" defer></script>
+    <script src="../js/arm.js?v=6" defer></script>
 </body>
 </html>

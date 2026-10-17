@@ -241,6 +241,7 @@
 }
 
 .case-hero-visual img,
+.case-hero-visual video,
 .case-hero-visual iframe,
 .case-hero-visual canvas,
 .case-hero-visual model-viewer {
@@ -248,8 +249,24 @@
     height: 100%;
     min-height: 360px;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+    background: #080808;
     border: 0;
+}
+
+.case-figure {
+    margin: 18px 0 0;
+    border: 1px solid rgba(245, 245, 245, .08);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #080808;
+}
+
+.case-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .case-kicker {
