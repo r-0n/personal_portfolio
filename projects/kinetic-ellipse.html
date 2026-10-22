@@ -8,44 +8,304 @@
     <link rel="icon" type="image/png" href="../images/logo-no-background.png">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/ellipse.css?v=10">
 </head>
-<body class="case-study-page" data-base="../">
+<body class="case-study-page ellipse-story" data-base="../">
     <div id="case-chrome-top"></div>
-    <main class="case-study">
-    <header class="case-hero">
-        <div class="case-hero-visual"><img src="../images/lampshade.png" alt="Kinetic ellipse analog"></div>
-        <div>
-            <div class="case-kicker">Interactive Audio & Architecture</div>
-            <h1>Kinetic <span class="color">Ellipse</span></h1>
-            <p class="case-subtitle">A Java / Processing 3D simulation of 130 trigonometrically calculated columns, serialized to an Arduino prototype of NeoPixels and motors.</p>
-            <p class="case-role">Role: Software + hardware bridge</p>
-        </div>
-    </header>
-    <div class="case-meta">
-        <div><h6>Year / Status</h6><p>2023  |  Prototype</p></div>
-        <div><h6>Discipline</h6><p>Kinetic architecture</p></div>
-        <div><h6>Tools & Tech</h6><p>Processing, Serial, Arduino</p></div>
-        <div><h6>Links</h6><p><a href="../index.html#portfolio">Portfolio hub</a></p></div>
-    </div>
-    <section class="case-section">
-        <h2>Serial Communication <span>Diagram</span></h2>
-        <div class="flow">
-            <div class="flow-node">Processing 3D sim<br>130 trig columns</div>
-            <div class="flow-arrow">â†’</div>
-            <div class="flow-node">Serial bridge<br>byte stream</div>
-            <div class="flow-arrow">â†’</div>
-            <div class="flow-node">Arduino</div>
-            <div class="flow-arrow">â†’</div>
-            <div class="flow-node">NeoPixels + motors</div>
-        </div>
-        <p style="margin-top:18px">The physical ellipse is a low-resolution proof of a high-resolution computation. Columns that exist as sine and cosine in software become light and torque in space.</p>
-    </section>
-    <nav class="case-pager">
-        <a href="magnesynth.html"><small>Previous</small>Magnesynth</a>
-        <a class="next" href="chain-farms.html"><small>Next</small>Chain Farms</a>
+
+    <nav class="ellipse-rail" aria-label="Chapters">
+        <a href="#hero" data-chapter="hero"><i>00</i><span>Hero</span></a>
+        <a href="#concept" data-chapter="concept"><i>01</i><span>Concept</span></a>
+        <a href="#motion" data-chapter="motion"><i>02</i><span>Motion</span></a>
+        <a href="#interaction" data-chapter="interaction"><i>03</i><span>Interact</span></a>
+        <a href="#reflection" data-chapter="reflection"><i>04</i><span>Close</span></a>
     </nav>
-</main>
+
+    <main class="ellipse-main case-study">
+        <!-- 00 HERO -->
+        <header class="case-hero reveal" id="hero">
+            <div class="case-hero-visual">
+                <video
+                    class="autoplay-inview"
+                    src="../images/kinetic-ellipse/video/columns-a.mp4"
+                    poster="../images/kinetic-ellipse/hub-cover.png"
+                    muted
+                    loop
+                    playsinline
+                    autoplay
+                    preload="auto"
+                    aria-label="Kinetic Ellipse Processing simulation"></video>
+            </div>
+            <div>
+                <div class="case-kicker">October 2025 · Interactive Media Capstone</div>
+                <h1>Kinetic <span class="color">Ellipse</span></h1>
+                <p class="case-subtitle">A prototype for dynamic, responsive, living architecture — composed through movement.</p>
+                <p class="case-role">Role: Computational designer · Processing developer</p>
+            </div>
+        </header>
+
+        <!-- 01 CONCEPT -->
+        <section class="chapter" id="concept">
+            <div class="chapter-index" aria-hidden="true">01</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Concept &amp; Inspiration</p>
+                <h2>An Encounter with Jenny <span class="color">Hall</span></h2>
+            </div>
+
+            <div class="ellipse-split reveal">
+                <div class="chapter-prose">
+                    <p class="lead">The idea for Kinetic Ellipse began at Sound Kitchen in Sharjah, where I participated in a live demonstration of <a href="https://michaelang.com/mangsynth" target="_blank" rel="noopener noreferrer">Magnesynth</a> with Professor Michael Ang. Following the performance, I met Jenny, an architect from Wales. After sharing that my capstone explored the idea of interactive architecture, she was intrigued and shared her website with me. What really caught my attention on her website was <a href="https://www.craftedspace.co.uk/artworks/proto-elips" target="_blank" rel="noopener noreferrer">Proto Elips</a> because featured an elliptical arrangement of slanted wooden columns that looked as though they were held together parametrically by some mathematical formulation.</p>
+                    <p>So naturally, I thought to myself, "What if I could make Proto Elips interactive, responsive, or dynamic?</p>
+                    <p>I began imagining potential interesting results that could be achieved if the columns could rotate independently, responding to one another and changing the character of the space they enclosed. Rather than treating architecture as a fixed arrangement of materials, I wanted to explore it as something dynamic: closer to a living system than a static object.</p>
+                    <p>Thus was born Kinetic Ellipse, a project developed while I was working on my Interactive Media Capstone. It became a prototype of the idea or responsive architecture/spaces: not a finished building, but a computational experiment into how architecture might perform, respond, and transform over time.</p>
+                </div>
+
+                <div class="ellipse-editorial" aria-label="Proto Elips documentation">
+                    <figure>
+                        <img src="../images/kinetic-ellipse/concept/proto1.png" alt="Proto Elips installation with a harpist performing inside The Tabernacl" loading="lazy">
+                        <figcaption>Proto Elips, Crafted Space — Culture Action Llandudno, 2016</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../images/kinetic-ellipse/concept/proto-06.jpg" alt="Visitors interacting with Proto Elips slanted columns" loading="lazy">
+                        <figcaption>An architecture meant to be inhabited and played</figcaption>
+                    </figure>
+                    <p class="ellipse-credit">Photos: Lindsey Colbourne &amp; Llawn 04 · Source: <a href="https://www.craftedspace.co.uk/artworks/proto-elips" target="_blank" rel="noopener noreferrer">craftedspace.co.uk/artworks/proto-elips</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 COMPUTATIONAL DESIGN & MOTION -->
+        <section class="chapter" id="motion">
+            <div class="chapter-index" aria-hidden="true">02</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Development Process</p>
+                <h2>Four Iterations Toward <span class="color">Motion</span></h2>
+            </div>
+
+            <div class="chapter-prose reveal ellipse-prose-wide">
+                <p class="lead">The development of Kinetic Ellipse progressed through four iterations, from a parametric 3D model to a kinetic system capable of communicating with physical hardware. Each stage allowed me to investigate how independently controlled columns could collectively transform architectural space.</p>
+            </div>
+
+            <div class="iter-stack" data-iter-stack>
+                <!-- ITER 01 -->
+                <article class="iter-block reveal" id="iter-01" data-iter="01">
+                    <div class="iter-rail" aria-hidden="true"><span>01</span></div>
+                    <div class="iter-main">
+                        <h3 class="iter-title">Parametric Ellipse &amp; Sequential <span class="color">Motion</span></h3>
+                        <div class="iter-body">
+                            <div class="iter-copy">
+                                <p>I began by using Processing (Java) to arrange 40 columns along an elliptical perimeter. Rather than positioning each column manually, I used parametric equations to calculate their positions automatically, allowing me to adjust the structure's dimensions and column count.</p>
+                                <p>I then programmed the columns to rotate sequentially when triggered by a mouse click. By introducing short delays and smooth transitions between rotation angles, I was able to create a wave-like movement around the ellipse.</p>
+                                <p class="iter-outcome"><strong>What I achieved:</strong> A configurable 3D structure in which independently controlled columns could perform coordinated opening and closing sequences.</p>
+                            </div>
+                            <aside class="iter-side">
+                                <figure class="iter-media" data-iter-media>
+                                    <div class="iter-media-frame iter-media-frame--embed">
+                                        <iframe
+                                            src="https://drive.google.com/file/d/1VTq3YrPsfZ4_v7uXG20H4gTo_SjM53RJ/preview"
+                                            title="Iteration 01 — parametric ellipse and sequential motion"
+                                            allow="autoplay; encrypted-media; picture-in-picture"
+                                            allowfullscreen
+                                            loading="lazy"></iframe>
+                                    </div>
+                                </figure>
+                                <ul class="iter-keys" aria-label="Key developments">
+                                    <li>Parametric geometry</li>
+                                    <li>Independent column states</li>
+                                    <li>Mouse-triggered sequence</li>
+                                    <li>Timed delays</li>
+                                    <li>Interpolated rotation</li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITER 02 -->
+                <article class="iter-block iter-block--flip reveal" id="iter-02" data-iter="02">
+                    <div class="iter-rail" aria-hidden="true"><span>02</span></div>
+                    <div class="iter-main">
+                        <h3 class="iter-title">Hinged Tilting &amp; <span class="color">PeasyCam</span></h3>
+                        <div class="iter-body">
+                            <div class="iter-copy">
+                                <p>I refined the movement mechanism by introducing hinged rotation, allowing the columns to tilt around a horizontal axis, similar to architectural shutters. This gave the movement a clearer mechanical logic and allowed me to explore how different tilt angles affected the structure's openness.</p>
+                                <p>I also integrated PeasyCam, a Processing library that enabled me to orbit, zoom, and navigate around the 3D model. This helped me examine the movement from different perspectives and better understand its spatial effects.</p>
+                                <p class="iter-outcome"><strong>What I achieved:</strong> A more convincing architectural movement mechanism and an interactive environment for evaluating the structure in three dimensions.</p>
+                            </div>
+                            <aside class="iter-side">
+                                <figure class="iter-media" data-iter-media>
+                                    <div class="iter-media-frame iter-media-frame--embed">
+                                        <iframe
+                                            src="https://drive.google.com/file/d/1jCToMLfYv7VrBZpGRR7tTO3rbpZ1_BrM/preview"
+                                            title="Iteration 02 — hinged tilting and PeasyCam"
+                                            allow="autoplay; encrypted-media; picture-in-picture"
+                                            allowfullscreen
+                                            loading="lazy"></iframe>
+                                    </div>
+                                </figure>
+                                <ul class="iter-keys" aria-label="Key developments">
+                                    <li>Hinged tilt</li>
+                                    <li>Shutter logic</li>
+                                    <li>PeasyCam orbit</li>
+                                    <li>Spatial evaluation</li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITER 03 -->
+                <article class="iter-block reveal" id="iter-03" data-iter="03">
+                    <div class="iter-rail" aria-hidden="true"><span>03</span></div>
+                    <div class="iter-main">
+                        <h3 class="iter-title">Dual Rotation, Skin &amp; <span class="color">Breathing</span></h3>
+                        <div class="iter-body">
+                            <div class="iter-copy">
+                                <p>I expanded the structure to 120 thinner columns, creating a denser arrangement that resembled a continuous architectural skin. I also developed two movement modes: hinged tilting and lateral rotation, where neighboring columns could visually overlap to create different degrees of enclosure.</p>
+                                <p>To explore a less rigid form of movement, I experimented with sinusoidal animation — a repeating mathematical wave — to introduce subtle breathing-like motion. I further refined the simulation with an elliptical base, lighting, and structural details to better visualize the installation as an architectural space.</p>
+                                <p class="iter-outcome"><strong>What I achieved:</strong> A more expressive kinetic structure with multiple rotation behaviors, changing visual enclosure, and an experimental form of continuous ambient movement.</p>
+                            </div>
+                            <aside class="iter-side">
+                                <figure class="iter-media" data-iter-media>
+                                    <div class="iter-media-frame iter-media-frame--embed">
+                                        <iframe
+                                            src="https://drive.google.com/file/d/1d0oDiG09GpMMnMe35TK8gtCWLBVKPJKO/preview"
+                                            title="Iteration 03 — dual rotation, skin and breathing"
+                                            allow="autoplay; encrypted-media; picture-in-picture"
+                                            allowfullscreen
+                                            loading="lazy"></iframe>
+                                    </div>
+                                </figure>
+                                <ul class="iter-keys" aria-label="Key developments">
+                                    <li>120-column skin</li>
+                                    <li>Dual rotation modes</li>
+                                    <li>Visual enclosure</li>
+                                    <li>Sinusoidal breathing</li>
+                                    <li>Exhibition lighting</li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITER 04 -->
+                <article class="iter-block iter-block--flip reveal" id="iter-04" data-iter="04">
+                    <div class="iter-rail" aria-hidden="true"><span>04</span></div>
+                    <div class="iter-main">
+                        <h3 class="iter-title">Processing–Arduino Serial <span class="color">Communication</span></h3>
+                        <div class="iter-body">
+                            <div class="iter-copy">
+                                <p>I explored connecting the digital simulation to physical hardware using serial communication, which allows Processing and Arduino to exchange data.</p>
+                                <p>I programmed Processing to monitor the columns' movement states and send an <code>LED_ON</code> command when the sequence was complete. On the Arduino side, I developed code to interpret the command and activate an LED for two seconds.</p>
+                                <p>This allowed me to explore how a collective event in the digital model could trigger a physical response, establishing a foundation for future integration with motors, sensors, and other electronic components.</p>
+                                <p class="iter-outcome"><strong>What I achieved:</strong> A preliminary communication system linking the completion of a digital movement sequence to a physical LED output controlled by Arduino.</p>
+                            </div>
+                            <aside class="iter-side">
+                                <figure class="iter-media" data-iter-media>
+                                    <div class="iter-media-frame">
+                                        <video
+                                            class="autoplay-inview"
+                                            muted
+                                            loop
+                                            playsinline
+                                            preload="metadata"
+                                            poster="../images/kinetic-ellipse/hub-cover.png"
+                                            src="../images/kinetic-ellipse/video/iter-03.mp4"
+                                            data-iter-video
+                                            aria-label="Iteration 04 process recording"></video>
+                                        <div class="iter-media-fallback" data-iter-fallback>
+                                            <span class="iter-media-tag">04 · Process recording</span>
+                                            <p>Drop <code>iter-04.mp4</code> here</p>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <ul class="iter-keys" aria-label="Key developments">
+                                    <li>Serial protocol</li>
+                                    <li>State monitoring</li>
+                                    <li><code>LED_ON</code> event</li>
+                                    <li>Arduino feedback</li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 03 INTERACTION & PHYSICAL COMPUTING -->
+        <section class="chapter" id="interaction">
+            <div class="chapter-index" aria-hidden="true">03</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Interaction &amp; Physical Computing</p>
+                <h2>Connecting Motion to <span class="color">Interaction</span></h2>
+            </div>
+
+            <div class="ellipse-split reveal">
+                <div class="chapter-prose">
+                    <p class="lead">I wanted to extend Kinetic Ellipse beyond predefined animations by establishing bidirectional communication between Processing and Arduino. The objective was to create a system where events in the digital simulation could trigger physical responses, while external inputs could influence the movement of the virtual columns.</p>
+                    <p>I implemented this through serial communication, beginning with signals sent from Processing to Arduino to activate a red LED. I then reversed the communication flow by connecting a potentiometer to Arduino and transmitting its input values to Processing. When the potentiometer was rotated fully, it triggered the columns in the simulation to rotate.</p>
+                    <p>This was a significant step toward making the structure interactive. Rather than relying exclusively on keyboard commands or predetermined sequences, I could now use a physical input to influence the behavior of the architectural model.</p>
+                    <p>More importantly, the experiment established a foundation for environmental responsiveness. If a potentiometer could communicate with Processing to control column movement, other sensors could potentially serve the same purpose. For example, proximity sensors could detect human presence and trigger nearby columns to rotate, allowing the structure to open, close, or transform in response to its occupants.</p>
+                    <p>Although human-presence detection remained a future direction, establishing communication in both directions demonstrated how physical inputs and computational behavior could be connected.</p>
+                    <p class="beat"><strong>The goal was to move beyond architecture that simply performs programmed movements toward architecture capable of responding to the people and environments around it.</strong></p>
+                </div>
+
+                <div class="ellipse-interact-media">
+                    <figure class="ellipse-video">
+                        <video
+                            class="autoplay-inview"
+                            src="../images/kinetic-ellipse/video/columns-b.mp4"
+                            poster="../images/kinetic-ellipse/motion/sequential.jpg"
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                            aria-label="Physical controls driving the Processing simulation"></video>
+                        <figcaption>Bidirectional serial link — LED out, potentiometer in</figcaption>
+                    </figure>
+                    <div class="ellipse-flow" aria-label="System bridge">
+                        <div class="ellipse-flow-node">Processing<br>3D simulation</div>
+                        <span class="ellipse-flow-arrow" aria-hidden="true">↔</span>
+                        <div class="ellipse-flow-node">Serial<br>bridge</div>
+                        <span class="ellipse-flow-arrow" aria-hidden="true">↔</span>
+                        <div class="ellipse-flow-node">Arduino<br>LED + pot</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 REFLECTION -->
+        <section class="chapter" id="reflection">
+            <div class="chapter-index" aria-hidden="true">04</div>
+            <div class="chapter-head reveal">
+                <p class="season-kicker">Reflection &amp; Future Directions</p>
+                <h2>Beyond Predetermined <span class="color">Movement</span></h2>
+            </div>
+
+            <div class="chapter-prose reveal ellipse-prose-wide">
+                <p class="lead">Kinetic Ellipse began as a capstone prototype (an early model of dynamic, responsive, living architecture) but it gradually changed how I thought about the relationship between computation and physical space.</p>
+                <p>Working with 130 independently controlled elements demonstrated how relatively simple movements could produce complex collective behavior. The structure's character emerged not just from the geometry of its columns, but from the timing, coordination, and interaction between them.</p>
+                <p>It also raised a question that remains central to my interest in responsive environments.</p>
+                <p>What if architectural elements could do more than execute programmed sequences? What if they could continually adjust their behavior based on human presence, surrounding conditions, and the movements of neighboring components?</p>
+                <p>I see Kinetic Ellipse as an early investigation into that possibility: a bridge from the inspiration of Jenny's <a href="https://www.craftedspace.co.uk/artworks/proto-elips" target="_blank" rel="noopener noreferrer">Proto Elips</a> toward spaces that can respond to their occupants, and that is what <a href="https://r-0n.github.io/Capstone-Pneumitecture/" target="_blank" rel="noopener noreferrer">Pneumitecture</a> explored more on. More of that original project lives on at <a href="https://www.craftedspace.co.uk/" target="_blank" rel="noopener noreferrer">Crafted Space</a>.</p>
+                <p class="beat"><strong>The next step is to move from telling the architecture how to move toward giving it reasons to move.</strong></p>
+            </div>
+
+            <figure class="ellipse-finale reveal">
+                <img src="../images/kinetic-ellipse/hub-cover.png" alt="Expressive enclosure configuration of Kinetic Ellipse" loading="lazy">
+                <figcaption>A capstone prototype — collective behavior from coordinated columns</figcaption>
+            </figure>
+        </section>
+
+        <nav class="case-pager">
+            <a href="solidworks-robotic-arm.html"><small>Previous</small>SolidWorks Robotic Arm</a>
+            <a class="next" href="the-outer-experience.html"><small>Next</small>The Outer Experience</a>
+        </nav>
+    </main>
+
     <div id="case-chrome-bottom"></div>
+
     <script src="../js/case-study.js" defer></script>
+    <script src="../js/ellipse.js?v=3" defer></script>
 </body>
 </html>
