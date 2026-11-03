@@ -30,7 +30,6 @@
             '    <a href="' + BASE + 'index.html#header">HOME</a>' +
             '    <a href="' + BASE + 'index.html#portfolio">PORTFOLIO</a>' +
             '    <a href="' + BASE + 'index.html#blog">PROJECTS</a>' +
-            '    <a href="' + BASE + 'index.html#guitar">ACOUSTIC SESSIONS</a>' +
             '    <a href="' + BASE + 'index.html#about">ABOUT</a>' +
             '    <a href="' + BASE + 'index.html#contact">CONTACT</a>' +
             '  </div>' +

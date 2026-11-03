@@ -265,7 +265,7 @@ $(function() {
         e.preventDefault();
         navigateToSection('contact');
     })
-    $('#portfolio-link').on('click', function(e) {
+    $('#portfolio-link, #portfolio-bar-link').on('click', function(e) {
         e.preventDefault();
         navigateToSection('portfolio');
     })
@@ -276,13 +276,6 @@ $(function() {
     $('#project-link').on('click', function(e) {
         e.preventDefault();
         navigateToSection('blog');
-    })
-
-    //for guitar(acoustic sessions) post 
-
-    $('#guitar-link').on('click', function(e) {
-        e.preventDefault();
-        navigateToSection('guitar');
     })
 
     $('#home-link').on('click', function(e) {
