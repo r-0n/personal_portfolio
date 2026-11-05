@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <title>Gesture-Controlled Racing Car || Aaron Wajah</title>
+    <link rel="icon" type="image/png" href="../images/logo-no-background.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/rccar.css?v=18">
+</head>
+<body class="case-study-page rccar-story" data-base="../">
+    <div id="case-chrome-top"></div>
+
+    <nav class="rccar-rail" aria-label="Chapters">
+        <a href="#hero" data-chapter="hero"><i>00</i><span>Hero</span></a>
+        <a href="#concept" data-chapter="concept"><i>01</i><span>Concept</span></a>
+        <a href="#design" data-chapter="design"><i>02</i><span>Design</span></a>
+        <a href="#racing" data-chapter="racing"><i>03</i><span>Racing</span></a>
+        <a href="#reflection" data-chapter="reflection"><i>04</i><span>Reflection</span></a>
+    </nav>
+
+    <main class="rccar-main">
+        <!-- 00 HERO -->
+        <header class="rccar-hero" id="hero">
+            <div class="rccar-hero-media" aria-hidden="true">
+                <img src="../images/remote-control-car/hub-cover.jpg" alt="">
+            </div>
+            <div class="rccar-hero-veil" aria-hidden="true"></div>
+            <div class="rccar-hero-copy reveal">
+                <h1>Gesture-Controlled <span class="color">Racing Car</span></h1>
+                <p class="rccar-hero-line">A physical driving experience controlled through hand tracking and foot pedals.</p>
+            
+                <div class="rccar-pillars" aria-label="Story pillars">
+                    <span>Embodied control</span>
+                    <span>Hardware ↔ software</span>
+                    <span>Playable experience</span>
+                </div>
+                <br>
+                <p class="case-kicker">May 2023 · Physical Computing · Human–Computer Interaction · Robotics</p>
+            </div>
+        </header>
+
+        <!-- 01 CONCEPT -->
+        <section class="chapter" id="concept">
+            <div class="chapter-index" aria-hidden="true">01</div>
+            <div class="chapter-head reveal">
+                <p class="chapter-eyebrow">Concept &amp; Inspiration</p>
+                <h2>Rethinking the Driving Interface</h2>
+                <p class="lead">Exploring embodied interaction through a miniature driving experience.</p>
+            </div>
+
+            <div class="rccar-concept-layout reveal">
+                <div class="rccar-concept-copy">
+                    <p>Learning to drive involves coordinating several actions at once. Steering, accelerating, and braking must work together, often requiring practice before these movements become instinctive.</p>
+                    <p>We began by asking whether a small robotic car could make this coordination easier to explore through an interactive experience.</p>
+                    <p>Working with Hassan and Majid, I helped develop a gesture-controlled car that replaced the conventional remote with hand tracking and a physical foot pedal. By moving their hand in front of a camera, users could steer the car left or right, while the pedal provided control over its forward and backward movement.</p>
+                    <p>The intention was to create a more physical connection between the user and the machine. Rather than pressing buttons on a controller, participants could use movements inspired by actual driving.</p>
+                    <p>What began as an exploration of alternative control methods gradually developed into a racing experience, introducing an element of competition to the challenge of navigating a physical vehicle.</p>
+                </div>
+
+                <aside class="rccar-credits" aria-label="Project credits">
+                    <div class="rccar-credits-grid">
+                        <div class="rccar-credit-block rccar-credit-stack">
+                            <h3>Team</h3>
+                            <ul>
+                                <li>Aaron Wajah</li>
+                                <li>Hassan</li>
+                                <li>Majid</li>
+                            </ul>
+                        </div>
+                        <div class="rccar-credit-block">
+                            <h3>Roles & Disciplines</h3>
+                            <ul>
+                                <li>Embedded Systems</li>
+                                <li>Robotics & Physical Computing</li>
+                                <li>Software Engineering</li>
+                                <li>Human–Computer Interaction</li>
+                                <li>Interaction Design</li>
+                                <li>Computer Vision</li>
+                                <li>Racing UI Development</li>
+                            </ul>
+                        </div>
+                        <div class="rccar-credit-block">
+                            <h3>Hardware</h3>
+                            <ul>
+                                <li>Arduino Uno</li>
+                                <li>L293D Motor Shield</li>
+                                <li>DC motors</li>
+                                <li>Foot pedal</li>
+                                <li>Ultrasonic + servo</li>
+                            </ul>
+                        </div>
+                        <div class="rccar-credit-block">
+                            <h3>Software &amp; Technologies</h3>
+                            <ul>
+                                <li>Arduino C/C++</li>
+                                <li>p5.js / JavaScript</li>
+                                
+                                <li>ml5.js / PoseNet</li>
+                                <li>Serial Communication</li>
+                                <li>Local Storage</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+
+            <div class="rccar-concept-media reveal">
+                <div class="rccar-media-panel">
+                    <div class="rccar-carousel" data-concept-carousel aria-roledescription="carousel" aria-label="Concept sketches">
+                        <div class="rccar-media-frame rccar-carousel-stage">
+                            <div class="rccar-carousel-track" data-carousel-track>
+                                <figure class="rccar-carousel-slide is-on" data-slide="0">
+                                    <button type="button" class="rccar-carousel-expand" data-lightbox-open data-lightbox-group="concept" data-index="0" data-src="../images/remote-control-car/concept-1.1.png" data-caption="01.1 · System overview" aria-label="Expand system overview sketch">
+                                        <img src="../images/remote-control-car/concept-1.1.png" alt="Concept sketch of hand steering, camera, foot pedal, and car on track" loading="lazy">
+                                        <span class="rccar-expand-hint" aria-hidden="true">Expand</span>
+                                    </button>
+                                    <figcaption><span>01.1</span> System overview</figcaption>
+                                </figure>
+                                <figure class="rccar-carousel-slide" data-slide="1">
+                                    <button type="button" class="rccar-carousel-expand" data-lightbox-open data-lightbox-group="concept" data-index="1" data-src="../images/remote-control-car/concept-1.png" data-caption="01 · Circuit &amp; leaderboard" aria-label="Expand circuit and leaderboard sketch">
+                                        <img src="../images/remote-control-car/concept-1.png" alt="Concept sketch of racing track, lap timer, and leaderboard" loading="lazy">
+                                        <span class="rccar-expand-hint" aria-hidden="true">Expand</span>
+                                    </button>
+                                    <figcaption><span>01</span> Circuit &amp; leaderboard</figcaption>
+                                </figure>
+                                <figure class="rccar-carousel-slide" data-slide="2">
+                                    <button type="button" class="rccar-carousel-expand" data-lightbox-open data-lightbox-group="concept" data-index="2" data-src="../images/remote-control-car/concept-2.png" data-caption="02 · Gesture mapping" aria-label="Expand gesture mapping sketch">
+                                        <img src="../images/remote-control-car/concept-2.png" alt="Concept sketch of five-region hand gesture mapping on a laptop" loading="lazy">
+                                        <span class="rccar-expand-hint" aria-hidden="true">Expand</span>
+                                    </button>
+                                    <figcaption><span>02</span> Gesture mapping</figcaption>
+                                </figure>
+                            </div>
+                            <button type="button" class="rccar-carousel-nav rccar-carousel-prev" data-carousel-prev aria-label="Previous sketch">‹</button>
+                            <button type="button" class="rccar-carousel-nav rccar-carousel-next" data-carousel-next aria-label="Next sketch">›</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rccar-media-panel">
+                    <figure class="rccar-concept-video">
+                        <div class="rccar-media-frame rccar-video-frame">
+                            <video
+                                class="rccar-autoplay"
+                                src="../images/remote-control-car/concept-demo.mp4"
+                                muted
+                                loop
+                                playsinline
+                                autoplay
+                                preload="auto"
+                                controls
+                                controlslist="nodownload"
+                                aria-label="Gesture-Controlled Racing Car concept video"></video>
+                            <figcaption><span>▶</span> Final demo</figcaption>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="rccar-lightbox" id="rccar-lightbox" hidden>
+            <button type="button" class="rccar-lightbox-backdrop" data-lightbox-close aria-label="Close expanded image"></button>
+            <div class="rccar-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded concept sketch">
+                <button type="button" class="rccar-lightbox-close" data-lightbox-close aria-label="Close">×</button>
+                <button type="button" class="rccar-lightbox-nav rccar-lightbox-prev" data-lightbox-prev aria-label="Previous sketch">‹</button>
+                <img src="" alt="" data-lightbox-img>
+                <button type="button" class="rccar-lightbox-nav rccar-lightbox-next" data-lightbox-next aria-label="Next sketch">›</button>
+                <p class="rccar-lightbox-caption" data-lightbox-caption></p>
+            </div>
+        </div>
+
+        <!-- 02 DESIGN -->
+        <section class="chapter" id="design">
+            <div class="chapter-index" aria-hidden="true">02</div>
+            <div class="chapter-head reveal">
+                <p class="chapter-eyebrow">Design &amp; Implementation</p>
+                <h2>From Gesture to Movement</h2>
+                <p class="lead">The robotic car, hand tracking, pedal mechanism, serial communication, and obstacle avoidance experiments.</p>
+            </div>
+
+            <div class="reveal">
+                <p>We built the car using an Arduino Uno, four DC motors, and an L293D motor shield, which simplified the motor connections and left room for additional components.</p>
+            </div>
+
+            <div class="rccar-parts reveal">
+                <span>Arduino Uno</span>
+                <span>L293D Motor Shield</span>
+                <span>4× DC motors</span>
+                <span>PoseNet · p5.js</span>
+                <span>Foot pedal + potentiometer</span>
+                <span>2× Serial ports</span>
+                <span>Ultrasonic + servo</span>
+            </div>
+
+            <div class="reveal">
+                <p>The steering system was developed in p5.js using PoseNet to track the horizontal position of the user's right wrist through a webcam. We divided the tracking area into five regions, interpreting movement across them as steering instructions. Moving the hand left or right generated corresponding commands for the car.</p>
+                <p>For acceleration and braking, we developed a separate foot pedal mechanism using a potentiometer. Pressing the pedal changed its resistance reading, which Arduino transmitted to p5.js for interpretation.</p>
+                <p>Connecting everything presented another challenge. The car and pedal operated through separate Arduino boards, requiring two serial connections within the same p5.js application. We adapted the communication system to receive pedal inputs while sending movement commands to the car.</p>
+                <p>We also experimented with obstacle avoidance using an ultrasonic sensor mounted on a servo motor. This allowed the car to detect nearby obstacles and scan alternative directions, introducing an early form of environmental awareness alongside user control.</p>
+            </div>
+
+            <div class="rccar-stack reveal" aria-label="System communication">
+                <div class="rccar-stack-node">
+                    <strong>Wrist X</strong>
+                    <span>PoseNet maps horizontal position into five steering bands</span>
+                </div>
+                <div class="rccar-stack-node">
+                    <strong>Pedal</strong>
+                    <span>Potentiometer → Arduino → Acceleration / Brake over serial</span>
+                </div>
+                <div class="rccar-stack-node">
+                    <strong>p5.js</strong>
+                    <span>Fuses gesture + pedal, writes movement commands</span>
+                </div>
+                <div class="rccar-stack-node">
+                    <strong>Chassis</strong>
+                    <span>Second Arduino drives motors via the L293D shield</span>
+                </div>
+            </div>
+
+            <!-- Signature interactive: hand-tracking demonstration -->
+            <div class="rccar-demo reveal" id="gesture-demo">
+                <div class="rccar-demo-head">
+                    <h3>Hand-Tracking Demonstration</h3>
+                    <p class="rccar-demo-live">Region <b id="demo-region">CENTER</b></p>
+                </div>
+
+                <div class="rccar-demo-track" id="demo-track" tabindex="0" role="application" aria-label="Five horizontal wrist-position regions. Move your cursor or use the slider to steer.">
+                    <div class="rccar-demo-band" data-dir="left2" data-label="LEFT2" data-value="-1"><i>LEFT2</i><b>−1</b></div>
+                    <div class="rccar-demo-band" data-dir="left1" data-label="LEFT1" data-value="-0.5"><i>LEFT1</i><b>−0.5</b></div>
+                    <div class="rccar-demo-band is-hot" data-dir="center" data-label="CENTER" data-value="0"><i>CENTER</i><b>0</b></div>
+                    <div class="rccar-demo-band" data-dir="right1" data-label="RIGHT1" data-value="0.5"><i>RIGHT1</i><b>+0.5</b></div>
+                    <div class="rccar-demo-band" data-dir="right2" data-label="RIGHT2" data-value="1"><i>RIGHT2</i><b>+1</b></div>
+                    <span class="rccar-demo-hand" id="demo-hand" aria-hidden="true"></span>
+                </div>
+                <div class="rccar-demo-axis">
+                    <span>Left</span>
+                    <span>Center</span>
+                    <span>Right</span>
+                </div>
+
+                <div class="rccar-demo-controls">
+                    <label for="demo-slider">Tracked hand position</label>
+                    <input
+                        type="range"
+                        id="demo-slider"
+                        min="0"
+                        max="100"
+                        value="50"
+                        step="1"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="50"
+                        aria-describedby="demo-help">
+                </div>
+
+                <div class="rccar-demo-readout">
+                    <span>Region <strong id="demo-label">Center</strong></span>
+                    <span>Value <strong id="demo-value">0</strong></span>
+                    <span>Steering <strong id="demo-steer">Neutral</strong></span>
+                </div>
+                <p class="rccar-demo-note" id="demo-help">Move your cursor across the track — or drag the slider — to simulate horizontal wrist movement. The highlighted region determines the steering direction. This demonstrates the original classification logic, not a live connection to the robotic car.</p>
+            </div>
+
+            <div class="rccar-dev-block reveal">
+                <div class="rccar-dev-head">
+                    <p class="chapter-eyebrow">Build log</p>
+                    <h3>Development Process</h3>
+                </div>
+
+            <div class="rccar-dev-grid" aria-label="Development process photos">
+                <figure class="rccar-dev-item">
+                    <button type="button" class="rccar-dev-expand" data-lightbox-open data-lightbox-group="dev" data-index="0" data-src="../images/remote-control-car/dev-1.jpg" data-caption="Dev 1 · Adding motors " aria-label="Expand photo: adding motors">
+                        <img src="../images/remote-control-car/dev-1.jpg" alt="Development photo: adding motors to the chassis" loading="lazy">
+                        <span class="rccar-expand-hint" aria-hidden="true">Expand</span>
+                    </button>
+                    <figcaption><span>Dev 1</span> Adding motors to chassis</figcaption>
+                </figure>
+                <figure class="rccar-dev-item">
+                    <button type="button" class="rccar-dev-expand" data-lightbox-open data-lightbox-group="dev" data-index="1" data-src="../images/remote-control-car/dev-2.jpg" data-caption="Dev 2 · Adding Arduino Uno" aria-label="Expand photo: adding Arduino Uno board">
+                        <img src="../images/remote-control-car/dev-2.jpg" alt="Development photo: adding the Arduino Uno board" loading="lazy">
+                        <span class="rccar-expand-hint" aria-hidden="true">Expand</span>
+                    </button>
+                    <figcaption><span>Dev 2</span> Adding Arduino Uno to chassis</figcaption>
+                </figure>
+                <figure class="rccar-dev-item">
+                    <button type="button" class="rccar-dev-expand" data-lightbox-open data-lightbox-group="dev" data-index="2" data-src="../images/remote-control-car/dev-2.1.jpg" data-caption="Dev 2.1 · Connecting tires to motors" aria-label="Expand photo: connecting tires to motors ">
+                        <img src="../images/remote-control-car/dev-2.1.jpg" alt="Development photo: connecting tires to the motor drivers" loading="lazy">
+                        <span class="rccar-expand-hint" aria-hidden="true">Expand</span>
+                    </button>
+                    <figcaption><span>Dev 3</span> Connecting tires to motors</figcaption>
+                </figure>
+            </div>
+
+            <div class="rccar-dev-videos reveal" aria-label="Hardware assembly and obstacle testing videos">
+                <figure class="rccar-dev-video">
+                    <div class="rccar-media-frame rccar-video-frame">
+                        <video
+                            class="rccar-autoplay"
+                            src="../images/remote-control-car/dev-motoshield-obstacle.mp4"
+                            muted
+                            loop
+                            playsinline
+                            autoplay
+                            preload="auto"
+                            controls
+                            controlslist="nodownload"
+                            aria-label="Adding motoshield, ultrasonic sensor and testing obstacle checking"></video>
+                    </div>
+                    <figcaption><span>Dev 4</span> Adding motoshield, ultrasonic sensor and testing obstacle checking</figcaption>
+                </figure>
+                <figure class="rccar-dev-video">
+                    <div class="rccar-media-frame rccar-video-frame">
+                        <video
+                            class="rccar-autoplay"
+                            src="../images/remote-control-car/dev-obstacle-2.mp4"
+                            muted
+                            loop
+                            playsinline
+                            autoplay
+                            preload="auto"
+                            controls
+                            controlslist="nodownload"
+                            aria-label="Obstacle detection 2"></video>
+                    </div>
+                    <figcaption><span>Dev 5</span> Obstacle detection 2</figcaption>
+                </figure>
+            </div>
+            </div>
+        </section>
+
+        <!-- 03 RACING -->
+        <section class="chapter" id="racing">
+            <div class="chapter-index" aria-hidden="true">03</div>
+            <div class="chapter-head reveal">
+                <p class="chapter-eyebrow">Interactive Racing Experience</p>
+                <h2>Turning Movement into Competition</h2>
+                <p class="lead">The racing circuit, ultrasonic lap timer, user interface, and leaderboard.</p>
+            </div>
+
+            <div class="reveal">
+                <p>Controlling the car was only the beginning. We wanted to create an experience that encouraged people to test their coordination while making the interaction enjoyable.</p>
+                <p>We designed a racing circuit where participants could compete to complete a lap in the shortest possible time.</p>
+                <p>A separate Arduino system, connected to an ultrasonic sensor, monitored the start and finish line. When the car crossed the starting point, the system initiated a timer. Completing the circuit stopped the timer and recorded the lap duration.</p>
+                <p>We developed a leaderboard interface in p5.js to display recorded times. After finishing a lap, participants could enter their names and add their results, creating a running record of attempts.</p>
+                <p>The addition of timing and competition gave the project a different character. Steering accuracy and pedal control now had measurable consequences, turning an experimental control system into a shared interactive experience.</p>
+            </div>
+
+            <div class="rccar-loop reveal">
+                <div class="rccar-loop-step">
+                    <h3>Check the board</h3>
+                    <p>Before racing, view the leaderboard of fastest laps stored in the browser.</p>
+                </div>
+                <div class="rccar-loop-step">
+                    <h3>Cross the line</h3>
+                    <p>Ultrasonic sensing starts the timer the moment the car enters the circuit.</p>
+                </div>
+                <div class="rccar-loop-step">
+                    <h3>Drive the lap</h3>
+                    <p>Hands steer; the pedal accelerates, brakes, and reverses through the track.</p>
+                </div>
+                <div class="rccar-loop-step">
+                    <h3>Claim your time</h3>
+                    <p>Finish triggers a name prompt — your result joins the running leaderboard.</p>
+                </div>
+            </div>
+
+            <figure class="rccar-race-video reveal">
+                <div class="rccar-media-frame rccar-video-frame">
+                    <video
+                        class="rccar-autoplay"
+                        src="../images/remote-control-car/concept-demo.mp4"
+                        muted
+                        loop
+                        playsinline
+                        autoplay
+                        preload="auto"
+                        controls
+                        controlslist="nodownload"
+                        aria-label="Gesture-Controlled Racing Car final demo"></video>
+                </div>
+                <figcaption><span>▶</span> Final demo</figcaption>
+            </figure>
+        </section>
+
+        <!-- 04 REFLECTION -->
+        <section class="chapter" id="reflection">
+            <div class="chapter-index" aria-hidden="true">04</div>
+            <div class="chapter-head reveal">
+                <p class="chapter-eyebrow">Challenges &amp; Reflection</p>
+                <h2>Engineering a Responsive Experience</h2>
+                <p class="lead">Technical limitations, problem-solving, testing, and lessons from the project.</p>
+            </div>
+
+            <div class="reveal">
+                <p>One of the greatest challenges was making the car respond reliably to gestures and pedal inputs.</p>
+                <p>Our initial hand-tracking implementation processed movement along both horizontal and vertical axes, placing unnecessary demands on the application. By focusing on horizontal wrist position, we reduced the amount of information being processed and improved responsiveness.</p>
+                <p>Communication between devices proved equally demanding. Our original plan involved wireless control, but difficulties with the Bluetooth hardware led us to use wired serial connections instead. Supporting two Arduino boards required changes to the p5.js serial implementation, while a USB extension cable provided enough freedom for the car to navigate the circuit.</p>
+                <p>These challenges taught me the importance of testing individual components before integrating them into a larger interactive system.</p>
+            </div>
+
+            <div class="rccar-closing reveal">
+                <p>More importantly, the project demonstrated how software and physical mechanisms must work together to create a convincing interaction. A gesture is only useful when the machine responds in a way that feels understandable and consistent.</p>
+                <p style="margin-top:14px !important">I became interested in how this approach could extend beyond recreational robotics, particularly toward systems that combine human input with environmental sensing to make physical interactions more responsive and accessible.</p>
+            </div>
+
+            <div class="rccar-links reveal">
+                <a href="https://intro.nyuadim.com/author/anw2034/" target="_blank" rel="noopener noreferrer">Final submission post →</a>
+                <a href="https://intro.nyuadim.com/2023/05/09/final-user-testing-update-not-complete/" target="_blank" rel="noopener noreferrer">User testing update →</a>
+                <a href="https://intro.nyuadim.com/2023/04/24/project-update/" target="_blank" rel="noopener noreferrer">Early project update →</a>
+            </div>
+        </section>
+
+        <nav class="case-pager">
+            <a href="kinetic-ellipse.html"><small>Previous</small>Kinetic Ellipse</a>
+            <a class="next" href="the-outer-experience.html"><small>Next</small>The Outer Experience</a>
+        </nav>
+    </main>
+
+    <div id="case-chrome-bottom"></div>
+    <script src="../js/case-study.js" defer></script>
+    <script src="../js/rccar.js?v=7" defer></script>
+</body>
+</html>

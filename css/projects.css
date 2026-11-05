@@ -112,6 +112,10 @@
     object-position: 78% 48%;
 }
 
+.hub-media-rccar img {
+    object-position: 50% 62%;
+}
+
 .hub-media .wire {
     position: absolute;
     inset: 0;
