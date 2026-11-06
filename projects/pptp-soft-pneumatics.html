@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <title>Pneumitecture || Aaron Wajah</title>
+    <meta name="description" content="Pneumitecture — a continuation of the capstone soft-pneumatics research: heat-sealed TPU, solenoid control and an air-driven installation, documented May–Oct 2026.">
+    <link rel="icon" type="image/png" href="../images/logo-no-background.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/pptp.css">
+</head>
+<body class="case-study-page pptp-story" data-base="../">
+    <div id="case-chrome-top"></div>
+
+    <nav class="pptp-rail" aria-label="Journal chapters">
+      <ul>
+      <li><a href="#top" data-rail="top"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Hero</span></a></li>
+      <li><a href="#overview" data-rail="overview"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Overview</span></a></li>
+      <li><a href="#heat-seal-tpu" data-rail="heat-seal-tpu"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">26 May</span></a></li>
+      <li><a href="#heat-seal-update" data-rail="heat-seal-update"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">02 Jun</span></a></li>
+      <li><a href="#solenoid-wiring" data-rail="solenoid-wiring"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">03 Jun</span></a></li>
+      <li><a href="#solenoid-progress" data-rail="solenoid-progress"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">04 Jun</span></a></li>
+      <li><a href="#nine-valves" data-rail="nine-valves"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">05 Jun</span></a></li>
+      <li><a href="#neater-build" data-rail="neater-build"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Neater build</span></a></li>
+      <li><a href="#3d-printing-airtightness" data-rail="3d-printing-airtightness"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Airtightness</span></a></li>
+      <li><a href="#hvlp-compressor" data-rail="hvlp-compressor"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">HVLP</span></a></li>
+      <li><a href="#testing" data-rail="testing"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Testing</span></a></li>
+      <li><a href="#wooden-frame" data-rail="wooden-frame"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Frame</span></a></li>
+      <li><a href="#finalizing" data-rail="finalizing"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Finalizing</span></a></li>
+      <li><a href="#next-steps" data-rail="next-steps"><span class="pptp-rail-dot"></span><span class="pptp-rail-label">Next steps</span></a></li>
+      </ul>
+    </nav>
+
+    <main class="case-study pptp-main">
+    <header class="pptp-hero" id="top" data-chapter>
+        <div class="pptp-hero-bg" aria-hidden="true"><img src="../images/pptp/wooden-frame/assembled-23-39-05.jpg" alt=""></div>
+        <div class="pptp-hero-inner">
+            <div class="pptp-hero-copy">
+                <div class="case-kicker">May–Oct 2026 · Research supervisor Aya Riad</div>
+                <h1><span class="color">Pneumitecture</span></h1>
+                <p class="pptp-hero-sub">Continuation of the Capstone</p>
+                <p class="case-subtitle">A PPTP journal that continues the Capstone Pneumitecture research </p>
+                <p class="pptp-hero-links">
+                    <a class="hub-cta" href="https://canva.link/emonw8g4ickx88s" target="_blank" rel="noopener">Presentation slides ↗</a>
+                    <a class="pptp-ghost" href="https://r-0n.github.io/Capstone-Pneumitecture/" target="_blank" rel="noopener">Capstone website ↗</a>
+                    <a class="pptp-ghost" href="https://github.com/r-0n/Postgraduate-Practical-Training-Course-PPTP-" target="_blank" rel="noopener">GitHub ↗</a>
+                    <a class="pptp-ghost" href="#overview">Read the journal ↓</a>
+                </p>
+            </div>
+            <figure class="pptp-hero-card">
+                <button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp-hero" data-src="../images/pptp/finalizing/formal-23-40-33.jpg" data-caption="The finished installation" aria-label="Expand image">
+                    <img src="../images/pptp/finalizing/formal-23-40-33.jpg" alt="The finished wooden-frame installation with inflatable elements on aluminium rods" width="960" height="1280">
+                    <span class="pptp-expand-hint" aria-hidden="true">Expand</span>
+                </button>
+                <figcaption>The finished frame, from the final tests</figcaption>
+            </figure>
+        </div>
+    </header>
+
+    <div class="case-meta pptp-meta">
+        <div><h6>Team</h6><p>Aaron Wajah</p></div>
+        <div><h6>Research supervisor</h6><p>Aya Riad</p></div>
+        <div><h6>Capstone</h6><p><a href="https://r-0n.github.io/Capstone-Pneumitecture/" target="_blank" rel="noopener">Live project site ↗</a></p></div>
+        <div><h6>Fabrication</h6><p>Heat sealing TPU, aluminium rods, silicone, air pump, 3D print</p></div>
+        <div><h6>Software</h6><p>Arduino</p></div>
+    </div>
+
+    <section class="pptp-chapter pptp-overview" id="overview" data-chapter>
+        <div class="pptp-chapter-head reveal">
+            <span class="pptp-chapter-index">00</span>
+            <div><div class="pptp-eyebrow">Overview</div><h2>From a taken-apart sealer to a <span>breathing frame</span></h2></div>
+        </div>
+        <div class="pptp-prose">
+            <p class="pptp-lead reveal">This journal continues my capstone project (<a href="https://r-0n.github.io/Capstone-Pneumitecture/" target="_blank" rel="noopener">Capstone Pneumitecture</a>) into the PPTP research program with Dr. Aya Riad. My experiments begins with breaking down a heat sealing device to understand its mechanism to a finished wooden frame that inflates on its own. </p>
+            <ol class="pptp-arc">
+          <li class="reveal"><a href="#heat-seal-tpu"><span class="pptp-arc-n">01</span><span class="pptp-arc-copy"><strong>DIY heat sealing</strong><span>Searching for an easy way to heat seal TPU fabric led to taking apart a heat sealing device and reproducing its parts with a soldering iron, and the technique went on to work.</span></span></a></li>
+          <li class="reveal"><a href="#solenoid-wiring"><span class="pptp-arc-n">02</span><span class="pptp-arc-copy"><strong>Solenoid control</strong><span>A 3-way 2-position solenoid valve driven from an Arduino through a transistor, flyback diode and resistor, tested with a balloon and then wired up for all nine valves.</span></span></a></li>
+          <li class="reveal"><a href="#neater-build"><span class="pptp-arc-n">03</span><span class="pptp-arc-copy"><strong>A neater relay build</strong><span>The breadboard gave way to relay modules, a screw-terminal ground hub and a TalentCell battery powering the valves and the Arduino on separate rails.</span></span></a></li>
+          <li class="reveal"><a href="#3d-printing-airtightness"><span class="pptp-arc-n">04</span><span class="pptp-arc-copy"><strong>Manifold &amp; airtightness</strong><span>A 3D-printed pneumatic manifold, then fittings and an aluminium manifold in the pursuit of an air-tight system.</span></span></a></li>
+          <li class="reveal"><a href="#hvlp-compressor"><span class="pptp-arc-n">05</span><span class="pptp-arc-copy"><strong>HVLP compressor</strong><span>A High Volume Low Pressure compressor replaced the first pump once pressure proved unsuitable for high-volume objects.</span></span></a></li>
+          <li class="reveal"><a href="#testing"><span class="pptp-arc-n">06</span><span class="pptp-arc-copy"><strong>Testing</strong><span>Normal-speed and sped-up recordings of the valves running the inflatables.</span></span></a></li>
+          <li class="reveal"><a href="#wooden-frame"><span class="pptp-arc-n">07</span><span class="pptp-arc-copy"><strong>Wooden frame</strong><span>The frame designed and simulated in Rhino 3D Grasshopper was built with the scene shop, with electronics and the manifold housed at its base.</span></span></a></li>
+          <li class="reveal"><a href="#finalizing"><span class="pptp-arc-n">08</span><span class="pptp-arc-copy"><strong>Finalizing</strong><span>Key-press control gave way to autonomous firmware, then formal tests of the finished installation.</span></span></a></li>
+          <li class="reveal"><a href="#next-steps"><span class="pptp-arc-n">09</span><span class="pptp-arc-copy"><strong>Next steps</strong><span>From programmed movement toward living architecture that senses and adapts to people.</span></span></a></li>
+            </ol>
+            <div class="pptp-stats reveal">
+                <div><strong>9</strong><span>solenoid valves wired and driven from one Arduino</span></div>
+                <div><strong>85%</strong><span>airtightness reached with the printed and aluminium manifold</span></div>
+                <div><strong>40–45 psi</strong><span>the sweet spot found with the HVLP compressor</span></div>
+                <div><strong>3</strong><span>autonomous firmware patterns in the final iteration</span></div>
+            </div>
+        </div>
+    </section>
+
+<section class="pptp-chapter" id="heat-seal-tpu" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">01</span>
+    <div><div class="pptp-eyebrow">26th May</div><h2>Finding Easier Ways to Heat Seal TPU Fabric.</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>Today, I kept on trying to find an easy DIY way of heat sealing TPU. I took apart a heat sealing device(Fig. 1), and I observed the following components:</p>
+<ol class="pptp-list"><li>Heat sealing strip (Fig. 2) : it had a thin strip of metal that I would later find out is chromium-alloy wire, which was the core element that momentarily heats up to melt and seal the plastic. Above this wire was a Teflon tape.</li><li>Teflon tape (Fig. 3) : It had a heat-resistant, non-stick strip that sat over the heat sealing metallic strip to prevent the plastic bag (in this case, our TPU) from sticking to the wire.</li></ol>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.0544"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/heat-seal-tpu/fig1-IMG_2684.jpeg" data-caption="Finding Easier Ways to Heat Seal TPU Fabric. — Fig. 1" aria-label="Expand image"><img src="../images/pptp/heat-seal-tpu/fig1-IMG_2684.jpeg" alt="Fig. 1" width="640" height="607" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 1</figcaption></figure><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.3333"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/heat-seal-tpu/fig2-IMG_4304.jpeg" data-caption="Finding Easier Ways to Heat Seal TPU Fabric. — Fig. 2" aria-label="Expand image"><img src="../images/pptp/heat-seal-tpu/fig2-IMG_4304.jpeg" alt="Fig. 2" width="4032" height="3024" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 2</figcaption></figure></div>
+<p>Taking the heat sealing device apart, I reasoned I could find an easier DIY way of heat-sealing different plastic fabrics with customized designs easier and efficiently . For that, here are the suggested items:</p>
+<ol class="pptp-list"><li>Soldering Iron: This would be the device to apply heat.</li><li>Heat sealing strip (Fig. 4): For longer straight edges, this item would be placed on the TPU, then the soldering iron would be placed on the heat sealing metal allow. Because it has teflon, the TPU wouldn’t get stick to it.</li><li>Teflon tape (Fig. 5) : Another way to the above approach would be to tap the tip of the soldering iron with teflon tape and apply it to the TPU in any fashion one would want. The teflon would not allow the TPU to get stuck on the tip of the soldering iron.</li></ol>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.0366"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/heat-seal-tpu/fig4-IMG_2682.jpeg" data-caption="Finding Easier Ways to Heat Seal TPU Fabric. — Fig. 4" aria-label="Expand image"><img src="../images/pptp/heat-seal-tpu/fig4-IMG_2682.jpeg" alt="Fig. 4" width="679" height="655" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 4</figcaption></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.9391"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/heat-seal-tpu/fig5-IMG_2681.jpeg" data-caption="Finding Easier Ways to Heat Seal TPU Fabric. — Fig. 5" aria-label="Expand image"><img src="../images/pptp/heat-seal-tpu/fig5-IMG_2681.jpeg" alt="Fig. 5" width="679" height="723" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 5</figcaption></figure></div>
+<p>Here is a list of the Amazon links to the items:</p>
+<ol class="pptp-list"><li><a href="https://www.amazon.ae/LEXIVON-Multi-Purpose-Self-Igniting-Adjustable-LX-770/dp/B07M9ZKK9T/ref=sr_1_8?crid=25VSW3BL09IM7&amp;dib=eyJ2IjoiMSJ9.jnahy7BMzbpIYPtqAaSq39TRvFvlC3IoK7sjc9QHmopn5EYF-msttaFrYxal-vCPFlImEQyM7U3X272HnuupI7fzVh-tdI3doPdisSoYhyKoEsVnX3SFrUcKoJ1zwfXwhrhABsK_ce7lTWrkLfLb7RAQbdNSFzMnCqlXrqrpQiXM-oadrY_fEOCL4zQ60kMzWem0bvYQgOXc_a7k8OxLJzbngUCC9o3TsKWsNUcCanSQuFBxyBfLf5L5nisYBxfupkyDYUH27j1lvMxH5w4QNhwOkwp7jTD2UjTEmgd9V58.EPsL8fWxf1a7NbmaIeKbALB0Xw7_ftavP82SXkuCNi4&amp;dib_tag=se&amp;keywords=soldering%2Biron&amp;qid=1779785561&amp;sprefix=Solder%2Caps%2C351&amp;sr=8-8&amp;ufe=app_do%3Aamzn1.fos.b4f74a7b-9d54-420b-9003-7e54957e6f89&amp;th=1" target="_blank" rel="noopener">Soldering iron.</a></li><li><a href="https://www.amazon.ae/Honoson-Impulse-Replacement-Element-Compatible/dp/B08QVBP2LV/ref=sr_1_5?crid=MSNL3G80M8YM&amp;dib=eyJ2IjoiMSJ9.VqiQYUVijdZBL0-uzqmzvuqDqxmGAWCJgkPW4EiHxKGZSRn1fUHFD3dw5VgLgX5XZkR7Hp9jnnbXwxj4jboWVLvUDDsMxDCZOOWi8iNtmzCNaqdonxE7-PLBLyahFYL2SSKserZVijd9gIzlbgJfC3HTHnkiv3LS1f5DrrFthpMTegx5Bh3BOtGRiJycCRgSpGIkRib8tlbDGIqUCPlnQyozauo8Q5QSgfl5aUh0BCPVRAVQMQ9TZ5Xy4cp38CD4gFa9QMzegWpasNiu7iRLExWf4N3eLKb7maWaEPJon4M.RrI9IslYRpIbtM_X5a7nmzCuK4Nz29UL1KbFvhekw1Y&amp;dib_tag=se&amp;keywords=Heat+seal+strips&amp;qid=1779789210&amp;sprefix=heat+seal+strips%2Caps%2C259&amp;sr=8-5" target="_blank" rel="noopener">Heat sealing strips.</a></li><li><a href="https://www.amazon.ae/Skycabin-10mm-PTFE-Fabric-Tape/dp/B09TQG5D8G/ref=sr_1_14?crid=36PZB6QI8SYI7&amp;dib=eyJ2IjoiMSJ9.KVeVzj_IuxXZLnqsYncywtfzU2tHQCOR1_VNb6FMtqN5EzAlBczshjDMOL2YeIDcRDA-GsDejfpkBYYt8K6tbRI0XYTxPXAwIZN6-OlltyOdsCUeNKwl73B00kXreBHT_VBoR0cBHjbcodps_3Yu7rSUoTlBJSzRRhufGD0TNkrY08OtjdfAE1H_RU-3K1EzvmSK2KolEq0-d-wfr-1OnduJ_hT0IKKECfOe579bvE_cIleEIIeK4zCATQAGKvLwDpXX4mJGyXcjDtXvdLiqhKn90pUWL7s51GlVJppj_SI.4fgIio-1xHDMmqP8SfZ-QVl_eRnsDz-U6URCft48lEM&amp;dib_tag=se&amp;keywords=teflon+tape&amp;qid=1779789658&amp;sprefix=Teflon+%2Caps%2C244&amp;sr=8-14" target="_blank" rel="noopener">Teflon tape.</a></li></ol>
+<p>This is still in theory; I will be making an updates page once I test it out.</p>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="heat-seal-update" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">02</span>
+    <div><div class="pptp-eyebrow">02/06/2026</div><h2>Update on Heat Sealing Technique</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>The technique I proposed in my previous entry actually worked.</p>
+<h3 class="pptp-h pptp-h1">Intro</h3>
+<p>The Lexivon soldering iron uses a butane tank to supply fire to the soldering bit. The one we ordered came without it so I had to wait a while to figure out where to get a butane refiller. After some research and asking around, I figured out it could be found at any vape store or Buqala because they sell lighters.</p>
+<p>NB: Butane gas is the same gas used in lighters.</p>
+<h3 class="pptp-h pptp-h1">Setting UP</h3>
+<h5 class="pptp-h pptp-h3">Setting up the Lexivon Butane-powered Soldering Iron.</h5>
+<p>Before you do anything, read the manual of the tool. It uses a butane tank to supply heat to the soldering bit; thus, it must be handled with care because butane is highly flameable. The manual gives instructions on how to refill, light it up, control heat/flame, etc.</p>
+<p>Here is a video demonstration of how it works without a soldering bit (Fig. 2) and with a soldering bit (Fig. 3) after reading everything in the manual.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/heat-seal-update/fig1-IMG_4396.web.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Fig. 1"></video></div><figcaption>Fig. 1</figcaption></figure><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/heat-seal-update/fig2-IMG_4397.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Fig. 2"></video></div><figcaption>Fig. 2</figcaption></figure></div>
+<h4 class="pptp-h pptp-h2">Testing</h4>
+<p>After filling the soldering iron with butane, I proceeded to test it out. Here’s how they turned out.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/heat-seal-update/test-IMG_4400_Trim_1_1.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Update on Heat Sealing Technique — video"></video></div></figure><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/heat-seal-update/test-heat_seal_test1.web.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Update on Heat Sealing Technique — video"></video></div></figure></div>
+<h5 class="pptp-h pptp-h3">Full video tutorial on heat sealing a triangle.</h5>
+<p>The goal here is to start small, and slowly progress to making bigger, much more intricate designs.</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-yt"><div class="pptp-frame pptp-frame-yt"><iframe src="https://www.youtube-nocookie.com/embed/4dFO_U-QD9c" title="Update on Heat Sealing Technique — video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption>Full video tutorial on heat sealing a triangle. · <a href="https://youtu.be/4dFO_U-QD9c" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption></figure></div>
+<h6 class="pptp-h pptp-h4">Remarks</h6>
+<p>The proposed method works pretty well for heat-sealing well-defined shapes and free hand shapes if you’re looking to heat-seal something creative. It only takes some getting used to.</p>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="solenoid-wiring" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">03</span>
+    <div><div class="pptp-eyebrow">03/06/2026</div><h2>Wiring Up 3-way 2-Position Solenoid Valve</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>In what follows I will give a full run down on what and why of solenoid valve used for the project Pneumitecture.</p>
+<h3 class="pptp-h pptp-h1">Overview</h3>
+<p>The Airix 3V210-08 Pneumatic Solenoid Valve is designed for pneumatic and automation systems. It  offers reliable 2-position 3-way flow control. Ideal for regulating directional airflow in industrial applications with high repeatability. It comes with three pneumatic fittings:</p>
+<ol class="pptp-list"><li>2 Male Straight Push to Connect Fittings</li><li>1 Airtac BSL/pneumatic muffler.</li></ol>
+<p>The image below shows the dimensions from the Amazon link, but I found it to be misleading in case you’d want to get more fittings. In any case, you need more fittings for this valve. I found the fittings with thread 1/8” to be ideal instead of the 1/4’’ it says in the Amazon link and in this picture.</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.9627"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/dimensions-image.png" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/dimensions-image.png" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="1444" height="1500" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<p>This specific solenoid valve in the link comes with a junction box. However, there are some without it and has just wires for you to connect. Regardless, because we have the one with a junction box, I will document the process needed to wire it up and use it.</p>
+<h3 class="pptp-h pptp-h1">Setting the Solenoid Valve Up</h3>
+<p>Before delving in, I found this link very helpful in helping understand the different types of solenoid valves and how to wire them.</p>
+<ol class="pptp-list"><li>First, take it out of its cardboard box.</li><li>There is a screw screwing the junction box to the valve body. Unscrew this.</li><li>Carefully remove the junction box and pass a live and earth wire through it like this:</li></ol>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.4562"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/junction-box-wires.png" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/junction-box-wires.png" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="584" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<ol class="pptp-list" start="4"><li>Cut the ends of the wire and carefully connect them to the screw terminal on the connector that was inside the junction box:<ul><li>NB: carefully screw them to avoid breaking/damagin the connector.</li></ul></li></ol>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/terminal-12-36-08.jpg" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/terminal-12-36-08.jpg" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/terminal-12-36-18.jpg" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/terminal-12-36-18.jpg" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<ol class="pptp-list" start="5"><li>Put the connector back into the junction box and screw it tightly.</li></ol>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/connector-12-38-49.jpg" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/connector-12-38-49.jpg" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/connector-12-39-12.jpg" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/connector-12-39-12.jpg" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<ol class="pptp-list" start="6"><li>After that, you can then screw the pneumatic muffler/ Airtac BSL.</li></ol>
+<p>Link to purchase:</p>
+<p><a href="https://www.amazon.ae/dp/B0FH79583S?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1" target="_blank" rel="noopener">https://www.amazon.ae/dp/B0FH79583S?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1</a></p>
+<h3 class="pptp-h pptp-h1">Testing The Pneumatic Solenoid Valve With Arduino Control</h3>
+<p>After wiring and setting up the solenoid valve, it was now time to test it.</p>
+<h4 class="pptp-h pptp-h2">Arduino Circuit Connection.</h4>
+<p>To achieve Arduino control with simple wiring, here are the things you’d need:</p>
+<ul class="pptp-list"><li><strong>N-Channel MOSFET</strong> (IRF520/TIP120 Transistor).</li><li><strong>1N4007 Diode</strong> (Crucial flyback diode to protect against voltage spikes).</li><li><strong>10k Ohm Resistor</strong> (Pull-down resistor).</li><li>Breadboard and jumper wires.</li><li><strong>12V External Power Supply</strong> (for the valve).</li><li>Arduino Uno.</li></ul>
+<p><em>How I distribute 12V to the solenoid valve and share ground with the Arduino for simple testing</em></p>
+<ol class="pptp-list"><li><strong>12V Positive:</strong> Connected the <strong>Positive (+)</strong> wire of DC Power Supply (courtesy of IM Lab) to the <strong>Red Rail</strong> on the arduino breadboard.</li><li><strong>12V Ground:</strong> Connected the <strong>Negative (-)</strong> wire of the DC Power Supply to the <strong>Blue/Black Rail</strong> on breadboard.</li><li><strong>Common Ground (CRITICAL):</strong> Connected a jumper wire from the <strong>Blue/Black Rail</strong> to a <strong>GND pin</strong> on the Arduino. This was very CRITICAL because I learned if I mis<em>sed this wire, the Arduino wouldn’t talk to the motor driver or transistors.</em></li></ol>
+<p><em>How I used Arduino signals to switch the high-power 12V valves.</em></p>
+<p><strong>Wiring Steps for ONE Valve (Repeat as many time you need for more solenoid valves):</strong></p>
+<ol class="pptp-list"><li><strong>Place the Transistor:</strong> Insert the TIP120 into the breadboard.<ul><li><em>Orientation:</em> Metal tab facing <strong>away</strong> from you.</li><li><em>Pins (Right to Left):</em>  <strong>Gate (G)</strong>, <strong>Drain (D)</strong>, and <strong>Source (S)</strong></li></ul></li><li><strong>Source (Pin 3) to Ground:</strong> Connect the Left<strong> Leg</strong> directly to the <strong>Blue Ground Rail</strong>.</li><li><strong>Gate (Pin 1) to Arduino:</strong> Connect a <strong>10kΩ Resistor</strong> to the <strong>Right Leg</strong>. Connect the other end of the resistor to the specific <strong>Arduino signal pin</strong>.</li><li><strong>Drain (Pin 2) to Valve:</strong> Connect the <strong>Middle Leg</strong> to <strong>ONE wire</strong> of the Solenoid Valve.</li><li><strong>Valve Power:</strong> Connect the <strong>OTHER wire</strong> of your Solenoid Valve directly to the <strong>Red 12V Rail</strong>.</li><li><strong>The Diode (Safety):</strong> Place the diode bridging the two valve wires (or between the Middle Leg and the 12V Rail).</li></ol>
+<p><em>Notes</em></p>
+<ul class="pptp-list"><li><strong>Stripe (Cathode):</strong> Must face the <strong>Red 12V Rail</strong>.</li><li><strong>No-Stripe (Anode):</strong> Must face the <strong>Middle Leg (Drain)</strong>.</li></ul>
+<h3 class="pptp-h pptp-h1">After Wiring</h3>
+<p>You should have something like the below.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-wiring/after-wiring-13-15-57.jpg" data-caption="Wiring Up 3-way 2-Position Solenoid Valve" aria-label="Expand image"><img src="../images/pptp/solenoid-wiring/after-wiring-13-15-57.jpg" alt="Wiring Up 3-way 2-Position Solenoid Valve — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/solenoid-wiring/after-wiring-video_13-16-53.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Wiring Up 3-way 2-Position Solenoid Valve — video"></video></div></figure></div>
+<p>Connect the Arduino to you laptop, open the Arduino Software application and paste this simplle code.</p>
+<pre class="pptp-code" tabindex="0"><code>// Define the pin connected to the MOSFET Gate
+const int valvePin = 3; 
+
+void setup() {
+  // Initialize the pin as an output
+  pinMode(valvePin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(valvePin, HIGH); // Turn the valve ON (Opens/Shifts position)
+  delay(2000);                  // Wait for 2 seconds
+  
+  digitalWrite(valvePin, LOW);  // Turn the valve OFF (Returns to default position)
+  delay(2000);                  // Wait for 2 seconds
+}</code></pre>
+<p>You should hear periodic clicking of the solenoid valve. That means it’s working.</p>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="solenoid-progress" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">04</span>
+    <div><div class="pptp-eyebrow">04/06/2026</div><h2>Progress on Solenoid Valves</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>Today, I worked on wiring up all the solenoid valves.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.3333"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-progress/wiring-13-24-43.jpg" data-caption="Progress on Solenoid Valves" aria-label="Expand image"><img src="../images/pptp/solenoid-progress/wiring-13-24-43.jpg" alt="Progress on Solenoid Valves — image" width="1280" height="960" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.3333"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/solenoid-progress/wiring-13-24-41.jpg" data-caption="Progress on Solenoid Valves" aria-label="Expand image"><img src="../images/pptp/solenoid-progress/wiring-13-24-41.jpg" alt="Progress on Solenoid Valves — image" width="1280" height="960" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<p>After I wrote a code to test it together with a balloon and an air compressor.</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5471"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/solenoid-progress/Testing_solenoid_valve_with_balloon.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Progress on Solenoid Valves — video"></video></div></figure></div>
+<p>Code for Controlling Valve:</p>
+<h3 class="pptp-h pptp-h1">More on How a Solenoid Valve Works</h3>
+<p>Link:</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-yt"><div class="pptp-frame pptp-frame-yt"><iframe src="https://www.youtube-nocookie.com/embed/6GV0BAgjLb4" title="Progress on Solenoid Valves — video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption>More on How a Solenoid Valve Works · <a href="https://www.youtube.com/watch?v=6GV0BAgjLb4" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="nine-valves" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">05</span>
+    <div><div class="pptp-eyebrow">05/06/2026</div><h2>Circuit Connection for 9 Solenoid Valves (wiring all 9 valves)</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>My first approach to wiring all the solenoid valves was to rinse and repeat the single circuit connection made in <a href="#solenoid-wiring">Wiring Up a 3 by 2 …</a> (Under Testing The Pneumatic Solenoid Valve With Arduino Control title of the same documentation post) post I made a few days ago for 9 valves.</p>
+<h4 class="pptp-h pptp-h2">To demonstrate graphically:</h4>
+<p>the circuit connection for a single solenoid valve in (Fig. 1) repeated nine times as seen in (Fig. 2 &amp; 3) and in the last video.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/nine-valves/fig1-single-circuit-13-15-57.jpg" data-caption="Circuit Connection for 9 Solenoid Valves (wiring all 9 valves) — Fig. 1" aria-label="Expand image"><img src="../images/pptp/nine-valves/fig1-single-circuit-13-15-57.jpg" alt="Fig. 1" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 1</figcaption></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/nine-valves/fig2-nine-valves-15-21-48.jpg" data-caption="Circuit Connection for 9 Solenoid Valves (wiring all 9 valves) — Fig. 2" aria-label="Expand image"><img src="../images/pptp/nine-valves/fig2-nine-valves-15-21-48.jpg" alt="Fig. 2" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 2</figcaption></figure></div>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/nine-valves/fig3-nine-valves-15-21-57.jpg" data-caption="Circuit Connection for 9 Solenoid Valves (wiring all 9 valves)" aria-label="Expand image"><img src="../images/pptp/nine-valves/fig3-nine-valves-15-21-57.jpg" alt="Circuit Connection for 9 Solenoid Valves (wiring all 9 valves) — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/nine-valves/nine-valves-video_15-22-05.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Circuit Connection for 9 Solenoid Valves (wiring all 9 valves) — video"></video></div></figure></div>
+<p>But I soon realized this approach would lead to a mess of wires if I transitioned from a DC power supplier machine to a battery for neater, easy-to-portable build.</p>
+<p>My alternative to creating a neater circuit was to use a channel relay module and other components that made wiring 99% neat. See <a href="#neater-build">Transitioning to a Neater Build</a> for my alternative approach.</p>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="neater-build" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">06</span>
+    <div><div class="pptp-eyebrow">Journal entry 06</div><h2>Transitioning to a Neater Build</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>With an upgraded solenoid valves, it only made sense to create a neater circuit wiring: one that didn’t require any wiring connection on a breadboard because it would create a messy wiring connection. Messy wiring would consequently introduce unstable wiring (if the circuit needed to be moved or attached to something); make it difficult to make modifications without removing the wires for other solenoid valves, and many more drawbacks I found uncomfortable.</p>
+<h4 class="pptp-h pptp-h2"><strong>A. Bill of Materials (BOM) &amp; Hardware Specifications</strong></h4>
+<h6 class="pptp-h pptp-h4">Core Microcontroller &amp; Power Strategy</h6>
+<ul class="pptp-list"><li><strong>Arduino Uno:</strong> Acting as the main logic controller. Powered directly via its <strong>DC barrel jack</strong> connected to the 9V output of the TalentCell Rechargeable battery.</li><li><strong>TalentCell Rechargeable Lithium-Ion Battery Pack (12V/9V):</strong><p><em>Note:</em> Utilizes dual power rails to isolate motor/solenoid noise from digital micro-logic.</p><ul><li><strong>9V DC Output:</strong> Powers the Arduino board via barrel connector.</li><li><strong>12V DC High-Amperage Output (6A Max):</strong> Powers the high-draw solenoid valves.</li></ul></li></ul>
+<h6 class="pptp-h pptp-h4">Actuators &amp; Switching Electronics Components</h6>
+<ul class="pptp-list"><li><strong>9× 12V DC Pneumatic Solenoid Valves:</strong> 12V, pull approx. 200mA–300mA each during activation.</li><li><strong>1× 8-Channel Relay Module:</strong> <strong>Active-Low</strong> logic (operates on 5V logic from Arduino). Controls Valves 1 through 8.</li><li><strong>1× Single Relay Module:</strong> <strong>Active-High</strong> logic (operates on 5V logic from Arduino). Controls Valve 9.</li><li>9× Flyback Diodes (1N4001 or 1N4007): Protection against high-voltage inductive spikes produced when solenoid coils collapse.</li></ul>
+<p><em>Note: If there is any confusion about the valves, here’s an explanation: I had access to an 8-channel relay module and had an extra one from a past project. Here is a video description of how they look, but more on how it was all wired later:</em></p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/neater-build/relay-modules-video_16-05-29.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Transitioning to a Neater Build — video"></video></div></figure></div>
+<h6 class="pptp-h pptp-h4">Distribution &amp; Connectors</h6>
+<ul class="pptp-list"><li><strong>Dual-Row Screw Terminal Block Strip (Barrier Strip) (Fig. 1):</strong> Acts as a high-amperage Common Negative ground pool for all 12V valve circuits.</li></ul>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.1525"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/neater-build/fig1-terminal-block.png" data-caption="Transitioning to a Neater Build — Fig. 1" aria-label="Expand image"><img src="../images/pptp/neater-build/fig1-terminal-block.png" alt="Fig. 1" width="990" height="859" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 1</figcaption></figure></div>
+<ul class="pptp-list"><li><strong>Jumper Wire Combs / Bus Links:</strong> Used to daisy-chain terminals across one side of the barrier strip.</li><li><strong>2.1mm DC Barrel Jack Adapters (Screw Terminal Style):</strong> Breaks out the TalentCell 12V output to positive/negative bare wire leads.</li></ul>
+<h3 class="pptp-h pptp-h1">B. High-Voltage Power Distribution Wiring (12V System) ie</h3>
+<p>To easy visualization, here is a picture of the FULLY COMPLETE circuit wiring:</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/neater-build/complete-circuit-16-32-32.jpg" data-caption="Transitioning to a Neater Build" aria-label="Expand image"><img src="../images/pptp/neater-build/complete-circuit-16-32-32.jpg" alt="Transitioning to a Neater Build — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<ul class="pptp-list"><li>The red arrow points to the screw terminal blog. On one side (the black wires), is the daisy-chaine negative terminal.</li><li>Below it is the the positive daisy-chain loop.</li></ul>
+<h6 class="pptp-h pptp-h4">A. The Common Negative Bus (Screw Terminal Block / The ground)</h6>
+<p>To avoid cramming nine ground wires into a single power source connector, the Screw Terminal Block is configured as a <strong>Negative Distribution Hub</strong>:</p>
+<ol class="pptp-list"><li>All screw terminals along side A (opposite the valves in the image above) of the barrier strip are daisy-chained together using jumper wire bridges.</li><li>The <strong>12V Negative (-) wire</strong> from the TalentCell 12V output adapter is connected to any screw on the <strong>daisy-chained side</strong>. (for ease, I put it on the first screw on the far left.)</li><li>All negative legs from the 9 valves (and their flyback diodes) connect to individual slots on the same side as the daisy-chained ones, as I have done, or on the opposite side.</li></ol>
+<h5 class="pptp-h pptp-h3">B. The 12V Positive Daisy-Chain Loop</h5>
+<ol class="pptp-list"><li>The <strong>12V Positive (+) wire</strong> from the TalentCell 12V output adapter connects to the <strong>COM (Common)</strong> terminal of <strong>Relay 1</strong>.</li><li>A short jumper wire bridges from <strong>Relay 1 COM</strong> to <strong>Relay 2 COM</strong>.</li><li>This jumper chain continues down all 8 COM terminals of the 8-channel module and finishes at the <strong>COM</strong> terminal of the 9th single relay module.</li></ol>
+<h5 class="pptp-h pptp-h3">C. Valve &amp; Flyback Diode Terminal Connections</h5>
+<p>For each of the 9 valves, flyback diodes <strong>must</strong> be installed across the high-voltage termination points to prevent electromagnetic feedback from tripping the TalentCell battery's safety shutdown or resetting the Arduino:</p>
+<ul class="pptp-list"><li><strong>Relay NO (Normally Open) Terminal:</strong> Clamps <strong>Valve Wire 1</strong> twisted together with the <strong><em>Silver Stripe leg</em></strong> of the flyback diode.</li><li><strong>Terminal Block Slot:</strong> Clamps the V<strong>alve Wire 2</strong> twisted together with the <strong><em>Plain Black Leg</em></strong> of the flyback diode.</li></ul>
+<p><em>Note: It is paramount you pay attention to how the wires are screwed into the terminal block and the channel relay module. I faced a long hardware debugging process because one wire was inserting a bit too deep in the terminal block so I had screwed the plastic protection instead. this obstructed the flow of electricity. I took a long time to debug.</em></p>
+<p><em>Also pay attention to the silver-striped lef of the flyback diode and ensure they’re screwed in the right way</em></p>
+<h3 class="pptp-h pptp-h1">Programming</h3>
+<p>Critical Hardware Note: Valves 1–8 use an active-low module (relays click ON when receiving a LOW signal). Valve 9 uses an active-high module (clicks ON when receiving a HIGH signal). The firmware abstracts this completely so all patterns operate via standard ON/OFF state logic via key press.</p>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="3d-printing-airtightness" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">07</span>
+    <div><div class="pptp-eyebrow">Journal entry 07</div><h2>3D printing Parts &amp; Ensuring Air Tightness</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>3D printing the pneumatic manifold was time consuming particular for the following reasons:</p>
+<ul class="pptp-list"><li>For a system as this, ensuring airtightness was of extreme importance.</li><li>The slightest leak of air at the manifold affected how the valves responded by closing or opening for balloons to be inflated.</li></ul>
+<p>While I waited for the aluminium (Fig. 1) pneumatic manifold to arrive, I designed and printed different manifold blocks. Check this <a href="https://github.com/r-0n/Postgraduate-Practical-Training-Course-PPTP-" target="_blank" rel="noopener">Github Repo</a> for all the parts I designed and 3d printed.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.0000"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/3d-printing-airtightness/fig1-image.png" data-caption="3D printing Parts &amp; Ensuring Air Tightness — Fig. 1" aria-label="Expand image"><img src="../images/pptp/3d-printing-airtightness/fig1-image.png" alt="Fig. 1" width="679" height="679" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 1</figcaption></figure><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.1211"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/3d-printing-airtightness/fig2-image.png" data-caption="3D printing Parts &amp; Ensuring Air Tightness — Fig. 2" aria-label="Expand image"><img src="../images/pptp/3d-printing-airtightness/fig2-image.png" alt="Fig. 2" width="1500" height="1338" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 2</figcaption></figure></div>
+<p>When the aluminium manifold arrived, I now had to order a pneumatic stopper and air connect fittings with the right dimentions to fit the manifold holes. Here were the exact things I purchased:</p>
+<ul class="pptp-list"><li>1/4&quot; NPT Plug Pipe Plug Fitting Carbon Steel Male Thread Internal Allen Head Pipe Plug Set (Fig. 3)<ul><li>Amazon Link: <a href="https://www.amazon.ae/dp/B08NCTD7Y1?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1" target="_blank" rel="noopener">https://www.amazon.ae/dp/B08NCTD7Y1?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1</a></li></ul></li><li>12 Packs 1/4&quot; NPT Push to Connect Air Fittings Kit - 6mm to 1/4 Inch Male Thread Quick Connect Pneumatic Couplers, Heavy-Duty Universal Air Compressor Adapters (Fig. 4)<ul><li>Amazon Link: <a href="https://www.amazon.ae/dp/B0F5NV22GY?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank" rel="noopener">https://www.amazon.ae/dp/B0F5NV22GY?ref=ppx_yo2ov_dt_b_fed_asin_title</a></li></ul></li></ul>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.0142"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/3d-printing-airtightness/fig3-image.png" data-caption="3D printing Parts &amp; Ensuring Air Tightness — Fig. 3" aria-label="Expand image"><img src="../images/pptp/3d-printing-airtightness/fig3-image.png" alt="Fig. 3" width="1500" height="1479" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 3</figcaption></figure><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.0044"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/3d-printing-airtightness/fig4-image.png" data-caption="3D printing Parts &amp; Ensuring Air Tightness — Fig. 4" aria-label="Expand image"><img src="../images/pptp/3d-printing-airtightness/fig4-image.png" alt="Fig. 4" width="679" height="676" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 4</figcaption></figure></div>
+<p>With these pneumatic tools, I was able to achieve 85% airtightness. It was hard to achieve 100% airtightness because I realized air escaped from the plastic fittings (the blue part) of the push-to-connect fittings.</p>
+<p>Thus, I worked around that. The Xiaomi Portable Electric Air Compressor I had been using wasn’t enough for the entire system regardless. There was a need for me to move to a more powerful air compressor.</p>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="hvlp-compressor" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">08</span>
+    <div><div class="pptp-eyebrow">Journal entry 08</div><h2>Moving to a HVLP Air Compressor</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>With series of testing, I realized the pressure it generated wasn’t enough or suitable for object with high volume. Thus, I transitioned to a High Volume Low Pressure (HVLP) air compressor. The one available at my disposal was borrowed from Dustin Foster (Manager of the IM Lab), and it looked like the image in Fig. 1</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.0000"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/hvlp-compressor/fig1-image.png" data-caption="Moving to a HVLP Air Compressor — Fig. 1" aria-label="Expand image"><img src="../images/pptp/hvlp-compressor/fig1-image.png" alt="Fig. 1" width="447" height="447" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 1</figcaption></figure></div>
+<p>This air compressor worked great for this project. After so many tests shown in the videos below, I was able to come to an optimized pressure that worked great with the solenoid valves:</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.6981"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/hvlp-compressor/test-video_22-36-48.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Moving to a HVLP Air Compressor — video"></video></div></figure><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/hvlp-compressor/test-video_22-38-41.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Moving to a HVLP Air Compressor — video"></video></div></figure></div>
+<p>In order to achieve smooth inflation, the air compressor must be set to 40-45 psi.</p>
+<p><em>Note:</em> Anything above this would blow the tubes away violently.  Anything below this wouldn’t be able to get the valves to function properly. (see notes under <a href="#solenoid-progress">Progress on Solenoid Valves</a>) or the link below:</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-yt"><div class="pptp-frame pptp-frame-yt"><iframe src="https://www.youtube-nocookie.com/embed/6GV0BAgjLb4" title="Moving to a HVLP Air Compressor — video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><figcaption>Solenoid valve explanation · <a href="https://www.youtube.com/watch?v=6GV0BAgjLb4" target="_blank" rel="noopener">Watch on YouTube ↗</a></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="testing" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">09</span>
+    <div><div class="pptp-eyebrow">Journal entry 09</div><h2>Testing</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>Here are the results from testing. The videos placed side-by-side are the normal one (with normal video speed) and the sped-up video.</p>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/testing/normal-video_23-08-05.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Normal speed"></video></div><figcaption>Normal speed</figcaption></figure><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/testing/sped-up-video_23-08-05.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Sped up"></video></div><figcaption>Sped up</figcaption></figure></div>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/testing/normal-video_23-08-00.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Testing — video"></video></div></figure></div>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="wooden-frame" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">10</span>
+    <div><div class="pptp-eyebrow">Journal entry 10</div><h2>Wooden Frame &amp; More Testing</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>With the help of Tony (manager of the scene shop), I was able to bring the frame that was designed and simulatated in Rhino 3D Grasshopper (Fig. 1) to life.</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.3333"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/wooden-frame/frame-rhino-grasshopper-Frame_00040.png" data-caption="Wooden Frame &amp; More Testing — Fig. 1 · Frame designed and simulated in Rhino 3D Grasshopper" aria-label="Expand image"><img src="../images/pptp/wooden-frame/frame-rhino-grasshopper-Frame_00040.png" alt="Fig. 1 · Frame designed and simulated in Rhino 3D Grasshopper" width="800" height="600" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button><figcaption>Fig. 1 · Frame designed and simulated in Rhino 3D Grasshopper</figcaption></figure></div>
+<h4 class="pptp-h pptp-h2">Pictures of Physical Frame</h4>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/wooden-frame/physical-frame-23-34-52.jpg" data-caption="Wooden Frame &amp; More Testing" aria-label="Expand image"><img src="../images/pptp/wooden-frame/physical-frame-23-34-52.jpg" alt="Wooden Frame &amp; More Testing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<p>After, I installed the aluminium rods, inserted the electronics at the base of the frame, and installed the inflatable (balloon because time did not permit me to install TPU heat-sealed designs). Below is how they turned out.</p>
+<div class="pptp-media pptp-cols-3 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/wooden-frame/assembled-23-38-09.jpg" data-caption="Wooden Frame &amp; More Testing" aria-label="Expand image"><img src="../images/pptp/wooden-frame/assembled-23-38-09.jpg" alt="Wooden Frame &amp; More Testing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-land" style="--arn:1.3333"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/wooden-frame/assembled-23-39-05.jpg" data-caption="Wooden Frame &amp; More Testing" aria-label="Expand image"><img src="../images/pptp/wooden-frame/assembled-23-39-05.jpg" alt="Wooden Frame &amp; More Testing — image" width="1280" height="960" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/wooden-frame/assembled-23-38-38.jpg" data-caption="Wooden Frame &amp; More Testing" aria-label="Expand image"><img src="../images/pptp/wooden-frame/assembled-23-38-38.jpg" alt="Wooden Frame &amp; More Testing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<h3 class="pptp-h pptp-h1">Testing</h3>
+<p>After assembling everything, I did some more testing. Here’s how they turned out.</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-vid pptp-land" style="--arn:1.8276"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/wooden-frame/Final_Testing_Pneumitecture_1.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="Wooden Frame &amp; More Testing — video"></video></div></figure></div>
+<p>Below is the code I used for testing</p>
+<pre class="pptp-code" tabindex="0"><code>//Title: Inflation testing with key toggle
+//date: 26/06/2026
+//author: Aaron Wajah
+
+
+// Define the pins for valves 1, 2, and 3
+const int valve1 = 2;
+const int valve2 = 3;
+const int valve3 = 4;
+const int valve4 = 5;
+const int valve5 = 6;
+const int valve6 = 7;
+const int valve7 = 8;
+const int valve8 = 9;
+const int valve9 = 10;
+
+
+void setup() {
+  Serial.begin(9600);
+  
+  // Set pins as output
+  pinMode(valve1, OUTPUT);
+  pinMode(valve2, OUTPUT);
+  pinMode(valve3, OUTPUT);
+  pinMode(valve4, OUTPUT);
+  pinMode(valve5, OUTPUT);
+  pinMode(valve6, OUTPUT);
+  pinMode(valve7, OUTPUT);
+  pinMode(valve8, OUTPUT);
+  pinMode(valve9, OUTPUT);
+
+
+  // Start with all valves OFF
+  digitalWrite(valve1, HIGH);
+  digitalWrite(valve2, HIGH);
+  digitalWrite(valve3, HIGH);
+  digitalWrite(valve4, HIGH);
+  digitalWrite(valve5, HIGH);
+  digitalWrite(valve6, HIGH);
+  digitalWrite(valve7, HIGH);
+  digitalWrite(valve8, HIGH);
+  digitalWrite(valve9, LOW);
+  
+  
+  Serial.println(&quot;Valve Control Ready!&quot;);
+  Serial.println(&quot;Press '1', '2', or '3...' to TOGGLE that valve.&quot;);
+}
+
+void loop() {
+  if (Serial.available() &gt; 0) {
+    char key = Serial.read();
+    
+    // Toggle logic: If OFF, turn ON; if ON, turn OFF
+    switch (key) {
+      case '1':
+        digitalWrite(valve1, !digitalRead(valve1));
+        Serial.print(&quot;Valve 1 is now: &quot;);
+        Serial.println(digitalRead(valve1) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+        
+      case '2':
+        digitalWrite(valve2, !digitalRead(valve2));
+        Serial.print(&quot;Valve 2 is now: &quot;);
+        Serial.println(digitalRead(valve2) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+        
+      case '3':
+        digitalWrite(valve3, !digitalRead(valve3));
+        Serial.print(&quot;Valve 3 is now: &quot;);
+        Serial.println(digitalRead(valve3) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+
+      case '4':
+        digitalWrite(valve4, !digitalRead(valve4));
+        Serial.print(&quot;Valve 4 is now: &quot;);
+        Serial.println(digitalRead(valve4) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+
+      case '5':
+        digitalWrite(valve5, !digitalRead(valve5));
+        Serial.print(&quot;Valve 5 is now: &quot;);
+        Serial.println(digitalRead(valve5) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+
+      case '6':
+        digitalWrite(valve6, !digitalRead(valve6));
+        Serial.print(&quot;Valve 6 is now: &quot;);
+        Serial.println(digitalRead(valve6) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+
+      case '7':
+        digitalWrite(valve7, !digitalRead(valve7));
+        Serial.print(&quot;Valve 7 is now: &quot;);
+        Serial.println(digitalRead(valve7) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+
+      case '8':
+        digitalWrite(valve8, !digitalRead(valve8));
+        Serial.print(&quot;Valve 8 is now: &quot;);
+        Serial.println(digitalRead(valve8) ? &quot;OFF&quot; : &quot;ON&quot;);
+        break;
+
+      case '9':
+        digitalWrite(valve9, !digitalRead(valve9));
+        Serial.print(&quot;Valve 9 is now: &quot;);
+        Serial.println(digitalRead(valve9) ? &quot;ON&quot; : &quot;OFF&quot;);
+        break;
+
+    }
+  }
+}</code></pre>
+  </div>
+</section>
+
+<section class="pptp-chapter" id="finalizing" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">11</span>
+    <div><div class="pptp-eyebrow">Journal entry 11</div><h2>More Testing &amp; Finalizing</h2></div>
+  </div>
+  <div class="pptp-prose">
+<p>On my next iteration of testing, I moved from controlling the solenoid valves by pressing a key to a more autonomous control. The code for this iteration takes into account a rest time phase after the battery is turned on, consequently turning on the system to allow for you to connect the air compressor to the system.</p>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-vid pptp-land" style="--arn:1.8276"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/finalizing/final-testing2.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="More Testing &amp; Finalizing — video"></video></div></figure></div>
+<h3 class="pptp-h pptp-h1">The Firmware</h3>
+<p>The code also has 3 modes of patterns (random, sequence, and snake pattern) that it switches between after a full cycle of one mode.</p>
+<ul class="pptp-list"><li><strong>At Startup:</strong> The system defaults to autonomous mode. It will randomly pick between Random, Sequential, or Snake mode; run it for a full cycle (9 steps); hit a break; and then automatically pick a new random mode.</li><li><strong>Keyboard Overrides:</strong> If you type a command manually (<code>r</code>, <code>s</code>, or <code>n</code>), the autopilot instantly disengages, and it will loop your chosen pattern indefinitely.</li><li><strong>Return to Auto:</strong> You can press <strong><code>a</code></strong> at any time to turn the autopilot back on.</li></ul>
+<pre class="pptp-code" tabindex="0"><code>//title: Pneumetecture valve control modes
+//author: aaron wajah w/ help of Gemini
+//date: 09/07/2026
+
+// Define the 9 valve pins
+const int valvePins[] = {2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+// Easy-to-read state aliases
+#define ON 1
+#define OFF 0
+
+// ---- TIMING CONFIGURATION ----
+const unsigned long startDelayTime = 5000;      // Rest period before action begins (5 seconds)
+const unsigned long sequentialTotalTime = 7000; // Total time each valve runs (7 seconds)
+const unsigned long overlapTime = 1000;         // How long two valves stay open together (1 second)
+
+// ---- PATH ARRAYS (0-indexed mappings for pins 2 to 10) ----
+const int sequentialOrder[] = {0, 1, 2, 3, 4, 5, 6, 7, 8}; // 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;7-&gt;8-&gt;9
+const int snakeOrder[]      = {0, 1, 2, 5, 4, 3, 6, 7, 8}; // 1-&gt;2-&gt;3-&gt;6-&gt;5-&gt;4-&gt;7-&gt;8-&gt;9
+
+// Track operational modes and states
+enum SystemMode { IDLE, RANDOM_RUN, SEQUENTIAL_RUN, SNAKE_RUN };
+SystemMode currentMode = IDLE;
+SystemMode lastMode = IDLE;   // Memory buffer for the previous mode
+
+bool isAutoMode = true;       // Defaults to true! System runs itself at startup.
+bool firstRunOfMode = true;   // Triggers the 5-second rest phase on mode changes
+int sequenceStep = 0;         // Tracks progression through path arrays
+int randomStep = 0;           // Tracks how many random steps have executed
+
+int currentValve = -1;        // Tracks active valve inside the loop
+int lastValve = -1;           // Memory buffer for the absolute last deactivated valve
+
+void setup() {
+  Serial.begin(9600);
+
+  // Initialize valve pins and ensure they start completely OFF
+  for (int i = 0; i &lt; 8; i++) {
+    pinMode(valvePins[i], OUTPUT);
+    digitalWrite(valvePins[i], HIGH); // HIGH keeps Active-Low (1-8) OFF
+  }
+  pinMode(valvePins[8], OUTPUT);
+  digitalWrite(valvePins[8], LOW);    // LOW keeps Active-High (9) OFF
+  
+  randomSeed(analogRead(A0));
+  
+  Serial.println(&quot;=== Autonomous Valve System Initialized ===&quot;);
+  Serial.println(&quot;System starting in AUTO-PILOT mode...&quot;);
+  Serial.println(&quot;----------------------------------------&quot;);
+  Serial.println(&quot;Keyboard Commands:&quot;);
+  Serial.println(&quot;  'a' -&gt; Re-engage AUTO-PILOT&quot;);
+  Serial.println(&quot;  'r' -&gt; Force Manual RANDOM Mode&quot;);
+  Serial.println(&quot;  's' -&gt; Force Manual SEQUENTIAL Mode&quot;);
+  Serial.println(&quot;  'n' -&gt; Force Manual SNAKE Mode&quot;);
+  Serial.println(&quot;  '0' -&gt; Emergency STOP ALL&quot;);
+  Serial.println(&quot;========================================&quot;);
+}
+
+void loop() {
+  // Always poll keyboard inputs
+  checkKeyboard();
+
+  // If we are on Auto-Pilot and the previous mode finished, pick a new UNIQUE one
+  if (isAutoMode &amp;&amp; currentMode == IDLE) {
+    pickRandomMode();
+  }
+
+  // -------------------------------------------------------------------------
+  // MODE 1: RANDOM RUN WITH OVERLAP (No Consecutive Repeats)
+  // -------------------------------------------------------------------------
+  if (currentMode == RANDOM_RUN) {
+    if (firstRunOfMode) {
+      Serial.println(&quot;⏳ [RANDOM MODE] Starting 5-second system rest...&quot;);
+      if (responsiveDelay(startDelayTime)) return; 
+      
+      randomStep = 0;
+      
+      // HARDENING: Ensure the first valve does not match the last valve used anywhere else
+      do {
+        currentValve = random(0, 9);
+      } while (currentValve == lastValve);
+      
+      setValveState(currentValve, ON);
+      firstRunOfMode = false;
+      Serial.print(&quot;🚀 Action Started! Random Valve &quot;);
+      Serial.println(currentValve + 1);
+    }
+
+    unsigned long totalRandomTime = random(5000, 7001);
+    unsigned long soloTime = totalRandomTime - overlapTime;
+
+    if (responsiveDelay(soloTime)) return;
+
+    // HARDENING: Ensure the next valve is never the current valve
+    int nextValve;
+    do { 
+      nextValve = random(0, 9); 
+    } while (nextValve == currentValve);
+
+    Serial.print(&quot;Overlap Transition -&gt; Opening Valve &quot;);
+    Serial.println(nextValve + 1);
+
+    setValveState(nextValve, ON);
+    if (responsiveDelay(overlapTime)) return;
+
+    setValveState(currentValve, OFF);
+    lastValve = currentValve; // Log this valve into history
+    currentValve = nextValve;
+    randomStep++;
+
+    // If on Auto-Pilot, cycle out to a new mode after 9 random switches
+    if (isAutoMode &amp;&amp; randomStep &gt;= 9) {
+      Serial.println(&quot;\n🔄 Auto-Pilot: Random sequence cycle complete.&quot;);
+      allValvesOff();
+      lastValve = currentValve; // Save final valve selection before clearing
+      currentMode = IDLE;
+      firstRunOfMode = true;
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // MODE 2: SEQUENTIAL RUN WITH OVERLAP
+  // -------------------------------------------------------------------------
+  else if (currentMode == SEQUENTIAL_RUN) {
+    if (firstRunOfMode) {
+      Serial.println(&quot;⏳ [SEQUENTIAL MODE] Starting 5-second system rest...&quot;);
+      if (responsiveDelay(startDelayTime)) return; 
+      
+      sequenceStep = 0;
+      firstRunOfMode = false;
+    }
+
+    int cValve = sequentialOrder[sequenceStep];
+    setValveState(cValve, ON);
+    Serial.print(&quot;Running Valve &quot;);
+    Serial.println(cValve + 1);
+
+    if (sequenceStep &lt; 8) {
+      if (responsiveDelay(sequentialTotalTime - overlapTime)) return;
+      int nValve = sequentialOrder[sequenceStep + 1];
+      setValveState(nValve, ON);
+      Serial.print(&quot;Overlap Transition -&gt; Opening Valve &quot;);
+      Serial.println(nValve + 1);
+      if (responsiveDelay(overlapTime)) return;
+      setValveState(cValve, OFF);
+      lastValve = cValve; // Log to cross-mode history
+      sequenceStep++;
+    } else {
+      if (responsiveDelay(sequentialTotalTime)) return;
+      setValveState(cValve, OFF);
+      lastValve = cValve; // Log final valve to cross-mode history
+      
+      if (isAutoMode) {
+        Serial.println(&quot;\n🔄 Auto-Pilot: Sequential sequence cycle complete.&quot;);
+        currentMode = IDLE;
+        firstRunOfMode = true;
+      } else {
+        sequenceStep = 0; 
+      }
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // MODE 3: SNAKE RUN WITH OVERLAP (1,2,3,6,5,4,7,8,9)
+  // -------------------------------------------------------------------------
+  else if (currentMode == SNAKE_RUN) {
+    if (firstRunOfMode) {
+      Serial.println(&quot;⏳ [SNAKE MODE] Starting 5-second system rest...&quot;);
+      if (responsiveDelay(startDelayTime)) return; 
+      
+      sequenceStep = 0;
+      firstRunOfMode = false;
+    }
+
+    int cValve = snakeOrder[sequenceStep];
+    setValveState(cValve, ON);
+    Serial.print(&quot;Running Snake Valve &quot;);
+    Serial.println(cValve + 1);
+
+    if (sequenceStep &lt; 8) {
+      if (responsiveDelay(sequentialTotalTime - overlapTime)) return;
+      int nValve = snakeOrder[sequenceStep + 1];
+      setValveState(nValve, ON);
+      Serial.print(&quot;Overlap Transition -&gt; Opening Valve &quot;);
+      Serial.println(nValve + 1);
+      if (responsiveDelay(overlapTime)) return;
+      setValveState(cValve, OFF);
+      lastValve = cValve; // Log to cross-mode history
+      sequenceStep++;
+    } else {
+      if (responsiveDelay(sequentialTotalTime)) return;
+      setValveState(cValve, OFF);
+      lastValve = cValve; // Log final valve to cross-mode history
+      
+      if (isAutoMode) {
+        Serial.println(&quot;\n🔄 Auto-Pilot: Snake sequence cycle complete.&quot;);
+        currentMode = IDLE;
+        firstRunOfMode = true;
+      } else {
+        sequenceStep = 0; 
+      }
+    }
+  }
+}
+
+// =========================================================================
+// HELPER FUNCTIONS
+// =========================================================================
+
+// Chooses a fresh mode that is guaranteed to be different than the last one run
+void pickRandomMode() {
+  SystemMode nextMode;
+  
+  do {
+    int choice = random(0, 3); // Evaluates to 0, 1, or 2
+    if (choice == 0) nextMode = RANDOM_RUN;
+    else if (choice == 1) nextMode = SEQUENTIAL_RUN;
+    else nextMode = SNAKE_RUN;
+  } while (nextMode == lastMode); // Reject and reroll if it matches the history buffer
+  
+  currentMode = nextMode;
+  lastMode = currentMode; // Save this choice as the new historical anchor
+  firstRunOfMode = true;
+}
+
+void checkKeyboard() {
+  if (Serial.available() &gt; 0) {
+    char key = Serial.read();
+    if (key == '\n' || key == '\r') return; 
+
+    if (key == 'a' || key == 'A') {
+      isAutoMode = true;
+      currentMode = IDLE;
+      allValvesOff();
+      firstRunOfMode = true;
+      Serial.println(&quot;\n🤖 Auto-Pilot ENGAGED. Selecting fresh random pattern...&quot;);
+    }
+    else if (key == 'r' || key == 'R') {
+      isAutoMode = false;
+      currentMode = RANDOM_RUN;
+      lastMode = RANDOM_RUN; // Update manual selections into history as well
+      allValvesOff();
+      firstRunOfMode = true;
+      Serial.println(&quot;\n🎮 Manual Override: RANDOM MODE forced.&quot;);
+    }
+    else if (key == 's' || key == 'S') {
+      isAutoMode = false;
+      currentMode = SEQUENTIAL_RUN;
+      lastMode = SEQUENTIAL_RUN;
+      allValvesOff();
+      firstRunOfMode = true;
+      Serial.println(&quot;\n🎮 Manual Override: SEQUENTIAL MODE forced.&quot;);
+    }
+    else if (key == 'n' || key == 'N') {
+      isAutoMode = false;
+      currentMode = SNAKE_RUN;
+      lastMode = SNAKE_RUN;
+      allValvesOff();
+      firstRunOfMode = true;
+      Serial.println(&quot;\n🎮 Manual Override: SNAKE MODE forced.&quot;);
+    }
+    else if (key == '0') {
+      isAutoMode = false;
+      currentMode = IDLE;
+      allValvesOff();
+      firstRunOfMode = true;
+      Serial.println(&quot;\n🛑 Emergency Stop: All operations halted.&quot;);
+    }
+  }
+}
+
+void setValveState(int index, int state) {
+  if (index &lt; 8) {
+    digitalWrite(valvePins[index], state == ON ? LOW : HIGH); // Active-Low (1-8)
+  } else {
+    digitalWrite(valvePins[8], state == ON ? HIGH : LOW);    // Active-High (9)
+  }
+}
+
+bool responsiveDelay(unsigned long ms) {
+  unsigned long startTimestamp = millis();
+  while (millis() - startTimestamp &lt; ms) {
+    SystemMode oldMode = currentMode;
+    bool oldAuto = isAutoMode;
+    checkKeyboard();
+    if (currentMode != oldMode || isAutoMode != oldAuto) {
+      return true; 
+    }
+    delay(10);
+  }
+  return false;
+}
+
+void allValvesOff() {
+  for (int i = 0; i &lt; 8; i++) digitalWrite(valvePins[i], HIGH);
+  digitalWrite(valvePins[8], LOW);
+}</code></pre>
+<h3 class="pptp-h pptp-h1">More Formalized Pictures.</h3>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/finalizing/formal-23-40-33.jpg" data-caption="More Testing &amp; Finalizing" aria-label="Expand image"><img src="../images/pptp/finalizing/formal-23-40-33.jpg" alt="More Testing &amp; Finalizing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/finalizing/formal-23-41-01.jpg" data-caption="More Testing &amp; Finalizing" aria-label="Expand image"><img src="../images/pptp/finalizing/formal-23-41-01.jpg" alt="More Testing &amp; Finalizing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<div class="pptp-media pptp-cols-2 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/finalizing/formal-23-41-19.jpg" data-caption="More Testing &amp; Finalizing" aria-label="Expand image"><img src="../images/pptp/finalizing/formal-23-41-19.jpg" alt="More Testing &amp; Finalizing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/finalizing/formal-23-41-37.jpg" data-caption="More Testing &amp; Finalizing" aria-label="Expand image"><img src="../images/pptp/finalizing/formal-23-41-37.jpg" alt="More Testing &amp; Finalizing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-img pptp-port" style="--arn:0.7500"><button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp" data-src="../images/pptp/finalizing/formal-23-41-59.jpg" data-caption="More Testing &amp; Finalizing" aria-label="Expand image"><img src="../images/pptp/finalizing/formal-23-41-59.jpg" alt="More Testing &amp; Finalizing — image" width="960" height="1280" loading="lazy" decoding="async"><span class="pptp-expand-hint" aria-hidden="true">Expand</span></button></figure></div>
+<h3 class="pptp-h pptp-h1">Final Testing Video</h3>
+<div class="pptp-media pptp-cols-1 reveal"><figure class="pptp-fig pptp-vid pptp-port" style="--arn:0.5472"><div class="pptp-frame"><video class="pptp-autoplay" src="../images/pptp/finalizing/formal-testing3-more-professional.mp4" muted loop playsinline autoplay preload="metadata" controls controlslist="nodownload" aria-label="More Testing &amp; Finalizing — video"></video></div></figure></div>
+  </div>
+</section>
+
+<section class="pptp-chapter pptp-vision" id="next-steps" data-chapter>
+  <div class="pptp-chapter-head reveal">
+    <span class="pptp-chapter-index">09</span>
+    <div><div class="pptp-eyebrow">Looking ahead</div><h2>Next Steps &amp; <span>Future Vision</span></h2></div>
+  </div>
+  <div class="pptp-prose">
+    <h3 class="pptp-h pptp-h1 reveal">From Programmed Movement to Living Architecture</h3>
+    <p class="pptp-lead reveal">Spending so much time developing Pneumitecture has left me increasingly obsessed with the idea of adaptive and responsive environments. What began as an exploration of softness, air, and architectural transformation has grown into a much larger question: What if the spaces we inhabit could become aware of us, respond to our presence, and gradually learn how to accommodate us?</p>
+    <p class="reveal">Through the PPTP, I was able to bring Pneumitecture closer to that possibility. I developed a physical pneumatic system controlled through nine solenoid valves, allowing inflatable units to expand through sequential, random, and snake-like patterns. The system can now transition between these different modes without continuous manual input.</p>
+    <p class="pptp-pull reveal">It moves on its own. But it doesn’t yet know why it moves.</p>
+    <p class="reveal">That distinction has become central to how I imagine the project’s future. The existing system follows instructions I have written for it. Even its random movements operate within predefined rules. I want to move beyond these choreographies and explore a structure whose behavior emerges from its interactions with the surrounding environment.</p>
+
+    <div class="pptp-media pptp-cols-1 reveal">
+      <figure class="pptp-fig pptp-img pptp-land" style="--arn:1.8342">
+        <button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp-vision" data-src="../images/pptp/next-steps/breathing-dome.jpg" data-caption="Breathing Dome — concept sketch" aria-label="Expand image">
+          <img src="../images/pptp/next-steps/breathing-dome.jpg" alt="Breathing Dome concept sketch with arrows indicating inflation and structural nodes" width="1024" height="558" loading="lazy" decoding="async">
+          <span class="pptp-expand-hint" aria-hidden="true">Expand</span>
+        </button>
+        <figcaption>Breathing Dome — early concept for a structure that expands and settles through air</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="pptp-h pptp-h1 reveal">The Works That Continue to Shape My Thinking</h3>
+    <p class="reveal">My interest in this direction has been influenced by several experiments that challenge the boundaries between architecture, technology, and living systems.</p>
+    <p class="reveal"><a href="https://www.moma.org/collection/works/185728" target="_blank" rel="noopener">Haus-Rucker-Co</a> helped me understand the possibilities of air and softness as architectural materials. Their inflatable environments challenged the expectation that architecture must be rigid and permanent. They demonstrated how lightweight, temporary structures could transform the experience of inhabiting a space.</p>
+    <p class="reveal"><a href="https://www.ayariad.com/slinkybot" target="_blank" rel="noopener">Aya Riad’s Slinky(bot)</a> introduced another possibility: architectural components that behave like companions. The idea of individual units communicating, reorganizing, and developing relationships with their occupants resonates deeply with what I hope Pneumitecture can become.</p>
+    <p class="reveal">I am equally interested in <a href="https://behnazfarahi.com/alloplastic-architecture/" target="_blank" rel="noopener">Behnaz Farahi’s Alloplastic Architecture</a>, which explores how architectural structures can physically adapt to human movement. It suggests a more reciprocal relationship between people and their surroundings, where neither the occupant nor the environment remains entirely passive.</p>
+    <p class="reveal"><a href="https://www.rob-ley.com/reef" target="_blank" rel="noopener">REEF</a>, by Rob Ley and Joshua G. Stein, demonstrated how responsive architectural surfaces could acquire qualities we normally associate with living organisms. Its subtle movements interest me particularly. A responsive environment does not need dramatic transformations to communicate presence.</p>
+    <p class="reveal">The research behind Dissipative Architectures by the <a href="https://livingarchitecturesystems.com/" target="_blank" rel="noopener">Living Architecture Systems Group</a>, led by Philip Beesley, has helped me think more seriously about distributed sensing, interaction, and the possibility of architecture developing behaviors over time. <a href="https://livingarchitecturesystems.com/project/lumen/" target="_blank" rel="noopener">Lumen</a>, by Jenny Sabin Studio, offers another important perspective, showing how responsive materials, light, environmental conditions, and human presence can work together to create spaces that offer comfort rather than simply visual spectacle.</p>
+    <p class="reveal">Together, these works have pushed me to think beyond architecture that moves, toward architecture that develops a relationship with its inhabitants.</p>
+
+    <h3 class="pptp-h pptp-h1 reveal">What Comes Next</h3>
+    <p class="reveal">My immediate goal is to introduce sensing and feedback into Pneumitecture.</p>
+    <p class="reveal">I want to begin with relatively simple interactions. Proximity and motion sensors could allow the installation to detect where someone is standing, how they are moving, or whether they are approaching a particular region. Instead of executing a predetermined inflation sequence, the system could respond locally, activating nearby cells or gradually changing its shape as someone moves through the space.</p>
+    <p class="reveal">The next challenge is making those responses more deliberate.</p>
+    <p class="reveal">I envision combining environmental sensing with feedback from the inflatable units themselves. Pressure sensors, for example, could help the system monitor its physical state and adjust inflation accordingly. Rather than controlling each valve solely through fixed durations, I want the structure to regulate its movement based on what it senses and how its material responds.</p>
+    <p class="reveal">Over time, I hope to explore interactions between individual cells. One cell’s response could influence its neighbors, producing coordinated transformations without requiring every movement to be explicitly choreographed.</p>
+    <p class="reveal">Eventually, I want to investigate whether the system can develop a form of memory. Could it recognize recurring patterns of human activity? Could it gradually adjust its behavior based on previous encounters? Could it learn when to respond, when to remain still, and when a softer or slower movement might be more appropriate?</p>
+    <p class="reveal">These questions move Pneumitecture beyond automation and toward adaptive behavior.</p>
+
+    <div class="pptp-media pptp-cols-1 reveal">
+      <figure class="pptp-fig pptp-img pptp-land" style="--arn:2.1695">
+        <button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp-vision" data-src="../images/pptp/next-steps/pavilion-section.jpg" data-caption="Pavilion section — inflation response study" aria-label="Expand image">
+          <img src="../images/pptp/next-steps/pavilion-section.jpg" alt="Section sketch of a soft pavilion with red arrows showing cells expanding in response to a person inside" width="1024" height="472" loading="lazy" decoding="async">
+          <span class="pptp-expand-hint" aria-hidden="true">Expand</span>
+        </button>
+        <figcaption>Section study — local cells responding as someone occupies the space</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="pptp-h pptp-h1 reveal">Imagining an Environment That Feels Alive</h3>
+    <p class="reveal">One of the strongest images I carry into this research comes from the forests of Pandora in <em>Avatar</em>.</p>
+    <p class="reveal">What fascinates me is not simply their appearance, but the suggestion of an interconnected environment in which individual organisms sense, communicate, and respond as parts of something larger. The forest feels alive because its components appear to participate in a shared system.</p>
+    <p class="reveal">I imagine Pneumitecture developing something similar, at least as an architectural experiment.</p>
+    <p class="reveal">A person entering the space might cause nearby inflatable cells to slowly expand, almost as though the structure were acknowledging their presence. As they move, the response could travel through neighboring cells. When the space becomes quiet, the system might settle into a slower rhythm.</p>
+    <p class="pptp-pull reveal">Nothing aggressive. Nothing overwhelming.</p>
+    <p class="reveal">I am particularly interested in the possibility of soft, almost sentient architecture that responds with care. An environment that can adjust to create comfort, provide a sense of calm, support different spatial needs, or offer a gentle form of companionship through its physical behavior.</p>
+    <p class="reveal">I do not mean sentience in the literal sense of consciousness. What I want to investigate is how sensing, memory, adaptive control, and soft movement might give an architectural system a convincing sense of awareness, while allowing its responses to remain understandable and beneficial to the people around it.</p>
+    <p class="reveal">There are still substantial technical questions to resolve, from developing more reliable inflatable materials and pneumatic connections to controlling pressure safely, coordinating multiple units, and evaluating how people interpret the system’s behavior.</p>
+    <p class="reveal">But these are precisely the questions I want to pursue.</p>
+    <p class="reveal">Pneumitecture has taught me how to make a structure breathe through programmed movement. Now I want to explore what it would mean for that structure to breathe in response to the world around it.</p>
+    <p class="reveal">Ultimately, my ambition is to develop environments that do more than accommodate human activity. I want to investigate spaces that can participate in it, where the relationship between architecture and its occupants is continuously negotiated through movement, perception, and care.</p>
+
+    <div class="pptp-media pptp-cols-1 reveal">
+      <figure class="pptp-fig pptp-img pptp-land" style="--arn:2.1695">
+        <button type="button" class="pptp-expand" data-lightbox-open data-lightbox-group="pptp-vision" data-src="../images/pptp/next-steps/plaza-gathering-pavilion.jpg" data-caption="Plaza Gathering Pavilion — future vision rendering" aria-label="Expand image">
+          <img src="../images/pptp/next-steps/plaza-gathering-pavilion.jpg" alt="Plaza Gathering Pavilion concept rendering of a large cellular pneumatic pavilion in a public park" width="1024" height="472" loading="lazy" decoding="async">
+          <span class="pptp-expand-hint" aria-hidden="true">Expand</span>
+        </button>
+        <figcaption>Plaza Gathering Pavilion — a public-scale vision of Pneumitecture as shared living architecture</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="pptp-h pptp-h1 reveal">Verified references</h3>
+    <ul class="pptp-list pptp-refs reveal">
+      <li><strong>Haus-Rucker-Co — Oasis no. 7</strong> — inflatable architecture and altered spatial experience. <a href="https://www.moma.org/collection/works/185728" target="_blank" rel="noopener">MoMA ↗</a></li>
+      <li><strong>Aya Riad — Slinky(bot)</strong> — pneumatic units, collective organization, and human-responsive companionship. <a href="https://www.ayariad.com/slinkybot" target="_blank" rel="noopener">Aya Riad ↗</a></li>
+      <li><strong>Behnaz Farahi — Alloplastic Architecture</strong> — reciprocal adaptation between human movement and architectural form. <a href="https://behnazfarahi.com/alloplastic-architecture/" target="_blank" rel="noopener">Behnaz Farahi ↗</a></li>
+      <li><strong>Rob Ley and Joshua G. Stein — REEF</strong> — responsive surfaces and subtle, organism-like motion. <a href="https://www.rob-ley.com/reef" target="_blank" rel="noopener">Rob Ley Studio ↗</a></li>
+      <li><strong>Living Architecture Systems Group — Dissipative Architectures</strong> — distributed sensing, kinetic mechanisms, and architecture capable of adaptation. <a href="https://livingarchitecturesystems.com/" target="_blank" rel="noopener">Living Architecture Systems Group ↗</a></li>
+      <li><strong>Jenny Sabin Studio — Lumen</strong> — responsive materials, human proximity, light, and environmental comfort (featured on LASG; credited primarily to Jenny Sabin Studio). <a href="https://livingarchitecturesystems.com/project/lumen/" target="_blank" rel="noopener">Lumen ↗</a></li>
+    </ul>
+  </div>
+</section>
+
+    <p class="pptp-deck reveal">
+        <a class="hub-cta" href="https://canva.link/emonw8g4ickx88s" target="_blank" rel="noopener">Presentation slides ↗</a>
+    </p>
+
+    <nav class="case-pager">
+        <a class="next" href="visages-of-fanaticism.html"><small>Next</small>Visages of Fanaticism</a>
+    </nav>
+    </main>
+
+    <div class="pptp-lightbox" id="pptp-lightbox" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button type="button" class="pptp-lb-close" data-lightbox-close aria-label="Close">×</button>
+        <button type="button" class="pptp-lb-nav pptp-lb-prev" data-lightbox-prev aria-label="Previous image">‹</button>
+        <figure>
+            <img data-lightbox-img alt="">
+            <figcaption data-lightbox-caption></figcaption>
+        </figure>
+        <button type="button" class="pptp-lb-nav pptp-lb-next" data-lightbox-next aria-label="Next image">›</button>
+    </div>
+
+    <div id="case-chrome-bottom"></div>
+    <script src="../js/case-study.js" defer></script>
+    <script src="../js/pptp.js" defer></script>
+</body>
+</html>

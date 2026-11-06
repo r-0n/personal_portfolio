@@ -116,6 +116,10 @@
     object-position: 50% 62%;
 }
 
+.hub-media-pptp img {
+    object-position: 50% 62%;
+}
+
 .hub-media .wire {
     position: absolute;
     inset: 0;

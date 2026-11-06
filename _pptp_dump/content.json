@@ -1,0 +1,630 @@
+{
+  "source": "https://app.notion.com/p/36d7962f62078050a2bde5ef1542479d",
+  "generated": "2026-11-05T22:57:34.314Z",
+  "project": "PPTP Documentation — Soft Pneumatics",
+  "githubRepo": "https://github.com/r-0n/Postgraduate-Practical-Training-Course-PPTP-",
+  "notes": [
+    "remoteUrl is the unsigned Notion S3 object path (signed URLs expire after 300s); null where it was not recorded.",
+    "The \"Testing\" page contains an empty <video /> placeholder in Notion; it was not rendered.",
+    "The \"Code for Controlling Valve:\" heading in the Notion source has no code underneath it.",
+    ".mov files also have a .web.mp4 remux (webPath) for browser playback."
+  ],
+  "blankPages": [
+    {
+      "n": 1,
+      "title": "22nd May",
+      "note": "Blank page in Notion (no content)."
+    },
+    {
+      "n": 2,
+      "title": "25th May",
+      "note": "Blank page in Notion (no content)."
+    },
+    {
+      "n": 14,
+      "title": "Next Steps and Future Vision",
+      "note": "Page exists in Notion but contains only an empty paragraph (no content)."
+    }
+  ],
+  "pages": [
+    {
+      "index": 3,
+      "title": "26th May: Finding Easier Ways to Heat Seal TPU Fabric.",
+      "date": "26th May",
+      "heading": "Finding Easier Ways to Heat Seal TPU Fabric.",
+      "slug": "heat-seal-tpu",
+      "url": "https://app.notion.com/p/36d7962f620780a29618f5851a0903d7",
+      "markdown": "Today, I kept on trying to find an easy DIY way of heat sealing TPU. I took apart a heat sealing device(Fig. 1), and I observed the following components:\n\n1. Heat sealing strip (Fig. 2) : it had a thin strip of metal that I would later find out is chromium-alloy wire, which was the core element that momentarily heats up to melt and seal the plastic. Above this wire was a Teflon tape.\n2. Teflon tape (Fig. 3) : It had a heat-resistant, non-stick strip that sat over the heat sealing metallic strip to prevent the plastic bag (in this case, our TPU) from sticking to the wire.\n\n![Fig. 1](images/pptp/heat-seal-tpu/fig1-IMG_2684.jpeg)\n![Fig. 2](images/pptp/heat-seal-tpu/fig2-IMG_4304.jpeg)\n\nTaking the heat sealing device apart, I reasoned I could find an easier DIY way of heat-sealing different plastic fabrics with customized designs easier and efficiently . For that, here are the suggested items:\n\n1. Soldering Iron: This would be the device to apply heat.\n2. Heat sealing strip (Fig. 4): For longer straight edges, this item would be placed on the TPU, then the soldering iron would be placed on the heat sealing metal allow. Because it has teflon, the TPU wouldn’t get stick to it.\n3. Teflon tape (Fig. 5) : Another way to the above approach would be to tap the tip of the soldering iron with teflon tape and apply it to the TPU in any fashion one would want. The teflon would not allow the TPU to get stuck on the tip of the soldering iron.\n\n![Fig. 4](images/pptp/heat-seal-tpu/fig4-IMG_2682.jpeg)\n![Fig. 5](images/pptp/heat-seal-tpu/fig5-IMG_2681.jpeg)\n\nHere is a list of the Amazon links to the items:\n\n1. [Soldering iron.](https://www.amazon.ae/LEXIVON-Multi-Purpose-Self-Igniting-Adjustable-LX-770/dp/B07M9ZKK9T/ref=sr_1_8?crid=25VSW3BL09IM7&dib=eyJ2IjoiMSJ9.jnahy7BMzbpIYPtqAaSq39TRvFvlC3IoK7sjc9QHmopn5EYF-msttaFrYxal-vCPFlImEQyM7U3X272HnuupI7fzVh-tdI3doPdisSoYhyKoEsVnX3SFrUcKoJ1zwfXwhrhABsK_ce7lTWrkLfLb7RAQbdNSFzMnCqlXrqrpQiXM-oadrY_fEOCL4zQ60kMzWem0bvYQgOXc_a7k8OxLJzbngUCC9o3TsKWsNUcCanSQuFBxyBfLf5L5nisYBxfupkyDYUH27j1lvMxH5w4QNhwOkwp7jTD2UjTEmgd9V58.EPsL8fWxf1a7NbmaIeKbALB0Xw7_ftavP82SXkuCNi4&dib_tag=se&keywords=soldering%2Biron&qid=1779785561&sprefix=Solder%2Caps%2C351&sr=8-8&ufe=app_do%3Aamzn1.fos.b4f74a7b-9d54-420b-9003-7e54957e6f89&th=1)\n2. [Heat sealing strips.](https://www.amazon.ae/Honoson-Impulse-Replacement-Element-Compatible/dp/B08QVBP2LV/ref=sr_1_5?crid=MSNL3G80M8YM&dib=eyJ2IjoiMSJ9.VqiQYUVijdZBL0-uzqmzvuqDqxmGAWCJgkPW4EiHxKGZSRn1fUHFD3dw5VgLgX5XZkR7Hp9jnnbXwxj4jboWVLvUDDsMxDCZOOWi8iNtmzCNaqdonxE7-PLBLyahFYL2SSKserZVijd9gIzlbgJfC3HTHnkiv3LS1f5DrrFthpMTegx5Bh3BOtGRiJycCRgSpGIkRib8tlbDGIqUCPlnQyozauo8Q5QSgfl5aUh0BCPVRAVQMQ9TZ5Xy4cp38CD4gFa9QMzegWpasNiu7iRLExWf4N3eLKb7maWaEPJon4M.RrI9IslYRpIbtM_X5a7nmzCuK4Nz29UL1KbFvhekw1Y&dib_tag=se&keywords=Heat+seal+strips&qid=1779789210&sprefix=heat+seal+strips%2Caps%2C259&sr=8-5)\n3. [Teflon tape.](https://www.amazon.ae/Skycabin-10mm-PTFE-Fabric-Tape/dp/B09TQG5D8G/ref=sr_1_14?crid=36PZB6QI8SYI7&dib=eyJ2IjoiMSJ9.KVeVzj_IuxXZLnqsYncywtfzU2tHQCOR1_VNb6FMtqN5EzAlBczshjDMOL2YeIDcRDA-GsDejfpkBYYt8K6tbRI0XYTxPXAwIZN6-OlltyOdsCUeNKwl73B00kXreBHT_VBoR0cBHjbcodps_3Yu7rSUoTlBJSzRRhufGD0TNkrY08OtjdfAE1H_RU-3K1EzvmSK2KolEq0-d-wfr-1OnduJ_hT0IKKECfOe579bvE_cIleEIIeK4zCATQAGKvLwDpXX4mJGyXcjDtXvdLiqhKn90pUWL7s51GlVJppj_SI.4fgIio-1xHDMmqP8SfZ-QVl_eRnsDz-U6URCft48lEM&dib_tag=se&keywords=teflon+tape&qid=1779789658&sprefix=Teflon+%2Caps%2C244&sr=8-14)\n\nThis is still in theory; I will be making an updates page once I test it out.\n",
+      "text": "Today, I kept on trying to find an easy DIY way of heat sealing TPU. I took apart a heat sealing device(Fig. 1), and I observed the following components:\n\n1. Heat sealing strip (Fig. 2) : it had a thin strip of metal that I would later find out is chromium-alloy wire, which was the core element that momentarily heats up to melt and seal the plastic. Above this wire was a Teflon tape.\n2. Teflon tape (Fig. 3) : It had a heat-resistant, non-stick strip that sat over the heat sealing metallic strip to prevent the plastic bag (in this case, our TPU) from sticking to the wire.\n\nTaking the heat sealing device apart, I reasoned I could find an easier DIY way of heat-sealing different plastic fabrics with customized designs easier and efficiently . For that, here are the suggested items:\n\n1. Soldering Iron: This would be the device to apply heat.\n2. Heat sealing strip (Fig. 4): For longer straight edges, this item would be placed on the TPU, then the soldering iron would be placed on the heat sealing metal allow. Because it has teflon, the TPU wouldn’t get stick to it.\n3. Teflon tape (Fig. 5) : Another way to the above approach would be to tap the tip of the soldering iron with teflon tape and apply it to the TPU in any fashion one would want. The teflon would not allow the TPU to get stuck on the tip of the soldering iron.\n\nHere is a list of the Amazon links to the items:\n\n1. Soldering iron.\n2. Heat sealing strips.\n3. Teflon tape.\n\nThis is still in theory; I will be making an updates page once I test it out.",
+      "media": [
+        {
+          "type": "image",
+          "name": "fig1-IMG_2684.jpeg",
+          "localPath": "images/pptp/heat-seal-tpu/fig1-IMG_2684.jpeg",
+          "remoteUrl": null,
+          "caption": "Fig. 1",
+          "width": 640,
+          "height": 607
+        },
+        {
+          "type": "image",
+          "name": "fig2-IMG_4304.jpeg",
+          "localPath": "images/pptp/heat-seal-tpu/fig2-IMG_4304.jpeg",
+          "remoteUrl": null,
+          "caption": "Fig. 2",
+          "width": 4032,
+          "height": 3024
+        },
+        {
+          "type": "image",
+          "name": "fig4-IMG_2682.jpeg",
+          "localPath": "images/pptp/heat-seal-tpu/fig4-IMG_2682.jpeg",
+          "remoteUrl": null,
+          "caption": "Fig. 4",
+          "width": 679,
+          "height": 655
+        },
+        {
+          "type": "image",
+          "name": "fig5-IMG_2681.jpeg",
+          "localPath": "images/pptp/heat-seal-tpu/fig5-IMG_2681.jpeg",
+          "remoteUrl": null,
+          "caption": "Fig. 5",
+          "width": 679,
+          "height": 723
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "title": "02/06/2026 Update on Heat Sealing Technique",
+      "date": "02/06/2026",
+      "heading": "Update on Heat Sealing Technique",
+      "slug": "heat-seal-update",
+      "url": "https://app.notion.com/p/3737962f62078012bc14ff605509d5dc",
+      "markdown": "The technique I proposed in my previous entry actually worked.\n\n# Intro\n\nThe Lexivon soldering iron uses a butane tank to supply fire to the soldering bit. The one we ordered came without it so I had to wait a while to figure out where to get a butane refiller. After some research and asking around, I figured out it could be found at any vape store or Buqala because they sell lighters.\n\nNB: Butane gas is the same gas used in lighters.\n\n# Setting UP\n\n### Setting up the Lexivon Butane-powered Soldering Iron.\n\nBefore you do anything, read the manual of the tool. It uses a butane tank to supply heat to the soldering bit; thus, it must be handled with care because butane is highly flameable. The manual gives instructions on how to refill, light it up, control heat/flame, etc.\n\nHere is a video demonstration of how it works without a soldering bit (Fig. 2) and with a soldering bit (Fig. 3) after reading everything in the manual.\n\n@video[Fig. 1](images/pptp/heat-seal-update/fig1-IMG_4396.mov)\n@video[Fig. 2](images/pptp/heat-seal-update/fig2-IMG_4397.mp4)\n\n## Testing\n\nAfter filling the soldering iron with butane, I proceeded to test it out. Here’s how they turned out.\n\n@video[](images/pptp/heat-seal-update/test-IMG_4400_Trim_1_1.mp4)\n@video[](images/pptp/heat-seal-update/test-heat_seal_test1.mov)\n\n### Full video tutorial on heat sealing a triangle.\n\nThe goal here is to start small, and slowly progress to making bigger, much more intricate designs.\n\n@youtube[Full video tutorial on heat sealing a triangle.](https://youtu.be/4dFO_U-QD9c)\n\n#### Remarks\n\nThe proposed method works pretty well for heat-sealing well-defined shapes and free hand shapes if you’re looking to heat-seal something creative. It only takes some getting used to.\n",
+      "text": "The technique I proposed in my previous entry actually worked.\n\n# Intro\n\nThe Lexivon soldering iron uses a butane tank to supply fire to the soldering bit. The one we ordered came without it so I had to wait a while to figure out where to get a butane refiller. After some research and asking around, I figured out it could be found at any vape store or Buqala because they sell lighters.\n\nNB: Butane gas is the same gas used in lighters.\n\n# Setting UP\n\n### Setting up the Lexivon Butane-powered Soldering Iron.\n\nBefore you do anything, read the manual of the tool. It uses a butane tank to supply heat to the soldering bit; thus, it must be handled with care because butane is highly flameable. The manual gives instructions on how to refill, light it up, control heat/flame, etc.\n\nHere is a video demonstration of how it works without a soldering bit (Fig. 2) and with a soldering bit (Fig. 3) after reading everything in the manual.\n\n## Testing\n\nAfter filling the soldering iron with butane, I proceeded to test it out. Here’s how they turned out.\n\n### Full video tutorial on heat sealing a triangle.\n\nThe goal here is to start small, and slowly progress to making bigger, much more intricate designs.\n\n#### Remarks\n\nThe proposed method works pretty well for heat-sealing well-defined shapes and free hand shapes if you’re looking to heat-seal something creative. It only takes some getting used to.",
+      "media": [
+        {
+          "type": "video",
+          "name": "fig1-IMG_4396.mov",
+          "localPath": "images/pptp/heat-seal-update/fig1-IMG_4396.mov",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/715971e4-aa7f-4766-a7af-106ac97e5ee5/IMG_4396.mov",
+          "caption": "Fig. 1",
+          "webPath": "images/pptp/heat-seal-update/fig1-IMG_4396.web.mp4",
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "video",
+          "name": "fig2-IMG_4397.mp4",
+          "localPath": "images/pptp/heat-seal-update/fig2-IMG_4397.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/1f728557-f66f-4f9e-ac15-679cc7d3b4f2/IMG_4397.mp4",
+          "caption": "Fig. 2",
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "video",
+          "name": "test-IMG_4400_Trim_1_1.mp4",
+          "localPath": "images/pptp/heat-seal-update/test-IMG_4400_Trim_1_1.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/60a8334b-ec55-4a86-9f07-37a66f6da0a3/IMG_4400_-_Trim_%281%29_%281%29.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "video",
+          "name": "test-heat_seal_test1.mov",
+          "localPath": "images/pptp/heat-seal-update/test-heat_seal_test1.mov",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/b49c611c-43ba-42bd-82da-169965ce421f/heat_seal_test1.mov",
+          "caption": null,
+          "webPath": "images/pptp/heat-seal-update/test-heat_seal_test1.web.mp4",
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "youtube",
+          "name": "4dFO_U-QD9c",
+          "localPath": null,
+          "remoteUrl": "https://youtu.be/4dFO_U-QD9c",
+          "caption": "Full video tutorial on heat sealing a triangle.",
+          "embedUrl": "https://www.youtube.com/embed/4dFO_U-QD9c"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "title": "03/06/2026 Wiring Up 3-way 2-Position Solenoid Valve",
+      "date": "03/06/2026",
+      "heading": "Wiring Up 3-way 2-Position Solenoid Valve",
+      "slug": "solenoid-wiring",
+      "url": "https://app.notion.com/p/3767962f620780e88a4bc821cca372ad",
+      "markdown": "In what follows I will give a full run down on what and why of solenoid valve used for the project Pneumitecture.\n\n# Overview\n\nThe Airix 3V210-08 Pneumatic Solenoid Valve is designed for pneumatic and automation systems. It  offers reliable 2-position 3-way flow control. Ideal for regulating directional airflow in industrial applications with high repeatability. It comes with three pneumatic fittings:\n\n1. 2 Male Straight Push to Connect Fittings\n2. 1 Airtac BSL/pneumatic muffler.\n\nThe image below shows the dimensions from the Amazon link, but I found it to be misleading in case you’d want to get more fittings. In any case, you need more fittings for this valve. I found the fittings with thread 1/8” to be ideal instead of the 1/4’’ it says in the Amazon link and in this picture.\n\n![](images/pptp/solenoid-wiring/dimensions-image.png)\n\nThis specific solenoid valve in the link comes with a junction box. However, there are some without it and has just wires for you to connect. Regardless, because we have the one with a junction box, I will document the process needed to wire it up and use it.\n\n# Setting the Solenoid Valve Up\n\nBefore delving in, I found this link very helpful in helping understand the different types of solenoid valves and how to wire them.\n\n1. First, take it out of its cardboard box.\n2. There is a screw screwing the junction box to the valve body. Unscrew this.\n3. Carefully remove the junction box and pass a live and earth wire through it like this:\n\n![](images/pptp/solenoid-wiring/junction-box-wires.png)\n\n4. Cut the ends of the wire and carefully connect them to the screw terminal on the connector that was inside the junction box:\n   - NB: carefully screw them to avoid breaking/damagin the connector.\n\n![](images/pptp/solenoid-wiring/terminal-12-36-08.jpg)\n![](images/pptp/solenoid-wiring/terminal-12-36-18.jpg)\n\n5. Put the connector back into the junction box and screw it tightly.\n\n![](images/pptp/solenoid-wiring/connector-12-38-49.jpg)\n![](images/pptp/solenoid-wiring/connector-12-39-12.jpg)\n\n6. After that, you can then screw the pneumatic muffler/ Airtac BSL.\n\nLink to purchase:\n\n[https://www.amazon.ae/dp/B0FH79583S?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1](https://www.amazon.ae/dp/B0FH79583S?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)\n\n# Testing The Pneumatic Solenoid Valve With Arduino Control\n\nAfter wiring and setting up the solenoid valve, it was now time to test it.\n\n## Arduino Circuit Connection.\n\nTo achieve Arduino control with simple wiring, here are the things you’d need:\n\n- **N-Channel MOSFET** (IRF520/TIP120 Transistor).\n- **1N4007 Diode** (Crucial flyback diode to protect against voltage spikes).\n- **10k Ohm Resistor** (Pull-down resistor).\n- Breadboard and jumper wires.\n- **12V External Power Supply** (for the valve).\n- Arduino Uno.\n\n*How I distribute 12V to the solenoid valve and share ground with the Arduino for simple testing*\n\n1. **12V Positive:** Connected the **Positive (+)** wire of DC Power Supply (courtesy of IM Lab) to the **Red Rail** on the arduino breadboard.\n2. **12V Ground:** Connected the **Negative (-)** wire of the DC Power Supply to the **Blue/Black Rail** on breadboard.\n3. **Common Ground (CRITICAL):** Connected a jumper wire from the **Blue/Black Rail** to a **GND pin** on the Arduino. This was very CRITICAL because I learned if I mis*sed this wire, the Arduino wouldn’t talk to the motor driver or transistors.*\n\n*How I used Arduino signals to switch the high-power 12V valves.*\n\n**Wiring Steps for ONE Valve (Repeat as many time you need for more solenoid valves):**\n\n1. **Place the Transistor:** Insert the TIP120 into the breadboard.\n   - *Orientation:* Metal tab facing **away** from you.\n   - *Pins (Right to Left):*  **Gate (G)**, **Drain (D)**, and **Source (S)**\n2. **Source (Pin 3) to Ground:** Connect the Left** Leg** directly to the **Blue Ground Rail**.\n3. **Gate (Pin 1) to Arduino:** Connect a **10kΩ Resistor** to the **Right Leg**. Connect the other end of the resistor to the specific **Arduino signal pin**.\n4. **Drain (Pin 2) to Valve:** Connect the **Middle Leg** to **ONE wire** of the Solenoid Valve.\n5. **Valve Power:** Connect the **OTHER wire** of your Solenoid Valve directly to the **Red 12V Rail**.\n6. **The Diode (Safety):** Place the diode bridging the two valve wires (or between the Middle Leg and the 12V Rail).\n\n*Notes*\n\n- **Stripe (Cathode):** Must face the **Red 12V Rail**.\n- **No-Stripe (Anode):** Must face the **Middle Leg (Drain)**.\n\n# After Wiring\n\nYou should have something like the below.\n\n![](images/pptp/solenoid-wiring/after-wiring-13-15-57.jpg)\n@video[](images/pptp/solenoid-wiring/after-wiring-video_13-16-53.mp4)\n\nConnect the Arduino to you laptop, open the Arduino Software application and paste this simplle code.\n\n```cpp\n// Define the pin connected to the MOSFET Gate\nconst int valvePin = 3; \n\nvoid setup() {\n  // Initialize the pin as an output\n  pinMode(valvePin, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(valvePin, HIGH); // Turn the valve ON (Opens/Shifts position)\n  delay(2000);                  // Wait for 2 seconds\n  \n  digitalWrite(valvePin, LOW);  // Turn the valve OFF (Returns to default position)\n  delay(2000);                  // Wait for 2 seconds\n}\n```\n\nYou should hear periodic clicking of the solenoid valve. That means it’s working.\n",
+      "text": "In what follows I will give a full run down on what and why of solenoid valve used for the project Pneumitecture.\n\n# Overview\n\nThe Airix 3V210-08 Pneumatic Solenoid Valve is designed for pneumatic and automation systems. It  offers reliable 2-position 3-way flow control. Ideal for regulating directional airflow in industrial applications with high repeatability. It comes with three pneumatic fittings:\n\n1. 2 Male Straight Push to Connect Fittings\n2. 1 Airtac BSL/pneumatic muffler.\n\nThe image below shows the dimensions from the Amazon link, but I found it to be misleading in case you’d want to get more fittings. In any case, you need more fittings for this valve. I found the fittings with thread 1/8” to be ideal instead of the 1/4’’ it says in the Amazon link and in this picture.\n\nThis specific solenoid valve in the link comes with a junction box. However, there are some without it and has just wires for you to connect. Regardless, because we have the one with a junction box, I will document the process needed to wire it up and use it.\n\n# Setting the Solenoid Valve Up\n\nBefore delving in, I found this link very helpful in helping understand the different types of solenoid valves and how to wire them.\n\n1. First, take it out of its cardboard box.\n2. There is a screw screwing the junction box to the valve body. Unscrew this.\n3. Carefully remove the junction box and pass a live and earth wire through it like this:\n\n4. Cut the ends of the wire and carefully connect them to the screw terminal on the connector that was inside the junction box:\n   - NB: carefully screw them to avoid breaking/damagin the connector.\n\n5. Put the connector back into the junction box and screw it tightly.\n\n6. After that, you can then screw the pneumatic muffler/ Airtac BSL.\n\nLink to purchase:\n\nhttps://www.amazon.ae/dp/B0FH79583S?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1\n\n# Testing The Pneumatic Solenoid Valve With Arduino Control\n\nAfter wiring and setting up the solenoid valve, it was now time to test it.\n\n## Arduino Circuit Connection.\n\nTo achieve Arduino control with simple wiring, here are the things you’d need:\n\n- N-Channel MOSFET (IRF520/TIP120 Transistor).\n- 1N4007 Diode (Crucial flyback diode to protect against voltage spikes).\n- 10k Ohm Resistor (Pull-down resistor).\n- Breadboard and jumper wires.\n- 12V External Power Supply (for the valve).\n- Arduino Uno.\n\nHow I distribute 12V to the solenoid valve and share ground with the Arduino for simple testing\n\n1. 12V Positive: Connected the Positive (+) wire of DC Power Supply (courtesy of IM Lab) to the Red Rail on the arduino breadboard.\n2. 12V Ground: Connected the Negative (-) wire of the DC Power Supply to the Blue/Black Rail on breadboard.\n3. Common Ground (CRITICAL): Connected a jumper wire from the Blue/Black Rail to a GND pin on the Arduino. This was very CRITICAL because I learned if I missed this wire, the Arduino wouldn’t talk to the motor driver or transistors.\n\nHow I used Arduino signals to switch the high-power 12V valves.\n\nWiring Steps for ONE Valve (Repeat as many time you need for more solenoid valves):\n\n1. Place the Transistor: Insert the TIP120 into the breadboard.\n   - Orientation: Metal tab facing away from you.\n   - Pins (Right to Left):  Gate (G), Drain (D), and Source (S)\n2. Source (Pin 3) to Ground: Connect the Left Leg directly to the Blue Ground Rail.\n3. Gate (Pin 1) to Arduino: Connect a 10kΩ Resistor to the Right Leg. Connect the other end of the resistor to the specific Arduino signal pin.\n4. Drain (Pin 2) to Valve: Connect the Middle Leg to ONE wire of the Solenoid Valve.\n5. Valve Power: Connect the OTHER wire of your Solenoid Valve directly to the Red 12V Rail.\n6. The Diode (Safety): Place the diode bridging the two valve wires (or between the Middle Leg and the 12V Rail).\n\nNotes\n\n- Stripe (Cathode): Must face the Red 12V Rail.\n- No-Stripe (Anode): Must face the Middle Leg (Drain).\n\n# After Wiring\n\nYou should have something like the below.\n\nConnect the Arduino to you laptop, open the Arduino Software application and paste this simplle code.\n\ncpp\n// Define the pin connected to the MOSFET Gate\nconst int valvePin = 3; \n\nvoid setup() {\n  // Initialize the pin as an output\n  pinMode(valvePin, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(valvePin, HIGH); // Turn the valve ON (Opens/Shifts position)\n  delay(2000);                  // Wait for 2 seconds\n  \n  digitalWrite(valvePin, LOW);  // Turn the valve OFF (Returns to default position)\n  delay(2000);                  // Wait for 2 seconds\n}\n\nYou should hear periodic clicking of the solenoid valve. That means it’s working.",
+      "media": [
+        {
+          "type": "image",
+          "name": "dimensions-image.png",
+          "localPath": "images/pptp/solenoid-wiring/dimensions-image.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/495a750a-3bd5-4de0-b1ed-45e6a4a24645/image.png",
+          "caption": null,
+          "width": 1444,
+          "height": 1500
+        },
+        {
+          "type": "image",
+          "name": "junction-box-wires.png",
+          "localPath": "images/pptp/solenoid-wiring/junction-box-wires.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/e6e5e240-518f-465e-9f26-9fe481bc69ee/1e553fcf-9e6b-443f-846e-d0c2d3d12164.png",
+          "caption": null,
+          "width": 584,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "terminal-12-36-08.jpg",
+          "localPath": "images/pptp/solenoid-wiring/terminal-12-36-08.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/40b43b7f-e620-4c1a-9691-6014d7b257b1/photo_2026-06-17_12-36-08.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "terminal-12-36-18.jpg",
+          "localPath": "images/pptp/solenoid-wiring/terminal-12-36-18.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/17142a87-7478-47ec-9b85-98a1354b8b12/photo_2026-06-17_12-36-18.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "connector-12-38-49.jpg",
+          "localPath": "images/pptp/solenoid-wiring/connector-12-38-49.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/52827c78-2508-4dea-9c80-c5aa4b030690/photo_2026-06-17_12-38-49.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "connector-12-39-12.jpg",
+          "localPath": "images/pptp/solenoid-wiring/connector-12-39-12.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/f028f7f0-3d2e-4cc3-a225-b24a84eb38de/photo_2026-06-17_12-39-12.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "after-wiring-13-15-57.jpg",
+          "localPath": "images/pptp/solenoid-wiring/after-wiring-13-15-57.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/549968fc-9efc-413a-bc29-d2b03d6f997d/photo_2026-06-17_13-15-57.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "video",
+          "name": "after-wiring-video_13-16-53.mp4",
+          "localPath": "images/pptp/solenoid-wiring/after-wiring-video_13-16-53.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/322fc0ec-851e-49b3-841f-d4ae6bc249b7/video_2026-06-17_13-16-53.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "title": "04/06/2026 Progress on Solenoid Valves",
+      "date": "04/06/2026",
+      "heading": "Progress on Solenoid Valves",
+      "slug": "solenoid-progress",
+      "url": "https://app.notion.com/p/3767962f620780a59e81fc216036c485",
+      "markdown": "Today, I worked on wiring up all the solenoid valves.\n\n![](images/pptp/solenoid-progress/wiring-13-24-43.jpg)\n\n![](images/pptp/solenoid-progress/wiring-13-24-41.jpg)\n\nAfter I wrote a code to test it together with a balloon and an air compressor.\n\n@video[](images/pptp/solenoid-progress/Testing_solenoid_valve_with_balloon.mp4)\n\nCode for Controlling Valve:\n\n# More on How a Solenoid Valve Works\n\nLink:\n\n@youtube[More on How a Solenoid Valve Works](https://www.youtube.com/watch?v=6GV0BAgjLb4)\n",
+      "text": "Today, I worked on wiring up all the solenoid valves.\n\nAfter I wrote a code to test it together with a balloon and an air compressor.\n\nCode for Controlling Valve:\n\n# More on How a Solenoid Valve Works\n\nLink:",
+      "media": [
+        {
+          "type": "image",
+          "name": "wiring-13-24-43.jpg",
+          "localPath": "images/pptp/solenoid-progress/wiring-13-24-43.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/05cb0988-aa94-49ae-990f-772d3def5a62/photo_2026-06-17_13-24-43.jpg",
+          "caption": null,
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "type": "image",
+          "name": "wiring-13-24-41.jpg",
+          "localPath": "images/pptp/solenoid-progress/wiring-13-24-41.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/129395c7-19de-49e0-879a-066b4d417b02/photo_2026-06-17_13-24-41.jpg",
+          "caption": null,
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "type": "video",
+          "name": "Testing_solenoid_valve_with_balloon.mp4",
+          "localPath": "images/pptp/solenoid-progress/Testing_solenoid_valve_with_balloon.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/b334edc5-38e1-43dc-b122-9098bbca6163/Testing_solenoid_valve_with_balloon.mp4",
+          "caption": null,
+          "width": 720,
+          "height": 1316
+        },
+        {
+          "type": "youtube",
+          "name": "6GV0BAgjLb4",
+          "localPath": null,
+          "remoteUrl": "https://www.youtube.com/watch?v=6GV0BAgjLb4",
+          "caption": "More on How a Solenoid Valve Works",
+          "embedUrl": "https://www.youtube.com/embed/6GV0BAgjLb4"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "title": "05/06/2026 Circuit Connection for 9 Solenoid Valves wiring all 9 valves)",
+      "date": "05/06/2026",
+      "heading": "Circuit Connection for 9 Solenoid Valves (wiring all 9 valves)",
+      "slug": "nine-valves",
+      "url": "https://app.notion.com/p/3767962f620780b58591f700ad31d693",
+      "markdown": "My first approach to wiring all the solenoid valves was to rinse and repeat the single circuit connection made in [Wiring Up a 3 by 2 …](#solenoid-wiring) (Under Testing The Pneumatic Solenoid Valve With Arduino Control title of the same documentation post) post I made a few days ago for 9 valves.\n\n## To demonstrate graphically:\n\nthe circuit connection for a single solenoid valve in (Fig. 1) repeated nine times as seen in (Fig. 2 & 3) and in the last video.\n\n![Fig. 1](images/pptp/nine-valves/fig1-single-circuit-13-15-57.jpg)\n![Fig. 2](images/pptp/nine-valves/fig2-nine-valves-15-21-48.jpg)\n\n![](images/pptp/nine-valves/fig3-nine-valves-15-21-57.jpg)\n@video[](images/pptp/nine-valves/nine-valves-video_15-22-05.mp4)\n\nBut I soon realized this approach would lead to a mess of wires if I transitioned from a DC power supplier machine to a battery for neater, easy-to-portable build.\n\nMy alternative to creating a neater circuit was to use a channel relay module and other components that made wiring 99% neat. See [Transitioning to a Neater Build](#neater-build) for my alternative approach.\n",
+      "text": "My first approach to wiring all the solenoid valves was to rinse and repeat the single circuit connection made in Wiring Up a 3 by 2 … (Under Testing The Pneumatic Solenoid Valve With Arduino Control title of the same documentation post) post I made a few days ago for 9 valves.\n\n## To demonstrate graphically:\n\nthe circuit connection for a single solenoid valve in (Fig. 1) repeated nine times as seen in (Fig. 2 & 3) and in the last video.\n\nBut I soon realized this approach would lead to a mess of wires if I transitioned from a DC power supplier machine to a battery for neater, easy-to-portable build.\n\nMy alternative to creating a neater circuit was to use a channel relay module and other components that made wiring 99% neat. See Transitioning to a Neater Build for my alternative approach.",
+      "media": [
+        {
+          "type": "image",
+          "name": "fig1-single-circuit-13-15-57.jpg",
+          "localPath": "images/pptp/nine-valves/fig1-single-circuit-13-15-57.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/eb7805cc-791d-4aa4-8903-74cdca77a6d8/photo_2026-06-17_13-15-57.jpg",
+          "caption": "Fig. 1",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "fig2-nine-valves-15-21-48.jpg",
+          "localPath": "images/pptp/nine-valves/fig2-nine-valves-15-21-48.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/aa6af009-decc-49f0-ab54-40365ef6f62e/photo_2026-07-26_15-21-48.jpg",
+          "caption": "Fig. 2",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "fig3-nine-valves-15-21-57.jpg",
+          "localPath": "images/pptp/nine-valves/fig3-nine-valves-15-21-57.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/f4b88a0f-9548-4bb4-958c-77c93dbb9552/photo_2026-07-26_15-21-57.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "video",
+          "name": "nine-valves-video_15-22-05.mp4",
+          "localPath": "images/pptp/nine-valves/nine-valves-video_15-22-05.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/8ec2ad1f-0e82-4cf7-a5ec-85b1533106ac/video_2026-07-26_15-22-05.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Transitioning to a Neater Build",
+      "date": null,
+      "heading": "Transitioning to a Neater Build",
+      "slug": "neater-build",
+      "url": "https://app.notion.com/p/3827962f620780f0b833f87145519b3d",
+      "markdown": "With an upgraded solenoid valves, it only made sense to create a neater circuit wiring: one that didn’t require any wiring connection on a breadboard because it would create a messy wiring connection. Messy wiring would consequently introduce unstable wiring (if the circuit needed to be moved or attached to something); make it difficult to make modifications without removing the wires for other solenoid valves, and many more drawbacks I found uncomfortable.\n\n## **A. Bill of Materials (BOM) & Hardware Specifications**\n\n#### Core Microcontroller & Power Strategy\n\n- **Arduino Uno:** Acting as the main logic controller. Powered directly via its **DC barrel jack** connected to the 9V output of the TalentCell Rechargeable battery.\n- **TalentCell Rechargeable Lithium-Ion Battery Pack (12V/9V):**\n  - **9V DC Output:** Powers the Arduino board via barrel connector.\n  - **12V DC High-Amperage Output (6A Max):** Powers the high-draw solenoid valves.\n\n  *Note:* Utilizes dual power rails to isolate motor/solenoid noise from digital micro-logic.\n\n#### Actuators & Switching Electronics Components\n\n- **9× 12V DC Pneumatic Solenoid Valves:** 12V, pull approx. 200mA–300mA each during activation.\n- **1× 8-Channel Relay Module:** **Active-Low** logic (operates on 5V logic from Arduino). Controls Valves 1 through 8.\n- **1× Single Relay Module:** **Active-High** logic (operates on 5V logic from Arduino). Controls Valve 9.\n- 9× Flyback Diodes (1N4001 or 1N4007): Protection against high-voltage inductive spikes produced when solenoid coils collapse.\n\n*Note: If there is any confusion about the valves, here’s an explanation: I had access to an 8-channel relay module and had an extra one from a past project. Here is a video description of how they look, but more on how it was all wired later:*\n\n@video[](images/pptp/neater-build/relay-modules-video_16-05-29.mp4)\n\n#### Distribution & Connectors\n\n- **Dual-Row Screw Terminal Block Strip (Barrier Strip) (Fig. 1):** Acts as a high-amperage Common Negative ground pool for all 12V valve circuits.\n\n![Fig. 1](images/pptp/neater-build/fig1-terminal-block.png)\n\n- **Jumper Wire Combs / Bus Links:** Used to daisy-chain terminals across one side of the barrier strip.\n- **2.1mm DC Barrel Jack Adapters (Screw Terminal Style):** Breaks out the TalentCell 12V output to positive/negative bare wire leads.\n\n# B. High-Voltage Power Distribution Wiring (12V System) ie\n\nTo easy visualization, here is a picture of the FULLY COMPLETE circuit wiring:\n\n![](images/pptp/neater-build/complete-circuit-16-32-32.jpg)\n\n- The red arrow points to the screw terminal blog. On one side (the black wires), is the daisy-chaine negative terminal.\n- Below it is the the positive daisy-chain loop.\n\n#### A. The Common Negative Bus (Screw Terminal Block / The ground)\n\nTo avoid cramming nine ground wires into a single power source connector, the Screw Terminal Block is configured as a **Negative Distribution Hub**:\n\n1. All screw terminals along side A (opposite the valves in the image above) of the barrier strip are daisy-chained together using jumper wire bridges.\n2. The **12V Negative (-) wire** from the TalentCell 12V output adapter is connected to any screw on the **daisy-chained side**. (for ease, I put it on the first screw on the far left.)\n3. All negative legs from the 9 valves (and their flyback diodes) connect to individual slots on the same side as the daisy-chained ones, as I have done, or on the opposite side.\n\n### B. The 12V Positive Daisy-Chain Loop\n\n1. The **12V Positive (+) wire** from the TalentCell 12V output adapter connects to the **COM (Common)** terminal of **Relay 1**.\n2. A short jumper wire bridges from **Relay 1 COM** to **Relay 2 COM**.\n3. This jumper chain continues down all 8 COM terminals of the 8-channel module and finishes at the **COM** terminal of the 9th single relay module.\n\n### C. Valve & Flyback Diode Terminal Connections\n\nFor each of the 9 valves, flyback diodes **must** be installed across the high-voltage termination points to prevent electromagnetic feedback from tripping the TalentCell battery's safety shutdown or resetting the Arduino:\n\n- **Relay NO (Normally Open) Terminal:** Clamps **Valve Wire 1** twisted together with the ***Silver Stripe leg*** of the flyback diode.\n- **Terminal Block Slot:** Clamps the V**alve Wire 2** twisted together with the ***Plain Black Leg*** of the flyback diode.\n\n*Note: It is paramount you pay attention to how the wires are screwed into the terminal block and the channel relay module. I faced a long hardware debugging process because one wire was inserting a bit too deep in the terminal block so I had screwed the plastic protection instead. this obstructed the flow of electricity. I took a long time to debug.*\n\n*Also pay attention to the silver-striped lef of the flyback diode and ensure they’re screwed in the right way*\n\n# Programming\n\nCritical Hardware Note: Valves 1–8 use an active-low module (relays click ON when receiving a LOW signal). Valve 9 uses an active-high module (clicks ON when receiving a HIGH signal). The firmware abstracts this completely so all patterns operate via standard ON/OFF state logic via key press.\n",
+      "text": "With an upgraded solenoid valves, it only made sense to create a neater circuit wiring: one that didn’t require any wiring connection on a breadboard because it would create a messy wiring connection. Messy wiring would consequently introduce unstable wiring (if the circuit needed to be moved or attached to something); make it difficult to make modifications without removing the wires for other solenoid valves, and many more drawbacks I found uncomfortable.\n\n## A. Bill of Materials (BOM) & Hardware Specifications\n\n#### Core Microcontroller & Power Strategy\n\n- Arduino Uno: Acting as the main logic controller. Powered directly via its DC barrel jack connected to the 9V output of the TalentCell Rechargeable battery.\n- TalentCell Rechargeable Lithium-Ion Battery Pack (12V/9V):\n  - 9V DC Output: Powers the Arduino board via barrel connector.\n  - 12V DC High-Amperage Output (6A Max): Powers the high-draw solenoid valves.\n\n  Note: Utilizes dual power rails to isolate motor/solenoid noise from digital micro-logic.\n\n#### Actuators & Switching Electronics Components\n\n- 9× 12V DC Pneumatic Solenoid Valves: 12V, pull approx. 200mA–300mA each during activation.\n- 1× 8-Channel Relay Module: Active-Low logic (operates on 5V logic from Arduino). Controls Valves 1 through 8.\n- 1× Single Relay Module: Active-High logic (operates on 5V logic from Arduino). Controls Valve 9.\n- 9× Flyback Diodes (1N4001 or 1N4007): Protection against high-voltage inductive spikes produced when solenoid coils collapse.\n\nNote: If there is any confusion about the valves, here’s an explanation: I had access to an 8-channel relay module and had an extra one from a past project. Here is a video description of how they look, but more on how it was all wired later:\n\n#### Distribution & Connectors\n\n- Dual-Row Screw Terminal Block Strip (Barrier Strip) (Fig. 1): Acts as a high-amperage Common Negative ground pool for all 12V valve circuits.\n\n- Jumper Wire Combs / Bus Links: Used to daisy-chain terminals across one side of the barrier strip.\n- 2.1mm DC Barrel Jack Adapters (Screw Terminal Style): Breaks out the TalentCell 12V output to positive/negative bare wire leads.\n\n# B. High-Voltage Power Distribution Wiring (12V System) ie\n\nTo easy visualization, here is a picture of the FULLY COMPLETE circuit wiring:\n\n- The red arrow points to the screw terminal blog. On one side (the black wires), is the daisy-chaine negative terminal.\n- Below it is the the positive daisy-chain loop.\n\n#### A. The Common Negative Bus (Screw Terminal Block / The ground)\n\nTo avoid cramming nine ground wires into a single power source connector, the Screw Terminal Block is configured as a Negative Distribution Hub:\n\n1. All screw terminals along side A (opposite the valves in the image above) of the barrier strip are daisy-chained together using jumper wire bridges.\n2. The 12V Negative (-) wire from the TalentCell 12V output adapter is connected to any screw on the daisy-chained side. (for ease, I put it on the first screw on the far left.)\n3. All negative legs from the 9 valves (and their flyback diodes) connect to individual slots on the same side as the daisy-chained ones, as I have done, or on the opposite side.\n\n### B. The 12V Positive Daisy-Chain Loop\n\n1. The 12V Positive (+) wire from the TalentCell 12V output adapter connects to the COM (Common) terminal of Relay 1.\n2. A short jumper wire bridges from Relay 1 COM to Relay 2 COM.\n3. This jumper chain continues down all 8 COM terminals of the 8-channel module and finishes at the COM terminal of the 9th single relay module.\n\n### C. Valve & Flyback Diode Terminal Connections\n\nFor each of the 9 valves, flyback diodes must be installed across the high-voltage termination points to prevent electromagnetic feedback from tripping the TalentCell battery's safety shutdown or resetting the Arduino:\n\n- Relay NO (Normally Open) Terminal: Clamps Valve Wire 1 twisted together with the Silver Stripe leg of the flyback diode.\n- Terminal Block Slot: Clamps the Valve Wire 2 twisted together with the Plain Black Leg of the flyback diode.\n\nNote: It is paramount you pay attention to how the wires are screwed into the terminal block and the channel relay module. I faced a long hardware debugging process because one wire was inserting a bit too deep in the terminal block so I had screwed the plastic protection instead. this obstructed the flow of electricity. I took a long time to debug.\n\nAlso pay attention to the silver-striped lef of the flyback diode and ensure they’re screwed in the right way\n\n# Programming\n\nCritical Hardware Note: Valves 1–8 use an active-low module (relays click ON when receiving a LOW signal). Valve 9 uses an active-high module (clicks ON when receiving a HIGH signal). The firmware abstracts this completely so all patterns operate via standard ON/OFF state logic via key press.",
+      "media": [
+        {
+          "type": "video",
+          "name": "relay-modules-video_16-05-29.mp4",
+          "localPath": "images/pptp/neater-build/relay-modules-video_16-05-29.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/ecf84309-0930-44e7-875d-6e0d294f7dbb/video_2026-07-26_16-05-29.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "image",
+          "name": "fig1-terminal-block.png",
+          "localPath": "images/pptp/neater-build/fig1-terminal-block.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/2aa029fe-91f5-412d-8264-8cf752fdd686/image.png",
+          "caption": "Fig. 1",
+          "width": 990,
+          "height": 859
+        },
+        {
+          "type": "image",
+          "name": "complete-circuit-16-32-32.jpg",
+          "localPath": "images/pptp/neater-build/complete-circuit-16-32-32.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/5155843b-deca-4cf3-a997-49fca2d38ad2/photo_2026-07-26_16-32-32.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "title": "3D printing Parts & Ensuring Air Tightness",
+      "date": null,
+      "heading": "3D printing Parts & Ensuring Air Tightness",
+      "slug": "3d-printing-airtightness",
+      "url": "https://app.notion.com/p/3827962f62078056a3ccd3a0c29f1b28",
+      "markdown": "3D printing the pneumatic manifold was time consuming particular for the following reasons:\n\n- For a system as this, ensuring airtightness was of extreme importance.\n- The slightest leak of air at the manifold affected how the valves responded by closing or opening for balloons to be inflated.\n\nWhile I waited for the aluminium (Fig. 1) pneumatic manifold to arrive, I designed and printed different manifold blocks. Check this [Github Repo](https://github.com/r-0n/Postgraduate-Practical-Training-Course-PPTP-) for all the parts I designed and 3d printed.\n\n![Fig. 1](images/pptp/3d-printing-airtightness/fig1-image.png)\n![Fig. 2](images/pptp/3d-printing-airtightness/fig2-image.png)\n\nWhen the aluminium manifold arrived, I now had to order a pneumatic stopper and air connect fittings with the right dimentions to fit the manifold holes. Here were the exact things I purchased:\n\n- 1/4\" NPT Plug Pipe Plug Fitting Carbon Steel Male Thread Internal Allen Head Pipe Plug Set (Fig. 3)\n  - Amazon Link: [https://www.amazon.ae/dp/B08NCTD7Y1?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1](https://www.amazon.ae/dp/B08NCTD7Y1?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)\n- 12 Packs 1/4\" NPT Push to Connect Air Fittings Kit - 6mm to 1/4 Inch Male Thread Quick Connect Pneumatic Couplers, Heavy-Duty Universal Air Compressor Adapters (Fig. 4)\n  - Amazon Link: [https://www.amazon.ae/dp/B0F5NV22GY?ref=ppx_yo2ov_dt_b_fed_asin_title](https://www.amazon.ae/dp/B0F5NV22GY?ref=ppx_yo2ov_dt_b_fed_asin_title)\n\n![Fig. 3](images/pptp/3d-printing-airtightness/fig3-image.png)\n![Fig. 4](images/pptp/3d-printing-airtightness/fig4-image.png)\n\nWith these pneumatic tools, I was able to achieve 85% airtightness. It was hard to achieve 100% airtightness because I realized air escaped from the plastic fittings (the blue part) of the push-to-connect fittings.\n\nThus, I worked around that. The Xiaomi Portable Electric Air Compressor I had been using wasn’t enough for the entire system regardless. There was a need for me to move to a more powerful air compressor.\n",
+      "text": "3D printing the pneumatic manifold was time consuming particular for the following reasons:\n\n- For a system as this, ensuring airtightness was of extreme importance.\n- The slightest leak of air at the manifold affected how the valves responded by closing or opening for balloons to be inflated.\n\nWhile I waited for the aluminium (Fig. 1) pneumatic manifold to arrive, I designed and printed different manifold blocks. Check this Github Repo for all the parts I designed and 3d printed.\n\nWhen the aluminium manifold arrived, I now had to order a pneumatic stopper and air connect fittings with the right dimentions to fit the manifold holes. Here were the exact things I purchased:\n\n- 1/4\" NPT Plug Pipe Plug Fitting Carbon Steel Male Thread Internal Allen Head Pipe Plug Set (Fig. 3)\n  - Amazon Link: https://www.amazon.ae/dp/B08NCTD7Y1?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1\n- 12 Packs 1/4\" NPT Push to Connect Air Fittings Kit - 6mm to 1/4 Inch Male Thread Quick Connect Pneumatic Couplers, Heavy-Duty Universal Air Compressor Adapters (Fig. 4)\n  - Amazon Link: https://www.amazon.ae/dp/B0F5NV22GY?ref=ppx_yo2ov_dt_b_fed_asin_title\n\nWith these pneumatic tools, I was able to achieve 85% airtightness. It was hard to achieve 100% airtightness because I realized air escaped from the plastic fittings (the blue part) of the push-to-connect fittings.\n\nThus, I worked around that. The Xiaomi Portable Electric Air Compressor I had been using wasn’t enough for the entire system regardless. There was a need for me to move to a more powerful air compressor.",
+      "media": [
+        {
+          "type": "image",
+          "name": "fig1-image.png",
+          "localPath": "images/pptp/3d-printing-airtightness/fig1-image.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/893f6eb8-5257-4838-811d-32a508a8380a/image.png",
+          "caption": "Fig. 1",
+          "width": 679,
+          "height": 679
+        },
+        {
+          "type": "image",
+          "name": "fig2-image.png",
+          "localPath": "images/pptp/3d-printing-airtightness/fig2-image.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/30a8e2a8-30d9-448c-bac0-8e9148c1373a/image.png",
+          "caption": "Fig. 2",
+          "width": 1500,
+          "height": 1338
+        },
+        {
+          "type": "image",
+          "name": "fig3-image.png",
+          "localPath": "images/pptp/3d-printing-airtightness/fig3-image.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/7a4ad713-1c9a-4dda-b3ed-46e49e864e28/image.png",
+          "caption": "Fig. 3",
+          "width": 1500,
+          "height": 1479
+        },
+        {
+          "type": "image",
+          "name": "fig4-image.png",
+          "localPath": "images/pptp/3d-printing-airtightness/fig4-image.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/25ed5fa3-4f02-4be5-a026-7879e77a0340/image.png",
+          "caption": "Fig. 4",
+          "width": 679,
+          "height": 676
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "title": "Moving to a HVLP Air Compressor",
+      "date": null,
+      "heading": "Moving to a HVLP Air Compressor",
+      "slug": "hvlp-compressor",
+      "url": "https://app.notion.com/p/38e7962f620780fda3dec73f905da8a4",
+      "markdown": "With series of testing, I realized the pressure it generated wasn’t enough or suitable for object with high volume. Thus, I transitioned to a High Volume Low Pressure (HVLP) air compressor. The one available at my disposal was borrowed from Dustin Foster (Manager of the IM Lab), and it looked like the image in Fig. 1\n\n![Fig. 1](images/pptp/hvlp-compressor/fig1-image.png)\n\nThis air compressor worked great for this project. After so many tests shown in the videos below, I was able to come to an optimized pressure that worked great with the solenoid valves:\n\n@video[](images/pptp/hvlp-compressor/test-video_22-36-48.mp4)\n@video[](images/pptp/hvlp-compressor/test-video_22-38-41.mp4)\n\nIn order to achieve smooth inflation, the air compressor must be set to 40-45 psi.\n\n*Note:* Anything above this would blow the tubes away violently.  Anything below this wouldn’t be able to get the valves to function properly. (see notes under [Progress on Solenoid Valves](#solenoid-progress)) or the link below:\n\n@youtube[Solenoid valve explanation](https://www.youtube.com/watch?v=6GV0BAgjLb4)\n",
+      "text": "With series of testing, I realized the pressure it generated wasn’t enough or suitable for object with high volume. Thus, I transitioned to a High Volume Low Pressure (HVLP) air compressor. The one available at my disposal was borrowed from Dustin Foster (Manager of the IM Lab), and it looked like the image in Fig. 1\n\nThis air compressor worked great for this project. After so many tests shown in the videos below, I was able to come to an optimized pressure that worked great with the solenoid valves:\n\nIn order to achieve smooth inflation, the air compressor must be set to 40-45 psi.\n\nNote: Anything above this would blow the tubes away violently.  Anything below this wouldn’t be able to get the valves to function properly. (see notes under Progress on Solenoid Valves) or the link below:",
+      "media": [
+        {
+          "type": "image",
+          "name": "fig1-image.png",
+          "localPath": "images/pptp/hvlp-compressor/fig1-image.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/dfce22bb-7b3d-4fd9-b1e2-37bf28c797bd/image.png",
+          "caption": "Fig. 1",
+          "width": 447,
+          "height": 447
+        },
+        {
+          "type": "video",
+          "name": "test-video_22-36-48.mp4",
+          "localPath": "images/pptp/hvlp-compressor/test-video_22-36-48.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/032e2200-c9fe-432c-b80a-4b6a152c241c/video_2026-07-26_22-36-48.mp4",
+          "caption": null,
+          "width": 592,
+          "height": 848
+        },
+        {
+          "type": "video",
+          "name": "test-video_22-38-41.mp4",
+          "localPath": "images/pptp/hvlp-compressor/test-video_22-38-41.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/0a801014-7bdf-420f-8d3f-3a8f7fc03294/video_2026-07-26_22-38-41.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "youtube",
+          "name": "6GV0BAgjLb4",
+          "localPath": null,
+          "remoteUrl": "https://www.youtube.com/watch?v=6GV0BAgjLb4",
+          "caption": "Solenoid valve explanation",
+          "embedUrl": "https://www.youtube.com/embed/6GV0BAgjLb4"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "title": "Testing",
+      "date": null,
+      "heading": "Testing",
+      "slug": "testing",
+      "url": "https://app.notion.com/p/3a97962f6207800e9b24cd3a4a912357",
+      "markdown": "Here are the results from testing. The videos placed side-by-side are the normal one (with normal video speed) and the sped-up video.\n\n@video[Normal speed](images/pptp/testing/normal-video_23-08-05.mp4)\n@video[Sped up](images/pptp/testing/sped-up-video_23-08-05.mp4)\n\n@video[](images/pptp/testing/normal-video_23-08-00.mp4)\n",
+      "text": "Here are the results from testing. The videos placed side-by-side are the normal one (with normal video speed) and the sped-up video.",
+      "media": [
+        {
+          "type": "video",
+          "name": "normal-video_23-08-05.mp4",
+          "localPath": "images/pptp/testing/normal-video_23-08-05.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/8e805a6a-2e48-4f19-b9a8-e53bd676315c/video_2026-07-26_23-08-05_%281%29.mp4",
+          "caption": "Normal speed",
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "video",
+          "name": "sped-up-video_23-08-05.mp4",
+          "localPath": "images/pptp/testing/sped-up-video_23-08-05.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/fae0bc65-4e55-41af-8b32-b04a67cb1cf1/video-2026-07-26-23-08-05-1_yArgqjwq.mp4",
+          "caption": "Sped up",
+          "width": 464,
+          "height": 848
+        },
+        {
+          "type": "video",
+          "name": "normal-video_23-08-00.mp4",
+          "localPath": "images/pptp/testing/normal-video_23-08-00.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/a6c7bcdf-e9d3-4b8b-84d8-7dbab8a36868/video_2026-07-26_23-08-00_%281%29.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "title": "Wooden Frame & More Testing",
+      "date": null,
+      "heading": "Wooden Frame & More Testing",
+      "slug": "wooden-frame",
+      "url": "https://app.notion.com/p/3a97962f620780d2adf3f93026b29d74",
+      "markdown": "With the help of Tony (manager of the scene shop), I was able to bring the frame that was designed and simulatated in Rhino 3D Grasshopper (Fig. 1) to life.\n\n![Fig. 1 · Frame designed and simulated in Rhino 3D Grasshopper](images/pptp/wooden-frame/frame-rhino-grasshopper-Frame_00040.png)\n\n## Pictures of Physical Frame\n\n![](images/pptp/wooden-frame/physical-frame-23-34-52.jpg)\n\nAfter, I installed the aluminium rods, inserted the electronics at the base of the frame, and installed the inflatable (balloon because time did not permit me to install TPU heat-sealed designs). Below is how they turned out.\n\n![](images/pptp/wooden-frame/assembled-23-38-09.jpg)\n![](images/pptp/wooden-frame/assembled-23-39-05.jpg)\n![](images/pptp/wooden-frame/assembled-23-38-38.jpg)\n\n# Testing\n\nAfter assembling everything, I did some more testing. Here’s how they turned out.\n\n@video[](images/pptp/wooden-frame/Final_Testing_Pneumitecture_1.mp4)\n\nBelow is the code I used for testing\n\n```cpp\n//Title: Inflation testing with key toggle\n//date: 26/06/2026\n//author: Aaron Wajah\n\n\n// Define the pins for valves 1, 2, and 3\nconst int valve1 = 2;\nconst int valve2 = 3;\nconst int valve3 = 4;\nconst int valve4 = 5;\nconst int valve5 = 6;\nconst int valve6 = 7;\nconst int valve7 = 8;\nconst int valve8 = 9;\nconst int valve9 = 10;\n\n\nvoid setup() {\n  Serial.begin(9600);\n  \n  // Set pins as output\n  pinMode(valve1, OUTPUT);\n  pinMode(valve2, OUTPUT);\n  pinMode(valve3, OUTPUT);\n  pinMode(valve4, OUTPUT);\n  pinMode(valve5, OUTPUT);\n  pinMode(valve6, OUTPUT);\n  pinMode(valve7, OUTPUT);\n  pinMode(valve8, OUTPUT);\n  pinMode(valve9, OUTPUT);\n\n\n  // Start with all valves OFF\n  digitalWrite(valve1, HIGH);\n  digitalWrite(valve2, HIGH);\n  digitalWrite(valve3, HIGH);\n  digitalWrite(valve4, HIGH);\n  digitalWrite(valve5, HIGH);\n  digitalWrite(valve6, HIGH);\n  digitalWrite(valve7, HIGH);\n  digitalWrite(valve8, HIGH);\n  digitalWrite(valve9, LOW);\n  \n  \n  Serial.println(\"Valve Control Ready!\");\n  Serial.println(\"Press '1', '2', or '3...' to TOGGLE that valve.\");\n}\n\nvoid loop() {\n  if (Serial.available() > 0) {\n    char key = Serial.read();\n    \n    // Toggle logic: If OFF, turn ON; if ON, turn OFF\n    switch (key) {\n      case '1':\n        digitalWrite(valve1, !digitalRead(valve1));\n        Serial.print(\"Valve 1 is now: \");\n        Serial.println(digitalRead(valve1) ? \"OFF\" : \"ON\");\n        break;\n        \n      case '2':\n        digitalWrite(valve2, !digitalRead(valve2));\n        Serial.print(\"Valve 2 is now: \");\n        Serial.println(digitalRead(valve2) ? \"OFF\" : \"ON\");\n        break;\n        \n      case '3':\n        digitalWrite(valve3, !digitalRead(valve3));\n        Serial.print(\"Valve 3 is now: \");\n        Serial.println(digitalRead(valve3) ? \"OFF\" : \"ON\");\n        break;\n\n      case '4':\n        digitalWrite(valve4, !digitalRead(valve4));\n        Serial.print(\"Valve 4 is now: \");\n        Serial.println(digitalRead(valve4) ? \"OFF\" : \"ON\");\n        break;\n\n      case '5':\n        digitalWrite(valve5, !digitalRead(valve5));\n        Serial.print(\"Valve 5 is now: \");\n        Serial.println(digitalRead(valve5) ? \"OFF\" : \"ON\");\n        break;\n\n      case '6':\n        digitalWrite(valve6, !digitalRead(valve6));\n        Serial.print(\"Valve 6 is now: \");\n        Serial.println(digitalRead(valve6) ? \"OFF\" : \"ON\");\n        break;\n\n      case '7':\n        digitalWrite(valve7, !digitalRead(valve7));\n        Serial.print(\"Valve 7 is now: \");\n        Serial.println(digitalRead(valve7) ? \"OFF\" : \"ON\");\n        break;\n\n      case '8':\n        digitalWrite(valve8, !digitalRead(valve8));\n        Serial.print(\"Valve 8 is now: \");\n        Serial.println(digitalRead(valve8) ? \"OFF\" : \"ON\");\n        break;\n\n      case '9':\n        digitalWrite(valve9, !digitalRead(valve9));\n        Serial.print(\"Valve 9 is now: \");\n        Serial.println(digitalRead(valve9) ? \"ON\" : \"OFF\");\n        break;\n\n    }\n  }\n}\n```\n",
+      "text": "With the help of Tony (manager of the scene shop), I was able to bring the frame that was designed and simulatated in Rhino 3D Grasshopper (Fig. 1) to life.\n\n## Pictures of Physical Frame\n\nAfter, I installed the aluminium rods, inserted the electronics at the base of the frame, and installed the inflatable (balloon because time did not permit me to install TPU heat-sealed designs). Below is how they turned out.\n\n# Testing\n\nAfter assembling everything, I did some more testing. Here’s how they turned out.\n\nBelow is the code I used for testing\n\ncpp\n//Title: Inflation testing with key toggle\n//date: 26/06/2026\n//author: Aaron Wajah\n\n// Define the pins for valves 1, 2, and 3\nconst int valve1 = 2;\nconst int valve2 = 3;\nconst int valve3 = 4;\nconst int valve4 = 5;\nconst int valve5 = 6;\nconst int valve6 = 7;\nconst int valve7 = 8;\nconst int valve8 = 9;\nconst int valve9 = 10;\n\nvoid setup() {\n  Serial.begin(9600);\n  \n  // Set pins as output\n  pinMode(valve1, OUTPUT);\n  pinMode(valve2, OUTPUT);\n  pinMode(valve3, OUTPUT);\n  pinMode(valve4, OUTPUT);\n  pinMode(valve5, OUTPUT);\n  pinMode(valve6, OUTPUT);\n  pinMode(valve7, OUTPUT);\n  pinMode(valve8, OUTPUT);\n  pinMode(valve9, OUTPUT);\n\n  // Start with all valves OFF\n  digitalWrite(valve1, HIGH);\n  digitalWrite(valve2, HIGH);\n  digitalWrite(valve3, HIGH);\n  digitalWrite(valve4, HIGH);\n  digitalWrite(valve5, HIGH);\n  digitalWrite(valve6, HIGH);\n  digitalWrite(valve7, HIGH);\n  digitalWrite(valve8, HIGH);\n  digitalWrite(valve9, LOW);\n  \n  \n  Serial.println(\"Valve Control Ready!\");\n  Serial.println(\"Press '1', '2', or '3...' to TOGGLE that valve.\");\n}\n\nvoid loop() {\n  if (Serial.available() > 0) {\n    char key = Serial.read();\n    \n    // Toggle logic: If OFF, turn ON; if ON, turn OFF\n    switch (key) {\n      case '1':\n        digitalWrite(valve1, !digitalRead(valve1));\n        Serial.print(\"Valve 1 is now: \");\n        Serial.println(digitalRead(valve1) ? \"OFF\" : \"ON\");\n        break;\n        \n      case '2':\n        digitalWrite(valve2, !digitalRead(valve2));\n        Serial.print(\"Valve 2 is now: \");\n        Serial.println(digitalRead(valve2) ? \"OFF\" : \"ON\");\n        break;\n        \n      case '3':\n        digitalWrite(valve3, !digitalRead(valve3));\n        Serial.print(\"Valve 3 is now: \");\n        Serial.println(digitalRead(valve3) ? \"OFF\" : \"ON\");\n        break;\n\n      case '4':\n        digitalWrite(valve4, !digitalRead(valve4));\n        Serial.print(\"Valve 4 is now: \");\n        Serial.println(digitalRead(valve4) ? \"OFF\" : \"ON\");\n        break;\n\n      case '5':\n        digitalWrite(valve5, !digitalRead(valve5));\n        Serial.print(\"Valve 5 is now: \");\n        Serial.println(digitalRead(valve5) ? \"OFF\" : \"ON\");\n        break;\n\n      case '6':\n        digitalWrite(valve6, !digitalRead(valve6));\n        Serial.print(\"Valve 6 is now: \");\n        Serial.println(digitalRead(valve6) ? \"OFF\" : \"ON\");\n        break;\n\n      case '7':\n        digitalWrite(valve7, !digitalRead(valve7));\n        Serial.print(\"Valve 7 is now: \");\n        Serial.println(digitalRead(valve7) ? \"OFF\" : \"ON\");\n        break;\n\n      case '8':\n        digitalWrite(valve8, !digitalRead(valve8));\n        Serial.print(\"Valve 8 is now: \");\n        Serial.println(digitalRead(valve8) ? \"OFF\" : \"ON\");\n        break;\n\n      case '9':\n        digitalWrite(valve9, !digitalRead(valve9));\n        Serial.print(\"Valve 9 is now: \");\n        Serial.println(digitalRead(valve9) ? \"ON\" : \"OFF\");\n        break;\n\n    }\n  }\n}",
+      "media": [
+        {
+          "type": "image",
+          "name": "frame-rhino-grasshopper-Frame_00040.png",
+          "localPath": "images/pptp/wooden-frame/frame-rhino-grasshopper-Frame_00040.png",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/b63ed8bd-d66f-4381-a3bb-24a7c2a76048/Frame_00040.png",
+          "caption": "Fig. 1 · Frame designed and simulated in Rhino 3D Grasshopper",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "type": "image",
+          "name": "physical-frame-23-34-52.jpg",
+          "localPath": "images/pptp/wooden-frame/physical-frame-23-34-52.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/3c9daa6c-2270-4894-aa32-07fdd4c4427b/photo_2026-07-26_23-34-52.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "assembled-23-38-09.jpg",
+          "localPath": "images/pptp/wooden-frame/assembled-23-38-09.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/ed248e66-e369-41d6-9bc0-4a972e9f0dc3/photo_2026-07-26_23-38-09.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "assembled-23-39-05.jpg",
+          "localPath": "images/pptp/wooden-frame/assembled-23-39-05.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/1d44f97f-e98f-4077-9e3d-fa9da3e49ea9/photo_2026-07-26_23-39-05.jpg",
+          "caption": null,
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "type": "image",
+          "name": "assembled-23-38-38.jpg",
+          "localPath": "images/pptp/wooden-frame/assembled-23-38-38.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/6412e0aa-f046-4055-9a63-9812d2fce611/photo_2026-07-26_23-38-38.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "video",
+          "name": "Final_Testing_Pneumitecture_1.mp4",
+          "localPath": "images/pptp/wooden-frame/Final_Testing_Pneumitecture_1.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/e98b78e7-fa0f-4c0f-9c17-c225244a84ca/Final_Testing_Pneumitecture_%281%29.mp4",
+          "caption": null,
+          "width": 848,
+          "height": 464
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "title": "More Testing & Finalizing",
+      "date": null,
+      "heading": "More Testing & Finalizing",
+      "slug": "finalizing",
+      "url": "https://app.notion.com/p/3aa7962f620780ed8798cc1f985c7bca",
+      "markdown": "On my next iteration of testing, I moved from controlling the solenoid valves by pressing a key to a more autonomous control. The code for this iteration takes into account a rest time phase after the battery is turned on, consequently turning on the system to allow for you to connect the air compressor to the system.\n\n@video[](images/pptp/finalizing/final-testing2.mp4)\n\n# The Firmware\n\nThe code also has 3 modes of patterns (random, sequence, and snake pattern) that it switches between after a full cycle of one mode.\n\n- **At Startup:** The system defaults to autonomous mode. It will randomly pick between Random, Sequential, or Snake mode; run it for a full cycle (9 steps); hit a break; and then automatically pick a new random mode.\n- **Keyboard Overrides:** If you type a command manually (`r`, `s`, or `n`), the autopilot instantly disengages, and it will loop your chosen pattern indefinitely.\n- **Return to Auto:** You can press **`a`** at any time to turn the autopilot back on.\n\n```cpp\n//title: Pneumetecture valve control modes\n//author: aaron wajah w/ help of Gemini\n//date: 09/07/2026\n\n// Define the 9 valve pins\nconst int valvePins[] = {2, 3, 4, 5, 6, 7, 8, 9, 10};\n\n// Easy-to-read state aliases\n#define ON 1\n#define OFF 0\n\n// ---- TIMING CONFIGURATION ----\nconst unsigned long startDelayTime = 5000;      // Rest period before action begins (5 seconds)\nconst unsigned long sequentialTotalTime = 7000; // Total time each valve runs (7 seconds)\nconst unsigned long overlapTime = 1000;         // How long two valves stay open together (1 second)\n\n// ---- PATH ARRAYS (0-indexed mappings for pins 2 to 10) ----\nconst int sequentialOrder[] = {0, 1, 2, 3, 4, 5, 6, 7, 8}; // 1->2->3->4->5->6->7->8->9\nconst int snakeOrder[]      = {0, 1, 2, 5, 4, 3, 6, 7, 8}; // 1->2->3->6->5->4->7->8->9\n\n// Track operational modes and states\nenum SystemMode { IDLE, RANDOM_RUN, SEQUENTIAL_RUN, SNAKE_RUN };\nSystemMode currentMode = IDLE;\nSystemMode lastMode = IDLE;   // Memory buffer for the previous mode\n\nbool isAutoMode = true;       // Defaults to true! System runs itself at startup.\nbool firstRunOfMode = true;   // Triggers the 5-second rest phase on mode changes\nint sequenceStep = 0;         // Tracks progression through path arrays\nint randomStep = 0;           // Tracks how many random steps have executed\n\nint currentValve = -1;        // Tracks active valve inside the loop\nint lastValve = -1;           // Memory buffer for the absolute last deactivated valve\n\nvoid setup() {\n  Serial.begin(9600);\n\n  // Initialize valve pins and ensure they start completely OFF\n  for (int i = 0; i < 8; i++) {\n    pinMode(valvePins[i], OUTPUT);\n    digitalWrite(valvePins[i], HIGH); // HIGH keeps Active-Low (1-8) OFF\n  }\n  pinMode(valvePins[8], OUTPUT);\n  digitalWrite(valvePins[8], LOW);    // LOW keeps Active-High (9) OFF\n  \n  randomSeed(analogRead(A0));\n  \n  Serial.println(\"=== Autonomous Valve System Initialized ===\");\n  Serial.println(\"System starting in AUTO-PILOT mode...\");\n  Serial.println(\"----------------------------------------\");\n  Serial.println(\"Keyboard Commands:\");\n  Serial.println(\"  'a' -> Re-engage AUTO-PILOT\");\n  Serial.println(\"  'r' -> Force Manual RANDOM Mode\");\n  Serial.println(\"  's' -> Force Manual SEQUENTIAL Mode\");\n  Serial.println(\"  'n' -> Force Manual SNAKE Mode\");\n  Serial.println(\"  '0' -> Emergency STOP ALL\");\n  Serial.println(\"========================================\");\n}\n\nvoid loop() {\n  // Always poll keyboard inputs\n  checkKeyboard();\n\n  // If we are on Auto-Pilot and the previous mode finished, pick a new UNIQUE one\n  if (isAutoMode && currentMode == IDLE) {\n    pickRandomMode();\n  }\n\n  // -------------------------------------------------------------------------\n  // MODE 1: RANDOM RUN WITH OVERLAP (No Consecutive Repeats)\n  // -------------------------------------------------------------------------\n  if (currentMode == RANDOM_RUN) {\n    if (firstRunOfMode) {\n      Serial.println(\"⏳ [RANDOM MODE] Starting 5-second system rest...\");\n      if (responsiveDelay(startDelayTime)) return; \n      \n      randomStep = 0;\n      \n      // HARDENING: Ensure the first valve does not match the last valve used anywhere else\n      do {\n        currentValve = random(0, 9);\n      } while (currentValve == lastValve);\n      \n      setValveState(currentValve, ON);\n      firstRunOfMode = false;\n      Serial.print(\"🚀 Action Started! Random Valve \");\n      Serial.println(currentValve + 1);\n    }\n\n    unsigned long totalRandomTime = random(5000, 7001);\n    unsigned long soloTime = totalRandomTime - overlapTime;\n\n    if (responsiveDelay(soloTime)) return;\n\n    // HARDENING: Ensure the next valve is never the current valve\n    int nextValve;\n    do { \n      nextValve = random(0, 9); \n    } while (nextValve == currentValve);\n\n    Serial.print(\"Overlap Transition -> Opening Valve \");\n    Serial.println(nextValve + 1);\n\n    setValveState(nextValve, ON);\n    if (responsiveDelay(overlapTime)) return;\n\n    setValveState(currentValve, OFF);\n    lastValve = currentValve; // Log this valve into history\n    currentValve = nextValve;\n    randomStep++;\n\n    // If on Auto-Pilot, cycle out to a new mode after 9 random switches\n    if (isAutoMode && randomStep >= 9) {\n      Serial.println(\"\\n🔄 Auto-Pilot: Random sequence cycle complete.\");\n      allValvesOff();\n      lastValve = currentValve; // Save final valve selection before clearing\n      currentMode = IDLE;\n      firstRunOfMode = true;\n    }\n  }\n\n  // -------------------------------------------------------------------------\n  // MODE 2: SEQUENTIAL RUN WITH OVERLAP\n  // -------------------------------------------------------------------------\n  else if (currentMode == SEQUENTIAL_RUN) {\n    if (firstRunOfMode) {\n      Serial.println(\"⏳ [SEQUENTIAL MODE] Starting 5-second system rest...\");\n      if (responsiveDelay(startDelayTime)) return; \n      \n      sequenceStep = 0;\n      firstRunOfMode = false;\n    }\n\n    int cValve = sequentialOrder[sequenceStep];\n    setValveState(cValve, ON);\n    Serial.print(\"Running Valve \");\n    Serial.println(cValve + 1);\n\n    if (sequenceStep < 8) {\n      if (responsiveDelay(sequentialTotalTime - overlapTime)) return;\n      int nValve = sequentialOrder[sequenceStep + 1];\n      setValveState(nValve, ON);\n      Serial.print(\"Overlap Transition -> Opening Valve \");\n      Serial.println(nValve + 1);\n      if (responsiveDelay(overlapTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log to cross-mode history\n      sequenceStep++;\n    } else {\n      if (responsiveDelay(sequentialTotalTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log final valve to cross-mode history\n      \n      if (isAutoMode) {\n        Serial.println(\"\\n🔄 Auto-Pilot: Sequential sequence cycle complete.\");\n        currentMode = IDLE;\n        firstRunOfMode = true;\n      } else {\n        sequenceStep = 0; \n      }\n    }\n  }\n\n  // -------------------------------------------------------------------------\n  // MODE 3: SNAKE RUN WITH OVERLAP (1,2,3,6,5,4,7,8,9)\n  // -------------------------------------------------------------------------\n  else if (currentMode == SNAKE_RUN) {\n    if (firstRunOfMode) {\n      Serial.println(\"⏳ [SNAKE MODE] Starting 5-second system rest...\");\n      if (responsiveDelay(startDelayTime)) return; \n      \n      sequenceStep = 0;\n      firstRunOfMode = false;\n    }\n\n    int cValve = snakeOrder[sequenceStep];\n    setValveState(cValve, ON);\n    Serial.print(\"Running Snake Valve \");\n    Serial.println(cValve + 1);\n\n    if (sequenceStep < 8) {\n      if (responsiveDelay(sequentialTotalTime - overlapTime)) return;\n      int nValve = snakeOrder[sequenceStep + 1];\n      setValveState(nValve, ON);\n      Serial.print(\"Overlap Transition -> Opening Valve \");\n      Serial.println(nValve + 1);\n      if (responsiveDelay(overlapTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log to cross-mode history\n      sequenceStep++;\n    } else {\n      if (responsiveDelay(sequentialTotalTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log final valve to cross-mode history\n      \n      if (isAutoMode) {\n        Serial.println(\"\\n🔄 Auto-Pilot: Snake sequence cycle complete.\");\n        currentMode = IDLE;\n        firstRunOfMode = true;\n      } else {\n        sequenceStep = 0; \n      }\n    }\n  }\n}\n\n// =========================================================================\n// HELPER FUNCTIONS\n// =========================================================================\n\n// Chooses a fresh mode that is guaranteed to be different than the last one run\nvoid pickRandomMode() {\n  SystemMode nextMode;\n  \n  do {\n    int choice = random(0, 3); // Evaluates to 0, 1, or 2\n    if (choice == 0) nextMode = RANDOM_RUN;\n    else if (choice == 1) nextMode = SEQUENTIAL_RUN;\n    else nextMode = SNAKE_RUN;\n  } while (nextMode == lastMode); // Reject and reroll if it matches the history buffer\n  \n  currentMode = nextMode;\n  lastMode = currentMode; // Save this choice as the new historical anchor\n  firstRunOfMode = true;\n}\n\nvoid checkKeyboard() {\n  if (Serial.available() > 0) {\n    char key = Serial.read();\n    if (key == '\\n' || key == '\\r') return; \n\n    if (key == 'a' || key == 'A') {\n      isAutoMode = true;\n      currentMode = IDLE;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🤖 Auto-Pilot ENGAGED. Selecting fresh random pattern...\");\n    }\n    else if (key == 'r' || key == 'R') {\n      isAutoMode = false;\n      currentMode = RANDOM_RUN;\n      lastMode = RANDOM_RUN; // Update manual selections into history as well\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🎮 Manual Override: RANDOM MODE forced.\");\n    }\n    else if (key == 's' || key == 'S') {\n      isAutoMode = false;\n      currentMode = SEQUENTIAL_RUN;\n      lastMode = SEQUENTIAL_RUN;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🎮 Manual Override: SEQUENTIAL MODE forced.\");\n    }\n    else if (key == 'n' || key == 'N') {\n      isAutoMode = false;\n      currentMode = SNAKE_RUN;\n      lastMode = SNAKE_RUN;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🎮 Manual Override: SNAKE MODE forced.\");\n    }\n    else if (key == '0') {\n      isAutoMode = false;\n      currentMode = IDLE;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🛑 Emergency Stop: All operations halted.\");\n    }\n  }\n}\n\nvoid setValveState(int index, int state) {\n  if (index < 8) {\n    digitalWrite(valvePins[index], state == ON ? LOW : HIGH); // Active-Low (1-8)\n  } else {\n    digitalWrite(valvePins[8], state == ON ? HIGH : LOW);    // Active-High (9)\n  }\n}\n\nbool responsiveDelay(unsigned long ms) {\n  unsigned long startTimestamp = millis();\n  while (millis() - startTimestamp < ms) {\n    SystemMode oldMode = currentMode;\n    bool oldAuto = isAutoMode;\n    checkKeyboard();\n    if (currentMode != oldMode || isAutoMode != oldAuto) {\n      return true; \n    }\n    delay(10);\n  }\n  return false;\n}\n\nvoid allValvesOff() {\n  for (int i = 0; i < 8; i++) digitalWrite(valvePins[i], HIGH);\n  digitalWrite(valvePins[8], LOW);\n}\n```\n\n# More Formalized Pictures.\n\n![](images/pptp/finalizing/formal-23-40-33.jpg)\n![](images/pptp/finalizing/formal-23-41-01.jpg)\n\n![](images/pptp/finalizing/formal-23-41-19.jpg)\n![](images/pptp/finalizing/formal-23-41-37.jpg)\n\n![](images/pptp/finalizing/formal-23-41-59.jpg)\n\n# Final Testing Video\n\n@video[](images/pptp/finalizing/formal-testing3-more-professional.mp4)\n",
+      "text": "On my next iteration of testing, I moved from controlling the solenoid valves by pressing a key to a more autonomous control. The code for this iteration takes into account a rest time phase after the battery is turned on, consequently turning on the system to allow for you to connect the air compressor to the system.\n\n# The Firmware\n\nThe code also has 3 modes of patterns (random, sequence, and snake pattern) that it switches between after a full cycle of one mode.\n\n- At Startup: The system defaults to autonomous mode. It will randomly pick between Random, Sequential, or Snake mode; run it for a full cycle (9 steps); hit a break; and then automatically pick a new random mode.\n- Keyboard Overrides: If you type a command manually (r, s, or n), the autopilot instantly disengages, and it will loop your chosen pattern indefinitely.\n- Return to Auto: You can press a at any time to turn the autopilot back on.\n\ncpp\n//title: Pneumetecture valve control modes\n//author: aaron wajah w/ help of Gemini\n//date: 09/07/2026\n\n// Define the 9 valve pins\nconst int valvePins[] = {2, 3, 4, 5, 6, 7, 8, 9, 10};\n\n// Easy-to-read state aliases\n#define ON 1\n#define OFF 0\n\n// ---- TIMING CONFIGURATION ----\nconst unsigned long startDelayTime = 5000;      // Rest period before action begins (5 seconds)\nconst unsigned long sequentialTotalTime = 7000; // Total time each valve runs (7 seconds)\nconst unsigned long overlapTime = 1000;         // How long two valves stay open together (1 second)\n\n// ---- PATH ARRAYS (0-indexed mappings for pins 2 to 10) ----\nconst int sequentialOrder[] = {0, 1, 2, 3, 4, 5, 6, 7, 8}; // 1->2->3->4->5->6->7->8->9\nconst int snakeOrder[]      = {0, 1, 2, 5, 4, 3, 6, 7, 8}; // 1->2->3->6->5->4->7->8->9\n\n// Track operational modes and states\nenum SystemMode { IDLE, RANDOM_RUN, SEQUENTIAL_RUN, SNAKE_RUN };\nSystemMode currentMode = IDLE;\nSystemMode lastMode = IDLE;   // Memory buffer for the previous mode\n\nbool isAutoMode = true;       // Defaults to true! System runs itself at startup.\nbool firstRunOfMode = true;   // Triggers the 5-second rest phase on mode changes\nint sequenceStep = 0;         // Tracks progression through path arrays\nint randomStep = 0;           // Tracks how many random steps have executed\n\nint currentValve = -1;        // Tracks active valve inside the loop\nint lastValve = -1;           // Memory buffer for the absolute last deactivated valve\n\nvoid setup() {\n  Serial.begin(9600);\n\n  // Initialize valve pins and ensure they start completely OFF\n  for (int i = 0; i < 8; i++) {\n    pinMode(valvePins[i], OUTPUT);\n    digitalWrite(valvePins[i], HIGH); // HIGH keeps Active-Low (1-8) OFF\n  }\n  pinMode(valvePins[8], OUTPUT);\n  digitalWrite(valvePins[8], LOW);    // LOW keeps Active-High (9) OFF\n  \n  randomSeed(analogRead(A0));\n  \n  Serial.println(\"=== Autonomous Valve System Initialized ===\");\n  Serial.println(\"System starting in AUTO-PILOT mode...\");\n  Serial.println(\"----------------------------------------\");\n  Serial.println(\"Keyboard Commands:\");\n  Serial.println(\"  'a' -> Re-engage AUTO-PILOT\");\n  Serial.println(\"  'r' -> Force Manual RANDOM Mode\");\n  Serial.println(\"  's' -> Force Manual SEQUENTIAL Mode\");\n  Serial.println(\"  'n' -> Force Manual SNAKE Mode\");\n  Serial.println(\"  '0' -> Emergency STOP ALL\");\n  Serial.println(\"========================================\");\n}\n\nvoid loop() {\n  // Always poll keyboard inputs\n  checkKeyboard();\n\n  // If we are on Auto-Pilot and the previous mode finished, pick a new UNIQUE one\n  if (isAutoMode && currentMode == IDLE) {\n    pickRandomMode();\n  }\n\n  // -------------------------------------------------------------------------\n  // MODE 1: RANDOM RUN WITH OVERLAP (No Consecutive Repeats)\n  // -------------------------------------------------------------------------\n  if (currentMode == RANDOM_RUN) {\n    if (firstRunOfMode) {\n      Serial.println(\"⏳ [RANDOM MODE] Starting 5-second system rest...\");\n      if (responsiveDelay(startDelayTime)) return; \n      \n      randomStep = 0;\n      \n      // HARDENING: Ensure the first valve does not match the last valve used anywhere else\n      do {\n        currentValve = random(0, 9);\n      } while (currentValve == lastValve);\n      \n      setValveState(currentValve, ON);\n      firstRunOfMode = false;\n      Serial.print(\"🚀 Action Started! Random Valve \");\n      Serial.println(currentValve + 1);\n    }\n\n    unsigned long totalRandomTime = random(5000, 7001);\n    unsigned long soloTime = totalRandomTime - overlapTime;\n\n    if (responsiveDelay(soloTime)) return;\n\n    // HARDENING: Ensure the next valve is never the current valve\n    int nextValve;\n    do { \n      nextValve = random(0, 9); \n    } while (nextValve == currentValve);\n\n    Serial.print(\"Overlap Transition -> Opening Valve \");\n    Serial.println(nextValve + 1);\n\n    setValveState(nextValve, ON);\n    if (responsiveDelay(overlapTime)) return;\n\n    setValveState(currentValve, OFF);\n    lastValve = currentValve; // Log this valve into history\n    currentValve = nextValve;\n    randomStep++;\n\n    // If on Auto-Pilot, cycle out to a new mode after 9 random switches\n    if (isAutoMode && randomStep >= 9) {\n      Serial.println(\"\\n🔄 Auto-Pilot: Random sequence cycle complete.\");\n      allValvesOff();\n      lastValve = currentValve; // Save final valve selection before clearing\n      currentMode = IDLE;\n      firstRunOfMode = true;\n    }\n  }\n\n  // -------------------------------------------------------------------------\n  // MODE 2: SEQUENTIAL RUN WITH OVERLAP\n  // -------------------------------------------------------------------------\n  else if (currentMode == SEQUENTIAL_RUN) {\n    if (firstRunOfMode) {\n      Serial.println(\"⏳ [SEQUENTIAL MODE] Starting 5-second system rest...\");\n      if (responsiveDelay(startDelayTime)) return; \n      \n      sequenceStep = 0;\n      firstRunOfMode = false;\n    }\n\n    int cValve = sequentialOrder[sequenceStep];\n    setValveState(cValve, ON);\n    Serial.print(\"Running Valve \");\n    Serial.println(cValve + 1);\n\n    if (sequenceStep < 8) {\n      if (responsiveDelay(sequentialTotalTime - overlapTime)) return;\n      int nValve = sequentialOrder[sequenceStep + 1];\n      setValveState(nValve, ON);\n      Serial.print(\"Overlap Transition -> Opening Valve \");\n      Serial.println(nValve + 1);\n      if (responsiveDelay(overlapTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log to cross-mode history\n      sequenceStep++;\n    } else {\n      if (responsiveDelay(sequentialTotalTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log final valve to cross-mode history\n      \n      if (isAutoMode) {\n        Serial.println(\"\\n🔄 Auto-Pilot: Sequential sequence cycle complete.\");\n        currentMode = IDLE;\n        firstRunOfMode = true;\n      } else {\n        sequenceStep = 0; \n      }\n    }\n  }\n\n  // -------------------------------------------------------------------------\n  // MODE 3: SNAKE RUN WITH OVERLAP (1,2,3,6,5,4,7,8,9)\n  // -------------------------------------------------------------------------\n  else if (currentMode == SNAKE_RUN) {\n    if (firstRunOfMode) {\n      Serial.println(\"⏳ [SNAKE MODE] Starting 5-second system rest...\");\n      if (responsiveDelay(startDelayTime)) return; \n      \n      sequenceStep = 0;\n      firstRunOfMode = false;\n    }\n\n    int cValve = snakeOrder[sequenceStep];\n    setValveState(cValve, ON);\n    Serial.print(\"Running Snake Valve \");\n    Serial.println(cValve + 1);\n\n    if (sequenceStep < 8) {\n      if (responsiveDelay(sequentialTotalTime - overlapTime)) return;\n      int nValve = snakeOrder[sequenceStep + 1];\n      setValveState(nValve, ON);\n      Serial.print(\"Overlap Transition -> Opening Valve \");\n      Serial.println(nValve + 1);\n      if (responsiveDelay(overlapTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log to cross-mode history\n      sequenceStep++;\n    } else {\n      if (responsiveDelay(sequentialTotalTime)) return;\n      setValveState(cValve, OFF);\n      lastValve = cValve; // Log final valve to cross-mode history\n      \n      if (isAutoMode) {\n        Serial.println(\"\\n🔄 Auto-Pilot: Snake sequence cycle complete.\");\n        currentMode = IDLE;\n        firstRunOfMode = true;\n      } else {\n        sequenceStep = 0; \n      }\n    }\n  }\n}\n\n// =========================================================================\n// HELPER FUNCTIONS\n// =========================================================================\n\n// Chooses a fresh mode that is guaranteed to be different than the last one run\nvoid pickRandomMode() {\n  SystemMode nextMode;\n  \n  do {\n    int choice = random(0, 3); // Evaluates to 0, 1, or 2\n    if (choice == 0) nextMode = RANDOM_RUN;\n    else if (choice == 1) nextMode = SEQUENTIAL_RUN;\n    else nextMode = SNAKE_RUN;\n  } while (nextMode == lastMode); // Reject and reroll if it matches the history buffer\n  \n  currentMode = nextMode;\n  lastMode = currentMode; // Save this choice as the new historical anchor\n  firstRunOfMode = true;\n}\n\nvoid checkKeyboard() {\n  if (Serial.available() > 0) {\n    char key = Serial.read();\n    if (key == '\\n' || key == '\\r') return; \n\n    if (key == 'a' || key == 'A') {\n      isAutoMode = true;\n      currentMode = IDLE;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🤖 Auto-Pilot ENGAGED. Selecting fresh random pattern...\");\n    }\n    else if (key == 'r' || key == 'R') {\n      isAutoMode = false;\n      currentMode = RANDOM_RUN;\n      lastMode = RANDOM_RUN; // Update manual selections into history as well\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🎮 Manual Override: RANDOM MODE forced.\");\n    }\n    else if (key == 's' || key == 'S') {\n      isAutoMode = false;\n      currentMode = SEQUENTIAL_RUN;\n      lastMode = SEQUENTIAL_RUN;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🎮 Manual Override: SEQUENTIAL MODE forced.\");\n    }\n    else if (key == 'n' || key == 'N') {\n      isAutoMode = false;\n      currentMode = SNAKE_RUN;\n      lastMode = SNAKE_RUN;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🎮 Manual Override: SNAKE MODE forced.\");\n    }\n    else if (key == '0') {\n      isAutoMode = false;\n      currentMode = IDLE;\n      allValvesOff();\n      firstRunOfMode = true;\n      Serial.println(\"\\n🛑 Emergency Stop: All operations halted.\");\n    }\n  }\n}\n\nvoid setValveState(int index, int state) {\n  if (index < 8) {\n    digitalWrite(valvePins[index], state == ON ? LOW : HIGH); // Active-Low (1-8)\n  } else {\n    digitalWrite(valvePins[8], state == ON ? HIGH : LOW);    // Active-High (9)\n  }\n}\n\nbool responsiveDelay(unsigned long ms) {\n  unsigned long startTimestamp = millis();\n  while (millis() - startTimestamp < ms) {\n    SystemMode oldMode = currentMode;\n    bool oldAuto = isAutoMode;\n    checkKeyboard();\n    if (currentMode != oldMode || isAutoMode != oldAuto) {\n      return true; \n    }\n    delay(10);\n  }\n  return false;\n}\n\nvoid allValvesOff() {\n  for (int i = 0; i < 8; i++) digitalWrite(valvePins[i], HIGH);\n  digitalWrite(valvePins[8], LOW);\n}\n\n# More Formalized Pictures.\n\n# Final Testing Video",
+      "media": [
+        {
+          "type": "video",
+          "name": "final-testing2.mp4",
+          "localPath": "images/pptp/finalizing/final-testing2.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/f15fd4b3-6aa3-4dab-9389-cabe59830dd5/final_testing2_%281%29_%281%29.mp4",
+          "caption": null,
+          "width": 848,
+          "height": 464
+        },
+        {
+          "type": "image",
+          "name": "formal-23-40-33.jpg",
+          "localPath": "images/pptp/finalizing/formal-23-40-33.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/8108e311-706e-46bc-a0d6-07426e36ec09/photo_2026-07-26_23-40-33.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "formal-23-41-01.jpg",
+          "localPath": "images/pptp/finalizing/formal-23-41-01.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/6b435c24-522f-4a02-beea-c7eea54ee7b2/photo_2026-07-26_23-41-01.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "formal-23-41-19.jpg",
+          "localPath": "images/pptp/finalizing/formal-23-41-19.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/a11b91d3-7856-4fc3-8e82-980c6b95862a/photo_2026-07-26_23-41-19.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "formal-23-41-37.jpg",
+          "localPath": "images/pptp/finalizing/formal-23-41-37.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/2b82e2b6-bdb9-465c-b929-81a215e3ee2e/photo_2026-07-26_23-41-37.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "image",
+          "name": "formal-23-41-59.jpg",
+          "localPath": "images/pptp/finalizing/formal-23-41-59.jpg",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/5b2f0f72-f059-4946-aed1-91dd6d26b348/photo_2026-07-26_23-41-59.jpg",
+          "caption": null,
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "type": "video",
+          "name": "formal-testing3-more-professional.mp4",
+          "localPath": "images/pptp/finalizing/formal-testing3-more-professional.mp4",
+          "remoteUrl": "https://prod-files-secure.s3.us-west-2.amazonaws.com/a15b85eb-0e4b-4e6b-a756-5c54953216c2/65c4e78b-cce8-4093-9892-da419edcc5f3/fomal-testing3-more-professional_7vm0XMxz_%281%29.mp4",
+          "caption": null,
+          "width": 464,
+          "height": 848
+        }
+      ]
+    }
+  ]
+}
