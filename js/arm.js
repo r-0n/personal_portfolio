@@ -263,8 +263,9 @@
         };
     }
 
-    function initCarousel(root, keys) {
+    function initCarousel(root, keys, opts) {
         if (!root) return;
+        opts = opts || {};
 
         var slides = Array.prototype.slice.call(root.querySelectorAll(keys.slide));
         var thumbsWrap = root.querySelector(keys.thumbs);
@@ -384,16 +385,22 @@
 
         var cio = new IntersectionObserver(function (entries) {
             entries.forEach(function (e) {
+                var wasInView = inView;
                 inView = e.isIntersecting;
                 if (inView) {
-                    syncVideos();
-                    armTimer();
+                    // Always land on the first slide when the carousel enters view,
+                    // so autoplay while partially on-screen doesn't leave a later slide as the "default".
+                    if (!wasInView && opts.resetOnEnter) go(0);
+                    else {
+                        syncVideos();
+                        armTimer();
+                    }
                 } else {
                     clearTimer();
                     syncVideos();
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: opts.threshold != null ? opts.threshold : 0.3 });
         cio.observe(root);
 
         document.addEventListener('arm-fs-close', function () {
@@ -412,7 +419,7 @@
         prev: '[data-draw-prev]',
         next: '[data-draw-next]',
         fs: '[data-draw-fs]'
-    });
+    }, { resetOnEnter: true, threshold: 0.45 });
 
     initCarousel(document.querySelector('[data-media-carousel]'), {
         slide: '[data-media-slide]',

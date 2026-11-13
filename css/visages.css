@@ -680,13 +680,51 @@
     margin: 0 0 6px;
 }
 
-.system-card img {
+.system-expand {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    padding: 0;
+    border: 1px solid rgba(245, 245, 245, .1);
+    background: #fff;
+    cursor: zoom-in;
+    text-align: left;
+}
+
+.system-expand img {
     width: 100%;
     height: auto;
     display: block;
-    border: 1px solid rgba(245, 245, 245, .1);
-    background: #fff;
-    margin-top: auto;
+    transition: opacity .25s ease;
+}
+
+.system-expand-hint {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-family: poppins;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #111;
+    background: rgba(255, 255, 255, .88);
+    border: 1px solid rgba(0, 0, 0, .12);
+    padding: 6px 10px;
+    opacity: 0;
+    transition: opacity .25s ease;
+    pointer-events: none;
+}
+
+.system-expand:hover img,
+.system-expand:focus-visible img { opacity: .92; }
+
+.system-expand:hover .system-expand-hint,
+.system-expand:focus-visible .system-expand-hint { opacity: 1; }
+
+.system-expand:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 /* ---- 06 variations ---- */
